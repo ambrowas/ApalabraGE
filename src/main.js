@@ -202,6 +202,7 @@ class ApalabraApp {
       rankingPodium: document.getElementById('ranking-podium'),
       rankingPlayersList: document.getElementById('ranking-players-list'),
       rankingCurrentUserCard: document.getElementById('ranking-current-user-card'),
+      rankingGameTabs: document.querySelectorAll('#ranking-game-tabs .ranking-tab'),
 
       // Modal Perfil de Jugador (desde Ranking)
       modalPlayerProfile: document.getElementById('modal-player-profile'),
@@ -215,6 +216,7 @@ class ApalabraApp {
       ppStarsVal: document.getElementById('pp-stars-val'),
       ppLevelsVal: document.getElementById('pp-levels-val'),
       ppWordsVal: document.getElementById('pp-words-val'),
+      ppProverbsVal: document.getElementById('pp-proverbs-val'),
       ppSpeedVal: document.getElementById('pp-speed-val'),
       btnPlayerProfileAction: document.getElementById('btn-player-profile-action'),
 
@@ -224,6 +226,8 @@ class ApalabraApp {
       btnRetryTimeout: document.getElementById('btn-retry-timeout'),
       btnBackHomeTimeout: document.getElementById('btn-back-home-timeout')
     };
+
+    this.currentRankingGame = 'global';
 
     this.init();
   }
@@ -739,6 +743,16 @@ class ApalabraApp {
       this.dom.btnGotoTable.addEventListener('click', () => {
         sound.playSparkle();
         this.switchRankingScreen('table');
+      });
+    }
+
+    if (this.dom.rankingGameTabs) {
+      this.dom.rankingGameTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          sound.playSparkle();
+          const game = e.currentTarget.getAttribute('data-game') || 'global';
+          this.switchRankingGame(game);
+        });
       });
     }
 
@@ -2066,8 +2080,24 @@ class ApalabraApp {
     }
   }
 
+  switchRankingGame(game = 'global') {
+    this.currentRankingGame = game;
+    if (this.dom.rankingGameTabs) {
+      this.dom.rankingGameTabs.forEach(tab => {
+        tab.classList.toggle('active', tab.getAttribute('data-game') === game);
+      });
+    }
+    this.renderRankingData();
+  }
+
   async openRankingModal() {
     this.rankingFilter = 'stars';
+    if (!this.currentRankingGame) this.currentRankingGame = 'global';
+    if (this.dom.rankingGameTabs) {
+      this.dom.rankingGameTabs.forEach(tab => {
+        tab.classList.toggle('active', tab.getAttribute('data-game') === this.currentRankingGame);
+      });
+    }
     if (this.dom.rankingModal) {
       this.dom.rankingModal.classList.add('active');
     }
@@ -2168,6 +2198,11 @@ class ApalabraApp {
       this.dom.ppWordsVal.textContent = profile.wordsFound || 0;
     }
 
+    if (this.dom.ppProverbsVal) {
+      const pCount = Array.isArray(profile.proverbsSolved) ? profile.proverbsSolved.length : (profile.proverbsSolved || 0);
+      this.dom.ppProverbsVal.textContent = pCount;
+    }
+
     if (this.dom.ppSpeedVal) {
       this.dom.ppSpeedVal.textContent = profile.timeAttackHighScore ? `${profile.timeAttackHighScore} pts` : '--';
     }
@@ -2189,58 +2224,58 @@ class ApalabraApp {
 
   _getEnrichedRankingUsers(existingUsers) {
     const guineanRoster = [
-      { name: 'Leandro Mbomio', avatar: '🗿', city: 'Malabo', stars: 98, wordsFound: 85, levelsCompleted: 25, timeAttackHighScore: 1200 },
-      { name: 'Martiniano Ele', avatar: '✍️', city: 'Bata', stars: 94, wordsFound: 80, levelsCompleted: 24, timeAttackHighScore: 1150 },
-      { name: 'Leoncio Evita', avatar: '📖', city: 'Udubuamlange', stars: 90, wordsFound: 76, levelsCompleted: 23, timeAttackHighScore: 1100 },
-      { name: 'Nchama Mangue', avatar: '👑', city: 'Malabo', stars: 58, wordsFound: 52, levelsCompleted: 18, timeAttackHighScore: 920 },
-      { name: 'Mba Ondo', avatar: '🐆', city: 'Bata', stars: 54, wordsFound: 48, levelsCompleted: 16, timeAttackHighScore: 870 },
-      { name: 'Mari Paz Abaha', avatar: '🌺', city: 'Ebebiyín', stars: 50, wordsFound: 45, levelsCompleted: 15, timeAttackHighScore: 810 },
-      { name: 'Cándido Esono', avatar: '🛶', city: 'Luba', stars: 47, wordsFound: 41, levelsCompleted: 14, timeAttackHighScore: 760 },
-      { name: 'Esperanza Bolekia', avatar: '🌋', city: 'Mongomo', stars: 44, wordsFound: 39, levelsCompleted: 13, timeAttackHighScore: 710 },
-      { name: 'Juanita Mayé', avatar: '🌳', city: 'Madrid', stars: 40, wordsFound: 35, levelsCompleted: 12, timeAttackHighScore: 650 },
-      { name: 'Donato Ndongo', avatar: '📚', city: 'Bata', stars: 39, wordsFound: 34, levelsCompleted: 12, timeAttackHighScore: 630 },
-      { name: 'Cristina Mikue', avatar: '🌸', city: 'Barcelona', stars: 37, wordsFound: 33, levelsCompleted: 11, timeAttackHighScore: 600 },
-      { name: 'Joaquín Mbomio', avatar: '🌊', city: 'Annobón', stars: 36, wordsFound: 31, levelsCompleted: 11, timeAttackHighScore: 580 },
-      { name: 'Regina Nse', avatar: '🌿', city: 'Evinayong', stars: 35, wordsFound: 30, levelsCompleted: 10, timeAttackHighScore: 560 },
-      { name: 'Silverio Ncogo', avatar: '🦁', city: 'Valencia', stars: 33, wordsFound: 29, levelsCompleted: 10, timeAttackHighScore: 540 },
-      { name: 'Teresa Bindang', avatar: '🍲', city: 'Riaba', stars: 32, wordsFound: 28, levelsCompleted: 9, timeAttackHighScore: 520 },
-      { name: 'Diosdado Mocache', avatar: '🦅', city: 'Libreville', stars: 31, wordsFound: 27, levelsCompleted: 9, timeAttackHighScore: 500 },
-      { name: 'Inmaculada Obono', avatar: '💫', city: 'Malabo', stars: 30, wordsFound: 26, levelsCompleted: 9, timeAttackHighScore: 480 },
-      { name: 'Anacleto Bokesa', avatar: '🎯', city: 'Bata', stars: 29, wordsFound: 25, levelsCompleted: 8, timeAttackHighScore: 460 },
-      { name: 'Fátima Nzang', avatar: '✨', city: 'Zaragoza', stars: 28, wordsFound: 24, levelsCompleted: 8, timeAttackHighScore: 440 },
-      { name: 'Leandro Edú', avatar: '🛡️', city: 'Añisok', stars: 27, wordsFound: 23, levelsCompleted: 8, timeAttackHighScore: 430 },
-      { name: 'Rosalía Avomo', avatar: '🌟', city: 'Douala', stars: 26, wordsFound: 22, levelsCompleted: 7, timeAttackHighScore: 410 },
-      { name: 'Bonifacio Obama', avatar: '🏆', city: 'Nsork', stars: 25, wordsFound: 21, levelsCompleted: 7, timeAttackHighScore: 390 },
-      { name: 'Clara Mecheba', avatar: '🍃', city: 'Malabo', stars: 24, wordsFound: 20, levelsCompleted: 7, timeAttackHighScore: 380 },
-      { name: 'Marcos Ela', avatar: '🔥', city: 'Bata', stars: 23, wordsFound: 19, levelsCompleted: 6, timeAttackHighScore: 360 },
-      { name: 'Beatriz Mitogo', avatar: '🌺', city: 'Londres', stars: 22, wordsFound: 18, levelsCompleted: 6, timeAttackHighScore: 350 },
-      { name: 'Secundino Ntutumu', avatar: '🌾', city: 'Mikomeseng', stars: 21, wordsFound: 18, levelsCompleted: 6, timeAttackHighScore: 330 },
-      { name: 'Dolores Eyenga', avatar: '🌴', city: 'Sevilla', stars: 20, wordsFound: 17, levelsCompleted: 5, timeAttackHighScore: 320 },
-      { name: 'Plácido Miko', avatar: '☀️', city: 'Malabo', stars: 19, wordsFound: 16, levelsCompleted: 5, timeAttackHighScore: 300 },
-      { name: 'Esther Asue', avatar: '🦋', city: 'Cogo', stars: 19, wordsFound: 16, levelsCompleted: 5, timeAttackHighScore: 290 },
-      { name: 'Genaro Ndong', avatar: '🏹', city: 'Bata', stars: 18, wordsFound: 15, levelsCompleted: 5, timeAttackHighScore: 280 },
-      { name: 'Concepción Bilogo', avatar: '🌼', city: 'París', stars: 17, wordsFound: 14, levelsCompleted: 4, timeAttackHighScore: 270 },
-      { name: 'Faustino Nguema', avatar: '🌍', city: 'Mbini', stars: 16, wordsFound: 14, levelsCompleted: 4, timeAttackHighScore: 250 },
-      { name: 'Milagrosa Okomo', avatar: '💐', city: 'Malabo', stars: 16, wordsFound: 13, levelsCompleted: 4, timeAttackHighScore: 240 },
-      { name: 'Eulogio Abeso', avatar: '⚓', city: 'Kogo', stars: 15, wordsFound: 13, levelsCompleted: 4, timeAttackHighScore: 230 },
-      { name: 'Verónica Angue', avatar: '🌙', city: 'Bilbao', stars: 14, wordsFound: 12, levelsCompleted: 3, timeAttackHighScore: 220 },
-      { name: 'Felipe Ondo', avatar: '🌲', city: 'Acurenam', stars: 14, wordsFound: 12, levelsCompleted: 3, timeAttackHighScore: 210 },
-      { name: 'Gisela Mokata', avatar: '🌻', city: 'Malabo', stars: 13, wordsFound: 11, levelsCompleted: 3, timeAttackHighScore: 200 },
-      { name: 'Santiago Bee', avatar: '⛵', city: 'Bata', stars: 12, wordsFound: 10, levelsCompleted: 3, timeAttackHighScore: 190 },
-      { name: 'Lidia Mbasogo', avatar: '🕊️', city: 'Washington D.C.', stars: 12, wordsFound: 10, levelsCompleted: 3, timeAttackHighScore: 180 },
-      { name: 'Armando Nguema', avatar: '🧭', city: 'Niefang', stars: 11, wordsFound: 9, levelsCompleted: 2, timeAttackHighScore: 170 },
-      { name: 'Purificación Moto', avatar: '🌺', city: 'Malabo', stars: 10, wordsFound: 9, levelsCompleted: 2, timeAttackHighScore: 160 },
-      { name: 'Lucas Obama', avatar: '⚡', city: 'Ebebiyín', stars: 10, wordsFound: 8, levelsCompleted: 2, timeAttackHighScore: 150 },
-      { name: 'Sonsoles Nfumu', avatar: '🌴', city: 'Madrid', stars: 9, wordsFound: 8, levelsCompleted: 2, timeAttackHighScore: 140 },
-      { name: 'Emilio Sima', avatar: '🛶', city: 'Luba', stars: 9, wordsFound: 7, levelsCompleted: 2, timeAttackHighScore: 130 },
-      { name: 'Victoria Eyang', avatar: '⭐', city: 'Bata', stars: 8, wordsFound: 7, levelsCompleted: 1, timeAttackHighScore: 120 },
-      { name: 'Celestino Ekua', avatar: '🛡️', city: 'Mongomo', stars: 8, wordsFound: 6, levelsCompleted: 1, timeAttackHighScore: 110 },
-      { name: 'Antonia Besari', avatar: '👑', city: 'Malabo', stars: 7, wordsFound: 6, levelsCompleted: 1, timeAttackHighScore: 100 },
-      { name: 'Prisciliano Ndong', avatar: '🌾', city: 'Evinayong', stars: 6, wordsFound: 5, levelsCompleted: 1, timeAttackHighScore: 90 },
-      { name: 'Mercedes Nchama', avatar: '🌸', city: 'Alicante', stars: 6, wordsFound: 5, levelsCompleted: 1, timeAttackHighScore: 85 },
-      { name: 'Hilario Mba', avatar: '🌳', city: 'Bata', stars: 5, wordsFound: 4, levelsCompleted: 1, timeAttackHighScore: 80 },
-      { name: 'Belén Mangue', avatar: '💫', city: 'Malabo', stars: 5, wordsFound: 4, levelsCompleted: 1, timeAttackHighScore: 75 },
-      { name: 'Saturnino Esono', avatar: '🐆', city: 'Añisok', stars: 4, wordsFound: 3, levelsCompleted: 1, timeAttackHighScore: 70 }
+      { name: 'Leandro Mbomio', avatar: '🗿', city: 'Malabo', stars: 98, wordsFound: 85, levelsCompleted: 25, proverbsSolved: 30, timeAttackHighScore: 1200 },
+      { name: 'Martiniano Ele', avatar: '✍️', city: 'Bata', stars: 94, wordsFound: 80, levelsCompleted: 24, proverbsSolved: 28, timeAttackHighScore: 1150 },
+      { name: 'Leoncio Evita', avatar: '📖', city: 'Udubuamlange', stars: 90, wordsFound: 76, levelsCompleted: 23, proverbsSolved: 27, timeAttackHighScore: 1100 },
+      { name: 'Nchama Mangue', avatar: '👑', city: 'Malabo', stars: 58, wordsFound: 52, levelsCompleted: 18, proverbsSolved: 24, timeAttackHighScore: 920 },
+      { name: 'Mba Ondo', avatar: '🐆', city: 'Bata', stars: 54, wordsFound: 48, levelsCompleted: 16, proverbsSolved: 22, timeAttackHighScore: 870 },
+      { name: 'Mari Paz Abaha', avatar: '🌺', city: 'Ebebiyín', stars: 50, wordsFound: 45, levelsCompleted: 15, proverbsSolved: 20, timeAttackHighScore: 810 },
+      { name: 'Cándido Esono', avatar: '🛶', city: 'Luba', stars: 47, wordsFound: 41, levelsCompleted: 14, proverbsSolved: 19, timeAttackHighScore: 760 },
+      { name: 'Esperanza Bolekia', avatar: '🌋', city: 'Mongomo', stars: 44, wordsFound: 39, levelsCompleted: 13, proverbsSolved: 18, timeAttackHighScore: 710 },
+      { name: 'Juanita Mayé', avatar: '🌳', city: 'Madrid', stars: 40, wordsFound: 35, levelsCompleted: 12, proverbsSolved: 16, timeAttackHighScore: 650 },
+      { name: 'Donato Ndongo', avatar: '📚', city: 'Bata', stars: 39, wordsFound: 34, levelsCompleted: 12, proverbsSolved: 15, timeAttackHighScore: 630 },
+      { name: 'Cristina Mikue', avatar: '🌸', city: 'Barcelona', stars: 37, wordsFound: 33, levelsCompleted: 11, proverbsSolved: 14, timeAttackHighScore: 600 },
+      { name: 'Joaquín Mbomio', avatar: '🌊', city: 'Annobón', stars: 36, wordsFound: 31, levelsCompleted: 11, proverbsSolved: 13, timeAttackHighScore: 580 },
+      { name: 'Regina Nse', avatar: '🌿', city: 'Evinayong', stars: 35, wordsFound: 30, levelsCompleted: 10, proverbsSolved: 12, timeAttackHighScore: 560 },
+      { name: 'Silverio Ncogo', avatar: '🦁', city: 'Valencia', stars: 33, wordsFound: 29, levelsCompleted: 10, proverbsSolved: 11, timeAttackHighScore: 540 },
+      { name: 'Teresa Bindang', avatar: '🍲', city: 'Riaba', stars: 32, wordsFound: 28, levelsCompleted: 9, proverbsSolved: 10, timeAttackHighScore: 520 },
+      { name: 'Diosdado Mocache', avatar: '🦅', city: 'Libreville', stars: 31, wordsFound: 27, levelsCompleted: 9, proverbsSolved: 10, timeAttackHighScore: 500 },
+      { name: 'Inmaculada Obono', avatar: '💫', city: 'Malabo', stars: 30, wordsFound: 26, levelsCompleted: 9, proverbsSolved: 9, timeAttackHighScore: 480 },
+      { name: 'Anacleto Bokesa', avatar: '🎯', city: 'Bata', stars: 29, wordsFound: 25, levelsCompleted: 8, proverbsSolved: 8, timeAttackHighScore: 460 },
+      { name: 'Fátima Nzang', avatar: '✨', city: 'Zaragoza', stars: 28, wordsFound: 24, levelsCompleted: 8, proverbsSolved: 8, timeAttackHighScore: 440 },
+      { name: 'Leandro Edú', avatar: '🛡️', city: 'Añisok', stars: 27, wordsFound: 23, levelsCompleted: 8, proverbsSolved: 7, timeAttackHighScore: 430 },
+      { name: 'Rosalía Avomo', avatar: '🌟', city: 'Douala', stars: 26, wordsFound: 22, levelsCompleted: 7, proverbsSolved: 7, timeAttackHighScore: 410 },
+      { name: 'Bonifacio Obama', avatar: '🏆', city: 'Nsork', stars: 25, wordsFound: 21, levelsCompleted: 7, proverbsSolved: 6, timeAttackHighScore: 390 },
+      { name: 'Clara Mecheba', avatar: '🍃', city: 'Malabo', stars: 24, wordsFound: 20, levelsCompleted: 7, proverbsSolved: 6, timeAttackHighScore: 380 },
+      { name: 'Marcos Ela', avatar: '🔥', city: 'Bata', stars: 23, wordsFound: 19, levelsCompleted: 6, proverbsSolved: 5, timeAttackHighScore: 360 },
+      { name: 'Beatriz Mitogo', avatar: '🌺', city: 'Londres', stars: 22, wordsFound: 18, levelsCompleted: 6, proverbsSolved: 5, timeAttackHighScore: 350 },
+      { name: 'Secundino Ntutumu', avatar: '🌾', city: 'Mikomeseng', stars: 21, wordsFound: 18, levelsCompleted: 6, proverbsSolved: 4, timeAttackHighScore: 330 },
+      { name: 'Dolores Eyenga', avatar: '🌴', city: 'Sevilla', stars: 20, wordsFound: 17, levelsCompleted: 5, proverbsSolved: 4, timeAttackHighScore: 320 },
+      { name: 'Plácido Miko', avatar: '☀️', city: 'Malabo', stars: 19, wordsFound: 16, levelsCompleted: 5, proverbsSolved: 3, timeAttackHighScore: 300 },
+      { name: 'Esther Asue', avatar: '🦋', city: 'Cogo', stars: 19, wordsFound: 16, levelsCompleted: 5, proverbsSolved: 3, timeAttackHighScore: 290 },
+      { name: 'Genaro Ndong', avatar: '🏹', city: 'Bata', stars: 18, wordsFound: 15, levelsCompleted: 5, proverbsSolved: 3, timeAttackHighScore: 280 },
+      { name: 'Concepción Bilogo', avatar: '🌼', city: 'París', stars: 17, wordsFound: 14, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 270 },
+      { name: 'Faustino Nguema', avatar: '🌍', city: 'Mbini', stars: 16, wordsFound: 14, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 250 },
+      { name: 'Milagrosa Okomo', avatar: '💐', city: 'Malabo', stars: 16, wordsFound: 13, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 240 },
+      { name: 'Eulogio Abeso', avatar: '⚓', city: 'Kogo', stars: 15, wordsFound: 13, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 230 },
+      { name: 'Verónica Angue', avatar: '🌙', city: 'Bilbao', stars: 14, wordsFound: 12, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 220 },
+      { name: 'Felipe Ondo', avatar: '🌲', city: 'Acurenam', stars: 14, wordsFound: 12, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 210 },
+      { name: 'Gisela Mokata', avatar: '🌻', city: 'Malabo', stars: 13, wordsFound: 11, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 200 },
+      { name: 'Santiago Bee', avatar: '⛵', city: 'Bata', stars: 12, wordsFound: 10, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 190 },
+      { name: 'Lidia Mbasogo', avatar: '🕊️', city: 'Washington D.C.', stars: 12, wordsFound: 10, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 180 },
+      { name: 'Armando Nguema', avatar: '🧭', city: 'Niefang', stars: 11, wordsFound: 9, levelsCompleted: 2, proverbsSolved: 1, timeAttackHighScore: 170 },
+      { name: 'Purificación Moto', avatar: '🌺', city: 'Malabo', stars: 10, wordsFound: 9, levelsCompleted: 2, proverbsSolved: 1, timeAttackHighScore: 160 },
+      { name: 'Lucas Obama', avatar: '⚡', city: 'Ebebiyín', stars: 10, wordsFound: 8, levelsCompleted: 2, proverbsSolved: 1, timeAttackHighScore: 150 },
+      { name: 'Sonsoles Nfumu', avatar: '🌴', city: 'Madrid', stars: 9, wordsFound: 8, levelsCompleted: 2, proverbsSolved: 0, timeAttackHighScore: 140 },
+      { name: 'Emilio Sima', avatar: '🛶', city: 'Luba', stars: 9, wordsFound: 7, levelsCompleted: 2, proverbsSolved: 0, timeAttackHighScore: 130 },
+      { name: 'Victoria Eyang', avatar: '⭐', city: 'Bata', stars: 8, wordsFound: 7, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 120 },
+      { name: 'Celestino Ekua', avatar: '🛡️', city: 'Mongomo', stars: 8, wordsFound: 6, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 110 },
+      { name: 'Antonia Besari', avatar: '👑', city: 'Malabo', stars: 7, wordsFound: 6, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 100 },
+      { name: 'Prisciliano Ndong', avatar: '🌾', city: 'Evinayong', stars: 6, wordsFound: 5, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 90 },
+      { name: 'Mercedes Nchama', avatar: '🌸', city: 'Alicante', stars: 6, wordsFound: 5, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 85 },
+      { name: 'Hilario Mba', avatar: '🌳', city: 'Bata', stars: 5, wordsFound: 4, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 80 },
+      { name: 'Belén Mangue', avatar: '💫', city: 'Malabo', stars: 5, wordsFound: 4, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 75 },
+      { name: 'Saturnino Esono', avatar: '🐆', city: 'Añisok', stars: 4, wordsFound: 3, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 70 }
     ];
 
     const merged = existingUsers.map(u => {
@@ -2261,8 +2296,46 @@ class ApalabraApp {
 
   renderRankingData() {
     let sorted = [...this.cachedRankingUsers];
-    // Clasificación única unificada: ordenada por estrellas/puntos, y en caso de empate por palabras y niveles
-    sorted.sort((a, b) => (b.stars || 0) - (a.stars || 0) || (b.wordsFound || 0) - (a.wordsFound || 0) || (b.levelsCompleted || 0) - (a.levelsCompleted || 0));
+
+    const getProverbsCount = (u) => {
+      if (!u) return 0;
+      if (Array.isArray(u.proverbsSolved)) return u.proverbsSolved.length;
+      if (typeof u.proverbsSolved === 'number') return u.proverbsSolved;
+      return 0;
+    };
+
+    const getScoreBadge = (u) => {
+      if (!u) return '0 ⭐';
+      if (this.currentRankingGame === 'apalabrage') {
+        return `${u.levelsCompleted || 0} 🏆 (${u.wordsFound || 0} 🔤)`;
+      } else if (this.currentRankingGame === 'hangman') {
+        const pc = getProverbsCount(u);
+        return `${pc} 🪢 ${pc === 1 ? 'refrán' : 'refranes'}`;
+      } else {
+        return `${u.stars || 0} ⭐`;
+      }
+    };
+
+    // Ordenar según el juego activo
+    if (this.currentRankingGame === 'apalabrage') {
+      sorted.sort((a, b) => 
+        (b.levelsCompleted || 0) - (a.levelsCompleted || 0) || 
+        (b.wordsFound || 0) - (a.wordsFound || 0) || 
+        (b.stars || 0) - (a.stars || 0)
+      );
+    } else if (this.currentRankingGame === 'hangman') {
+      sorted.sort((a, b) => 
+        getProverbsCount(b) - getProverbsCount(a) || 
+        (b.stars || 0) - (a.stars || 0)
+      );
+    } else {
+      // Global
+      sorted.sort((a, b) => 
+        (b.stars || 0) - (a.stars || 0) || 
+        (b.wordsFound || 0) - (a.wordsFound || 0) || 
+        (b.levelsCompleted || 0) - (a.levelsCompleted || 0)
+      );
+    }
 
     // 1. Renderizar Pantalla 1: Salón de Honor (Top 3)
     if (this.dom.rankingPodium) {
@@ -2273,7 +2346,7 @@ class ApalabraApp {
 
       const makePodiumStep = (user, place, cssClass, medalEmoji, crown = '') => {
         if (!user) return null;
-        const scoreVal = `${user.stars || 0} ⭐`;
+        const scoreVal = getScoreBadge(user);
         const avatarHtml = (user.avatar && (user.avatar.startsWith('data:') || user.avatar.startsWith('http')))
           ? `<img src="${user.avatar}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" />`
           : user.avatar || '👤';
@@ -2321,7 +2394,7 @@ class ApalabraApp {
         const isCurrentUser = u.id === profileManager.userId;
         const medalText = pos === 1 ? '🥇' : pos === 2 ? '🥈' : pos === 3 ? '🥉' : `#${pos}`;
         const medalClass = pos <= 3 ? 'top-medal' : '';
-        const scoreVal = `${u.stars || 0} ⭐`;
+        const scoreVal = getScoreBadge(u);
         const avatarHtml = (u.avatar && (u.avatar.startsWith('data:') || u.avatar.startsWith('http')))
           ? `<img src="${u.avatar}" alt="Avatar" />`
           : u.avatar || '👤';
@@ -2349,7 +2422,7 @@ class ApalabraApp {
       const myIndex = sorted.findIndex(u => u.id === profileManager.userId);
       const myRank = myIndex >= 0 ? myIndex + 1 : sorted.length;
       const myProfile = profileManager.profile;
-      const myScore = `${myProfile.stars || 0} ⭐`;
+      const myScore = getScoreBadge(myProfile);
       const myAvatarHtml = (myProfile.avatar && (myProfile.avatar.startsWith('data:') || myProfile.avatar.startsWith('http')))
         ? `<img src="${myProfile.avatar}" alt="Avatar" />`
         : myProfile.avatar || '👤';

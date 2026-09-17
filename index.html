@@ -520,6 +520,13 @@
             <button class="icon-btn-close" id="btn-close-ranking" aria-label="Cerrar">✕</button>
           </div>
 
+          <!-- Selector de Juego: Global, ApalabraGE o El Ahorcado -->
+          <div class="ranking-tabs-bar" id="ranking-game-tabs" style="margin-bottom: 10px;">
+            <button class="ranking-tab active" data-game="global">👑 Global</button>
+            <button class="ranking-tab" data-game="apalabrage">🔤 ApalabraGE</button>
+            <button class="ranking-tab" data-game="hangman">🪢 El Ahorcado</button>
+          </div>
+
           <!-- Selector de Pantalla: 👑 Salón de Honor vs 📊 Tabla Top 50 -->
           <div class="ranking-screen-switcher">
             <button class="ranking-screen-btn active" id="btn-screen-podium" data-screen="podium">
@@ -628,6 +635,11 @@
               <span class="pp-stat-icon">🔤</span>
               <span class="pp-stat-val" id="pp-words-val">0</span>
               <span class="pp-stat-label">Palabras</span>
+            </div>
+            <div class="pp-stat-card">
+              <span class="pp-stat-icon">🪢</span>
+              <span class="pp-stat-val" id="pp-proverbs-val">0</span>
+              <span class="pp-stat-label">Refranes</span>
             </div>
             <div class="pp-stat-card">
               <span class="pp-stat-icon">⚡</span>

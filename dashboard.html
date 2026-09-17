@@ -654,14 +654,30 @@
                 </div>
               </div>
 
-              <!-- Conmutador de Modalidades idéntico a la app -->
-              <div class="ranking-mode-switcher-dashboard">
-                <button class="btn-ranking-mode active" id="btn-dash-rank-podium" data-mode="podium">
-                  <span class="btn-icon">👑</span> Salón de Honor (Podio)
-                </button>
-                <button class="btn-ranking-mode" id="btn-dash-rank-table" data-mode="table">
-                  <span class="btn-icon">📊</span> Tabla Top 50
-                </button>
+              <!-- Conmutadores de Juegos y Modalidades -->
+              <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                <!-- Selector de Juego: Global, ApalabraGE o El Ahorcado -->
+                <div class="ranking-game-switcher-dashboard" id="dash-ranking-game-switcher">
+                  <button class="btn-ranking-game active" data-game="global">
+                    <span>👑</span> Global
+                  </button>
+                  <button class="btn-ranking-game" data-game="apalabrage">
+                    <span>🔤</span> ApalabraGE
+                  </button>
+                  <button class="btn-ranking-game" data-game="hangman">
+                    <span>🪢</span> El Ahorcado
+                  </button>
+                </div>
+
+                <!-- Conmutador de Modalidades: Podio vs Tabla Top 50 -->
+                <div class="ranking-mode-switcher-dashboard">
+                  <button class="btn-ranking-mode active" id="btn-dash-rank-podium" data-mode="podium">
+                    <span class="btn-icon">👑</span> Podio
+                  </button>
+                  <button class="btn-ranking-mode" id="btn-dash-rank-table" data-mode="table">
+                    <span class="btn-icon">📊</span> Top 50
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -672,7 +688,7 @@
             <div class="card-panel dash-podium-card" style="background: radial-gradient(circle at 50% 20%, #152749 0%, #0c1830 100%); border: 1px solid rgba(245, 158, 11, 0.25); text-align: center; padding: 28px 20px 24px;">
               <div style="margin-bottom: 24px;">
                 <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: #f59e0b; font-weight: 800;">CÚSPIDE DE LA SABIDURÍA GUINEANA</span>
-                <h3 style="font-size: 1.5rem; margin: 4px 0 0; color: #ffffff; font-weight: 900;">👑 Los Tres Grandes Sabios Culturales</h3>
+                <h3 style="font-size: 1.5rem; margin: 4px 0 0; color: #ffffff; font-weight: 900;" id="dash-podium-title">👑 Los Tres Grandes Sabios Culturales</h3>
               </div>
 
               <div class="dash-podium-container" id="dash-podium-container">
@@ -718,6 +734,7 @@
                       <th>Estrellas ⭐</th>
                       <th>Niveles Superados</th>
                       <th>Palabras Encontradas</th>
+                      <th>Refranes Descifrados 🪢</th>
                       <th>Récord Velocidad ⚡</th>
                       <th>Racha 🔥</th>
                       <th style="width: 90px; text-align: center;">Perfil</th>
@@ -900,27 +917,32 @@
         <span style="background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.4); padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 800; color: #fbbf24;" id="dash-pp-rank">Posición #1</span>
       </div>
 
-      <!-- Grid de 4 Estadísticas -->
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 22px;">
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
-          <div style="font-size: 1.4rem;">⭐</div>
-          <div style="font-size: 1.25rem; font-weight: 800; color: #fbbf24; margin-top: 2px;" id="dash-pp-stars">98</div>
-          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Estrellas Ganadas</div>
+      <!-- Grid de Estadísticas con Refranes -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); gap: 8px; margin-bottom: 22px;">
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px;">
+          <div style="font-size: 1.3rem;">⭐</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: #fbbf24; margin-top: 2px;" id="dash-pp-stars">98</div>
+          <div style="font-size: 0.70rem; color: #94a3b8; text-transform: uppercase;">Estrellas</div>
         </div>
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
-          <div style="font-size: 1.4rem;">🏆</div>
-          <div style="font-size: 1.25rem; font-weight: 800; color: #38bdf8; margin-top: 2px;" id="dash-pp-levels">25</div>
-          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Niveles Superados</div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px;">
+          <div style="font-size: 1.3rem;">🏆</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: #38bdf8; margin-top: 2px;" id="dash-pp-levels">25</div>
+          <div style="font-size: 0.70rem; color: #94a3b8; text-transform: uppercase;">Niveles</div>
         </div>
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
-          <div style="font-size: 1.4rem;">🔤</div>
-          <div style="font-size: 1.25rem; font-weight: 800; color: #4ade80; margin-top: 2px;" id="dash-pp-words">85</div>
-          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Palabras Descubiertas</div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px;">
+          <div style="font-size: 1.3rem;">🔤</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: #4ade80; margin-top: 2px;" id="dash-pp-words">85</div>
+          <div style="font-size: 0.70rem; color: #94a3b8; text-transform: uppercase;">Palabras</div>
         </div>
-        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
-          <div style="font-size: 1.4rem;">⚡</div>
-          <div style="font-size: 1.25rem; font-weight: 800; color: #c084fc; margin-top: 2px;" id="dash-pp-speed">1200 pts</div>
-          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Récord Velocidad</div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px;">
+          <div style="font-size: 1.3rem;">🪢</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: #f97316; margin-top: 2px;" id="dash-pp-proverbs">30</div>
+          <div style="font-size: 0.70rem; color: #94a3b8; text-transform: uppercase;">Refranes</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px;">
+          <div style="font-size: 1.3rem;">⚡</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: #c084fc; margin-top: 2px;" id="dash-pp-speed">1200 pts</div>
+          <div style="font-size: 0.70rem; color: #94a3b8; text-transform: uppercase;">Velocidad</div>
         </div>
       </div>
 

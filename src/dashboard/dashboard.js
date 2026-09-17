@@ -69,7 +69,8 @@ class DashboardApp {
       importerSearchQuery: '',
       isFirestoreConnected: false,
       rankingSearchQuery: '',
-      rankingMode: 'podium'
+      rankingMode: 'podium',
+      rankingGameFilter: 'global'
     };
 
     this.dom = {};
@@ -195,11 +196,13 @@ class DashboardApp {
       inputTrophyTarget: document.getElementById('input-trophy-target'),
 
       // Módulo de Ranking & Podio
+      dashRankingGameBtns: document.querySelectorAll('#dash-ranking-game-switcher .btn-ranking-game'),
       btnDashRankPodium: document.getElementById('btn-dash-rank-podium'),
       btnDashRankTable: document.getElementById('btn-dash-rank-table'),
       dashRankingViewPodium: document.getElementById('dash-ranking-view-podium'),
       dashRankingViewTable: document.getElementById('dash-ranking-view-table'),
       dashPodiumContainer: document.getElementById('dash-podium-container'),
+      dashPodiumTitle: document.getElementById('dash-podium-title'),
       dashTopSabiosGrid: document.getElementById('dash-top-sabios-grid'),
       tbodyDashRanking: document.getElementById('tbody-dash-ranking'),
       filterDashRankingSearch: document.getElementById('filter-dash-ranking-search'),
@@ -215,6 +218,7 @@ class DashboardApp {
       dashPpStars: document.getElementById('dash-pp-stars'),
       dashPpLevels: document.getElementById('dash-pp-levels'),
       dashPpWords: document.getElementById('dash-pp-words'),
+      dashPpProverbs: document.getElementById('dash-pp-proverbs'),
       dashPpSpeed: document.getElementById('dash-pp-speed'),
 
       toast: document.getElementById('toast-notify')
@@ -398,6 +402,16 @@ class DashboardApp {
       this.dom.formSponsorshipSettings.addEventListener('submit', (e) => {
         e.preventDefault();
         this.saveSponsorshipSettings(true);
+      });
+    }
+
+    // Conmutador de Juegos en Ranking (Global, ApalabraGE, El Ahorcado)
+    if (this.dom.dashRankingGameBtns) {
+      this.dom.dashRankingGameBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const game = e.currentTarget.dataset.game || 'global';
+          this.switchDashboardRankingGame(game);
+        });
       });
     }
 
@@ -974,58 +988,77 @@ class DashboardApp {
 
   /* ================= MÓDULO DE RANKING Y SALÓN DE HONOR ================= */
 
+  switchDashboardRankingGame(game = 'global') {
+    this.state.rankingGameFilter = game;
+    if (this.dom.dashRankingGameBtns) {
+      this.dom.dashRankingGameBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.game === game);
+      });
+    }
+    if (this.dom.dashPodiumTitle) {
+      if (game === 'apalabrage') {
+        this.dom.dashPodiumTitle.textContent = '🔤 Sabios de ApalabraGE (Niveles y Palabras)';
+      } else if (game === 'hangman') {
+        this.dom.dashPodiumTitle.textContent = '🪢 Maestros de El Ahorcado (Refranes Descifrados)';
+      } else {
+        this.dom.dashPodiumTitle.textContent = '👑 Los Tres Grandes Sabios Culturales';
+      }
+    }
+    this.renderDashboardRanking();
+  }
+
   getEnrichedRankingUsers() {
     const guineanRoster = [
-      { name: 'Leandro Mbomio', avatar: '🗿', city: 'Malabo', stars: 98, wordsFound: 85, levelsCompleted: 25, timeAttackHighScore: 1200, title: 'Gran Escultor & Sabio Nacional' },
-      { name: 'Martiniano Ele', avatar: '✍️', city: 'Bata', stars: 94, wordsFound: 80, levelsCompleted: 24, timeAttackHighScore: 1150, title: 'Cronista Mayor de Río Muni' },
-      { name: 'Leoncio Evita', avatar: '📖', city: 'Udubuamlange', stars: 90, wordsFound: 76, levelsCompleted: 23, timeAttackHighScore: 1100, title: 'Pionero de la Novela Guineana' },
-      { name: 'Nchama Mangue', avatar: '👑', city: 'Malabo', stars: 58, wordsFound: 52, levelsCompleted: 18, timeAttackHighScore: 920, title: 'Académica de Honor' },
-      { name: 'Mba Ondo', avatar: '🐆', city: 'Bata', stars: 54, wordsFound: 48, levelsCompleted: 16, timeAttackHighScore: 870, title: 'Guardián del Bosque Fang' },
-      { name: 'Mari Paz Abaha', avatar: '🌺', city: 'Ebebiyín', stars: 50, wordsFound: 45, levelsCompleted: 15, timeAttackHighScore: 810, title: 'Maestra de Tradiciones' },
-      { name: 'Cándido Esono', avatar: '🛶', city: 'Luba', stars: 47, wordsFound: 41, levelsCompleted: 14, timeAttackHighScore: 760, title: 'Navegante de la Bahía' },
-      { name: 'Esperanza Bolekia', avatar: '🌋', city: 'Mongomo', stars: 44, wordsFound: 39, levelsCompleted: 13, timeAttackHighScore: 710, title: 'Erudita Bubi & Fang' },
-      { name: 'Juanita Mayé', avatar: '🌳', city: 'Madrid', stars: 40, wordsFound: 35, levelsCompleted: 12, timeAttackHighScore: 650, title: 'Embajadora Lingüística' },
-      { name: 'Donato Ndongo', avatar: '📚', city: 'Bata', stars: 39, wordsFound: 34, levelsCompleted: 12, timeAttackHighScore: 630, title: 'Maestro de las Letras' },
-      { name: 'Cristina Mikue', avatar: '🌸', city: 'Barcelona', stars: 37, wordsFound: 33, levelsCompleted: 11, timeAttackHighScore: 600, title: 'Narradora del Mvet' },
-      { name: 'Joaquín Mbomio', avatar: '🌊', city: 'Annobón', stars: 36, wordsFound: 31, levelsCompleted: 11, timeAttackHighScore: 580, title: 'Voz del Fa d’Ambô' },
-      { name: 'Regina Nse', avatar: '🌿', city: 'Evinayong', stars: 35, wordsFound: 30, levelsCompleted: 10, timeAttackHighScore: 560, title: 'Sabia de Plantas Medicinales' },
-      { name: 'Silverio Ncogo', avatar: '🦁', city: 'Valencia', stars: 33, wordsFound: 29, levelsCompleted: 10, timeAttackHighScore: 540, title: 'Defensor de la Lengua' },
-      { name: 'Teresa Bindang', avatar: '🍲', city: 'Riaba', stars: 32, wordsFound: 28, levelsCompleted: 9, timeAttackHighScore: 520, title: 'Cocinera del Pepesup Real' },
-      { name: 'Diosdado Mocache', avatar: '🦅', city: 'Libreville', stars: 31, wordsFound: 27, levelsCompleted: 9, timeAttackHighScore: 500, title: 'Explorador Ecuatoguineano' },
-      { name: 'Inmaculada Obono', avatar: '💫', city: 'Malabo', stars: 30, wordsFound: 26, levelsCompleted: 9, timeAttackHighScore: 480, title: 'Líder Juvenil de Palabras' },
-      { name: 'Anacleto Bokesa', avatar: '🎯', city: 'Bata', stars: 29, wordsFound: 25, levelsCompleted: 8, timeAttackHighScore: 460, title: 'Tirador de Enigmas' },
-      { name: 'Fátima Nzang', avatar: '✨', city: 'Zaragoza', stars: 28, wordsFound: 24, levelsCompleted: 8, timeAttackHighScore: 440, title: 'Culturista del Léxico' },
-      { name: 'Leandro Edú', avatar: '🛡️', city: 'Añisok', stars: 27, wordsFound: 23, levelsCompleted: 8, timeAttackHighScore: 430, title: 'Guardián del Mvet' },
-      { name: 'Rosalía Avomo', avatar: '🌟', city: 'Douala', stars: 26, wordsFound: 22, levelsCompleted: 7, timeAttackHighScore: 410, title: 'Poetisa de Kie-Ntem' },
-      { name: 'Bonifacio Obama', avatar: '🏆', city: 'Nsork', stars: 25, wordsFound: 21, levelsCompleted: 7, timeAttackHighScore: 390, title: 'Campeón de Sopa de Letras' },
-      { name: 'Clara Mecheba', avatar: '🍃', city: 'Malabo', stars: 24, wordsFound: 20, levelsCompleted: 7, timeAttackHighScore: 380, title: 'Descubridora de Topónimos' },
-      { name: 'Marcos Ela', avatar: '🔥', city: 'Bata', stars: 23, wordsFound: 19, levelsCompleted: 6, timeAttackHighScore: 360, title: 'Palabrero Ágil' },
-      { name: 'Beatriz Mitogo', avatar: '🌺', city: 'Londres', stars: 22, wordsFound: 18, levelsCompleted: 6, timeAttackHighScore: 350, title: 'Coleccionista de Pistas' },
-      { name: 'Secundino Ntutumu', avatar: '🌾', city: 'Mikomeseng', stars: 21, wordsFound: 18, levelsCompleted: 6, timeAttackHighScore: 330, title: 'Erudito del Cacao' },
-      { name: 'Dolores Eyenga', avatar: '🌴', city: 'Sevilla', stars: 20, wordsFound: 17, levelsCompleted: 5, timeAttackHighScore: 320, title: 'Raíces Guineanas' },
-      { name: 'Plácido Miko', avatar: '☀️', city: 'Malabo', stars: 19, wordsFound: 16, levelsCompleted: 5, timeAttackHighScore: 300, title: 'Analista de Leyendas' },
-      { name: 'Esther Asue', avatar: '🦋', city: 'Cogo', stars: 19, wordsFound: 16, levelsCompleted: 5, timeAttackHighScore: 290, title: 'Descifradora de Modismos' },
-      { name: 'Genaro Ndong', avatar: '🏹', city: 'Bata', stars: 18, wordsFound: 15, levelsCompleted: 5, timeAttackHighScore: 280, title: 'Cazador de Vocablos' },
-      { name: 'Concepción Bilogo', avatar: '🌼', city: 'París', stars: 17, wordsFound: 14, levelsCompleted: 4, timeAttackHighScore: 270, title: 'Amante de la AEGLE' },
-      { name: 'Faustino Nguema', avatar: '🌍', city: 'Mbini', stars: 16, wordsFound: 14, levelsCompleted: 4, timeAttackHighScore: 250, title: 'Geógrafo del Benito' },
-      { name: 'Milagrosa Okomo', avatar: '💐', city: 'Malabo', stars: 16, wordsFound: 13, levelsCompleted: 4, timeAttackHighScore: 240, title: 'Entusiasta Cultural' },
-      { name: 'Eulogio Abeso', avatar: '⚓', city: 'Kogo', stars: 15, wordsFound: 13, levelsCompleted: 4, timeAttackHighScore: 230, title: 'Patrón del Estuario' },
-      { name: 'Verónica Angue', avatar: '🌙', city: 'Bilbao', stars: 14, wordsFound: 12, levelsCompleted: 3, timeAttackHighScore: 220, title: 'Buscadora Nocturna' },
-      { name: 'Felipe Ondo', avatar: '🌲', city: 'Acurenam', stars: 14, wordsFound: 12, levelsCompleted: 3, timeAttackHighScore: 210, title: 'Botánico de Monte Alén' },
-      { name: 'Gisela Mokata', avatar: '🌻', city: 'Malabo', stars: 13, wordsFound: 11, levelsCompleted: 3, timeAttackHighScore: 200, title: 'Lectora de Bioko' },
-      { name: 'Santiago Bee', avatar: '⛵', city: 'Bata', stars: 12, wordsFound: 10, levelsCompleted: 3, timeAttackHighScore: 190, title: 'Marinero de Utonde' },
-      { name: 'Lidia Mbasogo', avatar: '🕊️', city: 'Washington D.C.', stars: 12, wordsFound: 10, levelsCompleted: 3, timeAttackHighScore: 180, title: 'Voz Transatlántica' },
-      { name: 'Armando Nguema', avatar: '🧭', city: 'Niefang', stars: 11, wordsFound: 9, levelsCompleted: 2, timeAttackHighScore: 170, title: 'Pionero de Niefang' },
-      { name: 'Purificación Moto', avatar: '🌺', city: 'Malabo', stars: 10, wordsFound: 9, levelsCompleted: 2, timeAttackHighScore: 160, title: 'Exploradora de Rebolla' },
-      { name: 'Lucas Obama', avatar: '⚡', city: 'Ebebiyín', stars: 10, wordsFound: 8, levelsCompleted: 2, timeAttackHighScore: 150, title: 'Relámpago de la Frontera' },
-      { name: 'Sonsoles Nfumu', avatar: '🌴', city: 'Madrid', stars: 9, wordsFound: 8, levelsCompleted: 2, timeAttackHighScore: 140, title: 'Palavera Viva' },
-      { name: 'Emilio Sima', avatar: '🛶', city: 'Luba', stars: 9, wordsFound: 7, levelsCompleted: 2, timeAttackHighScore: 130, title: 'Guía de Ureca' },
-      { name: 'Victoria Eyang', avatar: '⭐', city: 'Bata', stars: 8, wordsFound: 7, levelsCompleted: 1, timeAttackHighScore: 120, title: 'Nueva Estrella Cultural' },
-      { name: 'Celestino Ekua', avatar: '🛡️', city: 'Mongomo', stars: 8, wordsFound: 6, levelsCompleted: 1, timeAttackHighScore: 110, title: 'Custodio de Tradiciones' },
-      { name: 'Antonia Besari', avatar: '👑', city: 'Malabo', stars: 7, wordsFound: 6, levelsCompleted: 1, timeAttackHighScore: 100, title: 'Dama de Ela Nguema' },
-      { name: 'Prisciliano Ndong', avatar: '🌾', city: 'Evinayong', stars: 6, wordsFound: 5, levelsCompleted: 1, timeAttackHighScore: 90, title: 'Sabio de Centro Sur' },
-      { name: 'Mercedes Nchama', avatar: '🌸', city: 'Alicante', stars: 6, wordsFound: 5, levelsCompleted: 1, timeAttackHighScore: 85, title: 'Estudiante de Guinea' },
-      { name: 'Hilario Mba', avatar: '🌳', city: 'Bata', stars: 5, wordsFound: 4, levelsCompleted: 1, timeAttackHighScore: 80, title: 'Amigo de ApalabraGE' }
+      { name: 'Leandro Mbomio', avatar: '🗿', city: 'Malabo', stars: 98, wordsFound: 85, levelsCompleted: 25, proverbsSolved: 30, timeAttackHighScore: 1200, title: 'Gran Escultor & Sabio Nacional' },
+      { name: 'Martiniano Ele', avatar: '✍️', city: 'Bata', stars: 94, wordsFound: 80, levelsCompleted: 24, proverbsSolved: 28, timeAttackHighScore: 1150, title: 'Cronista Mayor de Río Muni' },
+      { name: 'Leoncio Evita', avatar: '📖', city: 'Udubuamlange', stars: 90, wordsFound: 76, levelsCompleted: 23, proverbsSolved: 27, timeAttackHighScore: 1100, title: 'Pionero de la Novela Guineana' },
+      { name: 'Nchama Mangue', avatar: '👑', city: 'Malabo', stars: 58, wordsFound: 52, levelsCompleted: 18, proverbsSolved: 24, timeAttackHighScore: 920, title: 'Académica de Honor' },
+      { name: 'Mba Ondo', avatar: '🐆', city: 'Bata', stars: 54, wordsFound: 48, levelsCompleted: 16, proverbsSolved: 22, timeAttackHighScore: 870, title: 'Guardián del Bosque Fang' },
+      { name: 'Mari Paz Abaha', avatar: '🌺', city: 'Ebebiyín', stars: 50, wordsFound: 45, levelsCompleted: 15, proverbsSolved: 20, timeAttackHighScore: 810, title: 'Maestra de Tradiciones' },
+      { name: 'Cándido Esono', avatar: '🛶', city: 'Luba', stars: 47, wordsFound: 41, levelsCompleted: 14, proverbsSolved: 19, timeAttackHighScore: 760, title: 'Navegante de la Bahía' },
+      { name: 'Esperanza Bolekia', avatar: '🌋', city: 'Mongomo', stars: 44, wordsFound: 39, levelsCompleted: 13, proverbsSolved: 18, timeAttackHighScore: 710, title: 'Erudita Bubi & Fang' },
+      { name: 'Juanita Mayé', avatar: '🌳', city: 'Madrid', stars: 40, wordsFound: 35, levelsCompleted: 12, proverbsSolved: 16, timeAttackHighScore: 650, title: 'Embajadora Lingüística' },
+      { name: 'Donato Ndongo', avatar: '📚', city: 'Bata', stars: 39, wordsFound: 34, levelsCompleted: 12, proverbsSolved: 15, timeAttackHighScore: 630, title: 'Maestro de las Letras' },
+      { name: 'Cristina Mikue', avatar: '🌸', city: 'Barcelona', stars: 37, wordsFound: 33, levelsCompleted: 11, proverbsSolved: 14, timeAttackHighScore: 600, title: 'Narradora del Mvet' },
+      { name: 'Joaquín Mbomio', avatar: '🌊', city: 'Annobón', stars: 36, wordsFound: 31, levelsCompleted: 11, proverbsSolved: 13, timeAttackHighScore: 580, title: 'Voz del Fa d’Ambô' },
+      { name: 'Regina Nse', avatar: '🌿', city: 'Evinayong', stars: 35, wordsFound: 30, levelsCompleted: 10, proverbsSolved: 12, timeAttackHighScore: 560, title: 'Sabia de Plantas Medicinales' },
+      { name: 'Silverio Ncogo', avatar: '🦁', city: 'Valencia', stars: 33, wordsFound: 29, levelsCompleted: 10, proverbsSolved: 11, timeAttackHighScore: 540, title: 'Defensor de la Lengua' },
+      { name: 'Teresa Bindang', avatar: '🍲', city: 'Riaba', stars: 32, wordsFound: 28, levelsCompleted: 9, proverbsSolved: 10, timeAttackHighScore: 520, title: 'Cocinera del Pepesup Real' },
+      { name: 'Diosdado Mocache', avatar: '🦅', city: 'Libreville', stars: 31, wordsFound: 27, levelsCompleted: 9, proverbsSolved: 10, timeAttackHighScore: 500, title: 'Explorador Ecuatoguineano' },
+      { name: 'Inmaculada Obono', avatar: '💫', city: 'Malabo', stars: 30, wordsFound: 26, levelsCompleted: 9, proverbsSolved: 9, timeAttackHighScore: 480, title: 'Líder Juvenil de Palabras' },
+      { name: 'Anacleto Bokesa', avatar: '🎯', city: 'Bata', stars: 29, wordsFound: 25, levelsCompleted: 8, proverbsSolved: 8, timeAttackHighScore: 460, title: 'Tirador de Enigmas' },
+      { name: 'Fátima Nzang', avatar: '✨', city: 'Zaragoza', stars: 28, wordsFound: 24, levelsCompleted: 8, proverbsSolved: 8, timeAttackHighScore: 440, title: 'Culturista del Léxico' },
+      { name: 'Leandro Edú', avatar: '🛡️', city: 'Añisok', stars: 27, wordsFound: 23, levelsCompleted: 8, proverbsSolved: 7, timeAttackHighScore: 430, title: 'Guardián del Mvet' },
+      { name: 'Rosalía Avomo', avatar: '🌟', city: 'Douala', stars: 26, wordsFound: 22, levelsCompleted: 7, proverbsSolved: 7, timeAttackHighScore: 410, title: 'Poetisa de Kie-Ntem' },
+      { name: 'Bonifacio Obama', avatar: '🏆', city: 'Nsork', stars: 25, wordsFound: 21, levelsCompleted: 7, proverbsSolved: 6, timeAttackHighScore: 390, title: 'Campeón de Sopa de Letras' },
+      { name: 'Clara Mecheba', avatar: '🍃', city: 'Malabo', stars: 24, wordsFound: 20, levelsCompleted: 7, proverbsSolved: 6, timeAttackHighScore: 380, title: 'Descubridora de Topónimos' },
+      { name: 'Marcos Ela', avatar: '🔥', city: 'Bata', stars: 23, wordsFound: 19, levelsCompleted: 6, proverbsSolved: 5, timeAttackHighScore: 360, title: 'Palabrero Ágil' },
+      { name: 'Beatriz Mitogo', avatar: '🌺', city: 'Londres', stars: 22, wordsFound: 18, levelsCompleted: 6, proverbsSolved: 5, timeAttackHighScore: 350, title: 'Coleccionista de Pistas' },
+      { name: 'Secundino Ntutumu', avatar: '🌾', city: 'Mikomeseng', stars: 21, wordsFound: 18, levelsCompleted: 6, proverbsSolved: 4, timeAttackHighScore: 330, title: 'Erudito del Cacao' },
+      { name: 'Dolores Eyenga', avatar: '🌴', city: 'Sevilla', stars: 20, wordsFound: 17, levelsCompleted: 5, proverbsSolved: 4, timeAttackHighScore: 320, title: 'Raíces Guineanas' },
+      { name: 'Plácido Miko', avatar: '☀️', city: 'Malabo', stars: 19, wordsFound: 16, levelsCompleted: 5, proverbsSolved: 3, timeAttackHighScore: 300, title: 'Analista de Leyendas' },
+      { name: 'Esther Asue', avatar: '🦋', city: 'Cogo', stars: 19, wordsFound: 16, levelsCompleted: 5, proverbsSolved: 3, timeAttackHighScore: 290, title: 'Descifradora de Modismos' },
+      { name: 'Genaro Ndong', avatar: '🏹', city: 'Bata', stars: 18, wordsFound: 15, levelsCompleted: 5, proverbsSolved: 3, timeAttackHighScore: 280, title: 'Cazador de Vocablos' },
+      { name: 'Concepción Bilogo', avatar: '🌼', city: 'París', stars: 17, wordsFound: 14, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 270, title: 'Amante de la AEGLE' },
+      { name: 'Faustino Nguema', avatar: '🌍', city: 'Mbini', stars: 16, wordsFound: 14, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 250, title: 'Geógrafo del Benito' },
+      { name: 'Milagrosa Okomo', avatar: '💐', city: 'Malabo', stars: 16, wordsFound: 13, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 240, title: 'Entusiasta Cultural' },
+      { name: 'Eulogio Abeso', avatar: '⚓', city: 'Kogo', stars: 15, wordsFound: 13, levelsCompleted: 4, proverbsSolved: 2, timeAttackHighScore: 230, title: 'Patrón del Estuario' },
+      { name: 'Verónica Angue', avatar: '🌙', city: 'Bilbao', stars: 14, wordsFound: 12, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 220, title: 'Buscadora Nocturna' },
+      { name: 'Felipe Ondo', avatar: '🌲', city: 'Acurenam', stars: 14, wordsFound: 12, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 210, title: 'Botánico de Monte Alén' },
+      { name: 'Gisela Mokata', avatar: '🌻', city: 'Malabo', stars: 13, wordsFound: 11, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 200, title: 'Lectora de Bioko' },
+      { name: 'Santiago Bee', avatar: '⛵', city: 'Bata', stars: 12, wordsFound: 10, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 190, title: 'Marinero de Utonde' },
+      { name: 'Lidia Mbasogo', avatar: '🕊️', city: 'Washington D.C.', stars: 12, wordsFound: 10, levelsCompleted: 3, proverbsSolved: 1, timeAttackHighScore: 180, title: 'Voz Transatlántica' },
+      { name: 'Armando Nguema', avatar: '🧭', city: 'Niefang', stars: 11, wordsFound: 9, levelsCompleted: 2, proverbsSolved: 1, timeAttackHighScore: 170, title: 'Pionero de Niefang' },
+      { name: 'Purificación Moto', avatar: '🌺', city: 'Malabo', stars: 10, wordsFound: 9, levelsCompleted: 2, proverbsSolved: 1, timeAttackHighScore: 160, title: 'Exploradora de Rebolla' },
+      { name: 'Lucas Obama', avatar: '⚡', city: 'Ebebiyín', stars: 10, wordsFound: 8, levelsCompleted: 2, proverbsSolved: 1, timeAttackHighScore: 150, title: 'Relámpago de la Frontera' },
+      { name: 'Sonsoles Nfumu', avatar: '🌴', city: 'Madrid', stars: 9, wordsFound: 8, levelsCompleted: 2, proverbsSolved: 0, timeAttackHighScore: 140, title: 'Palavera Viva' },
+      { name: 'Emilio Sima', avatar: '🛶', city: 'Luba', stars: 9, wordsFound: 7, levelsCompleted: 2, proverbsSolved: 0, timeAttackHighScore: 130, title: 'Guía de Ureca' },
+      { name: 'Victoria Eyang', avatar: '⭐', city: 'Bata', stars: 8, wordsFound: 7, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 120, title: 'Nueva Estrella Cultural' },
+      { name: 'Celestino Ekua', avatar: '🛡️', city: 'Mongomo', stars: 8, wordsFound: 6, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 110, title: 'Custodio de Tradiciones' },
+      { name: 'Antonia Besari', avatar: '👑', city: 'Malabo', stars: 7, wordsFound: 6, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 100, title: 'Dama de Ela Nguema' },
+      { name: 'Prisciliano Ndong', avatar: '🌾', city: 'Evinayong', stars: 6, wordsFound: 5, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 90, title: 'Sabio de Centro Sur' },
+      { name: 'Mercedes Nchama', avatar: '🌸', city: 'Alicante', stars: 6, wordsFound: 5, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 85, title: 'Estudiante de Guinea' },
+      { name: 'Hilario Mba', avatar: '🌳', city: 'Bata', stars: 5, wordsFound: 4, levelsCompleted: 1, proverbsSolved: 0, timeAttackHighScore: 80, title: 'Amigo de ApalabraGE' }
     ];
 
     const merged = (this.state.users || []).map(u => {
@@ -1039,7 +1072,32 @@ class DashboardApp {
       }
     });
 
-    merged.sort((a, b) => (b.stars || 0) - (a.stars || 0) || (b.wordsFound || 0) - (a.wordsFound || 0) || (b.levelsCompleted || 0) - (a.levelsCompleted || 0));
+    const getProverbsCount = (u) => {
+      if (!u) return 0;
+      if (Array.isArray(u.proverbsSolved)) return u.proverbsSolved.length;
+      if (typeof u.proverbsSolved === 'number') return u.proverbsSolved;
+      return 0;
+    };
+
+    if (this.state.rankingGameFilter === 'apalabrage') {
+      merged.sort((a, b) => 
+        (b.levelsCompleted || 0) - (a.levelsCompleted || 0) || 
+        (b.wordsFound || 0) - (a.wordsFound || 0) || 
+        (b.stars || 0) - (a.stars || 0)
+      );
+    } else if (this.state.rankingGameFilter === 'hangman') {
+      merged.sort((a, b) => 
+        getProverbsCount(b) - getProverbsCount(a) || 
+        (b.stars || 0) - (a.stars || 0)
+      );
+    } else {
+      merged.sort((a, b) => 
+        (b.stars || 0) - (a.stars || 0) || 
+        (b.wordsFound || 0) - (a.wordsFound || 0) || 
+        (b.levelsCompleted || 0) - (a.levelsCompleted || 0)
+      );
+    }
+
     return merged;
   }
 
@@ -1056,6 +1114,25 @@ class DashboardApp {
     if (!this.dom.dashPodiumContainer) return;
     const rankingUsers = list || this.getEnrichedRankingUsers();
     this.dom.dashPodiumContainer.innerHTML = '';
+
+    const getProverbsCount = (u) => {
+      if (!u) return 0;
+      if (Array.isArray(u.proverbsSolved)) return u.proverbsSolved.length;
+      if (typeof u.proverbsSolved === 'number') return u.proverbsSolved;
+      return 0;
+    };
+
+    const getScoreBadge = (user) => {
+      if (!user) return '⭐ 0 pts';
+      if (this.state.rankingGameFilter === 'apalabrage') {
+        return `🏆 ${user.levelsCompleted || 0} niv (${user.wordsFound || 0} 🔤)`;
+      } else if (this.state.rankingGameFilter === 'hangman') {
+        const pc = getProverbsCount(user);
+        return `🪢 ${pc} ${pc === 1 ? 'refrán' : 'refranes'}`;
+      } else {
+        return `⭐ ${user.stars || 0} pts`;
+      }
+    };
 
     const top1 = rankingUsers[0];
     const top2 = rankingUsers[1];
@@ -1078,7 +1155,7 @@ class DashboardApp {
         <div class="dash-podium-name">${user.name || 'Sabio'}</div>
         <div class="dash-podium-title">${user.title || 'Maestro de la Lengua'}</div>
         <div class="dash-podium-city">📍 ${user.city || 'Guinea Ecuatorial'}</div>
-        <div class="dash-podium-score">⭐ ${user.stars || 0} pts</div>
+        <div class="dash-podium-score">${getScoreBadge(user)}</div>
         <div class="dash-podium-base">
           <span>${medalEmoji} #${place}</span>
         </div>
@@ -1120,7 +1197,7 @@ class DashboardApp {
             <div class="dash-sabio-name">${u.name}</div>
             <div class="dash-sabio-title">${u.title || 'Explorador Cultural'}</div>
             <div class="dash-sabio-meta">
-              <span class="dash-sabio-stars">⭐ ${u.stars || 0}</span>
+              <span class="dash-sabio-stars">${getScoreBadge(u)}</span>
               <span>•</span>
               <span class="dash-sabio-city">📍 ${u.city || 'GE'}</span>
             </div>
@@ -1137,6 +1214,13 @@ class DashboardApp {
     this.dom.tbodyDashRanking.innerHTML = '';
     const rankingUsers = list || this.getEnrichedRankingUsers();
 
+    const getProverbsCount = (u) => {
+      if (!u) return 0;
+      if (Array.isArray(u.proverbsSolved)) return u.proverbsSolved.length;
+      if (typeof u.proverbsSolved === 'number') return u.proverbsSolved;
+      return 0;
+    };
+
     const query = (this.state.rankingSearchQuery || '').toLowerCase();
     const filtered = rankingUsers.filter(u => {
       if (!query) return true;
@@ -1150,7 +1234,7 @@ class DashboardApp {
     }
 
     if (filtered.length === 0) {
-      this.dom.tbodyDashRanking.innerHTML = `<tr><td colspan="10" style="text-align:center; padding:30px; color:#94a3b8;">No se encontraron sabios que coincidan con la búsqueda.</td></tr>`;
+      this.dom.tbodyDashRanking.innerHTML = `<tr><td colspan="11" style="text-align:center; padding:30px; color:#94a3b8;">No se encontraron sabios que coincidan con la búsqueda.</td></tr>`;
       return;
     }
 
@@ -1181,6 +1265,7 @@ class DashboardApp {
         <td><span style="color:#fbbf24; font-weight:800;">⭐ ${u.stars || 0}</span></td>
         <td>${u.levelsCompleted || 0}</td>
         <td>${u.wordsFound || 0}</td>
+        <td><span style="color:#f97316; font-weight:700;">🪢 ${getProverbsCount(u)}</span></td>
         <td style="color:#c084fc; font-weight:700;">⚡ ${speedStr}</td>
         <td>🔥 ${u.streakDays || 1} días</td>
         <td style="text-align: center;">
@@ -1201,6 +1286,13 @@ class DashboardApp {
 
   openPlayerProfileModal(player, rank = 1) {
     if (!player || !this.dom.modalDashPlayerProfile) return;
+    const getProverbsCount = (u) => {
+      if (!u) return 0;
+      if (Array.isArray(u.proverbsSolved)) return u.proverbsSolved.length;
+      if (typeof u.proverbsSolved === 'number') return u.proverbsSolved;
+      return 0;
+    };
+
     if (this.dom.dashPpName) this.dom.dashPpName.textContent = player.name || 'Sabio Cultural';
     if (this.dom.dashPpAvatar) {
       if (player.avatar && (player.avatar.startsWith('data:') || player.avatar.startsWith('http'))) {
@@ -1215,6 +1307,7 @@ class DashboardApp {
     if (this.dom.dashPpStars) this.dom.dashPpStars.textContent = `${player.stars || 0}`;
     if (this.dom.dashPpLevels) this.dom.dashPpLevels.textContent = `${player.levelsCompleted || 0}`;
     if (this.dom.dashPpWords) this.dom.dashPpWords.textContent = `${player.wordsFound || 0}`;
+    if (this.dom.dashPpProverbs) this.dom.dashPpProverbs.textContent = `${getProverbsCount(player)}`;
     if (this.dom.dashPpSpeed) {
       this.dom.dashPpSpeed.textContent = player.timeAttackHighScore ? `${player.timeAttackHighScore} pts` : (player.fastestLevelTime ? `${player.fastestLevelTime}s` : '1200 pts');
     }

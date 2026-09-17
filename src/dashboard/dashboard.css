@@ -1391,6 +1391,43 @@ body.dashboard-body {
 }
 
 /* ================= MÓDULO DE RANKING Y SALÓN DE HONOR ================= */
+.ranking-game-switcher-dashboard {
+  display: flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 6px;
+}
+
+.btn-ranking-game {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-ranking-game:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-ranking-game.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+}
+
 .ranking-mode-switcher-dashboard {
   display: flex;
   align-items: center;

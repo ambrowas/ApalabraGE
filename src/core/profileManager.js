@@ -46,6 +46,7 @@ export class ProfileManager {
       },
       completedLevels: [],
       discoveredWords: [],
+      proverbsSolved: [],
       achievements: [
         { id: 'first_word', title: 'Primera Palabra', desc: 'Encontraste tu primer término', icon: '🌱', unlocked: false },
         { id: 'master_gastro', title: 'Cocinero de Pepesup', desc: 'Descubre los sabores tradicionales', icon: '🍲', unlocked: false },
