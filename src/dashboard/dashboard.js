@@ -12,6 +12,7 @@ import {
   setDoc, 
   addDoc, 
   deleteDoc, 
+  writeBatch,
   onSnapshot 
 } from 'firebase/firestore';
 import defaultLevelsData from '../data/levels.json';
@@ -66,6 +67,7 @@ class DashboardApp {
       searchQuery: '',
       levelSortBy: 'date',
       levelSortOrder: 'desc',
+      selectedLevelIds: new Set(),
       bookTopics: bookTopicsData || [],
       importerCategoryFilter: 'all',
       importerSearchQuery: '',
@@ -120,6 +122,12 @@ class DashboardApp {
       thSortTitle: document.getElementById('th-sort-title'),
       arrowSortDate: document.getElementById('arrow-sort-date'),
       arrowSortTitle: document.getElementById('arrow-sort-title'),
+      checkAllLevels: document.getElementById('check-all-levels'),
+      bulkActionsBanner: document.getElementById('levels-bulk-actions'),
+      bulkSelectedCount: document.getElementById('bulk-selected-count'),
+      bulkBtnCount: document.getElementById('bulk-btn-count'),
+      btnBulkDeleteLevels: document.getElementById('btn-bulk-delete-levels'),
+      btnBulkClearSelection: document.getElementById('btn-bulk-clear-selection'),
       categoryChips: document.querySelectorAll('#level-category-chips .chip'),
       btnCreateLevel: document.getElementById('btn-create-level'),
       btnAddLevelTop: document.getElementById('btn-add-level-top'),
@@ -300,6 +308,36 @@ class DashboardApp {
           this.state.levelSortOrder = 'asc';
         }
         this.updateSortHeaderArrows();
+        this.renderLevelsTable();
+      });
+    }
+
+    // Selección y Borrado Masivo de Niveles
+    if (this.dom.checkAllLevels) {
+      this.dom.checkAllLevels.addEventListener('change', (e) => {
+        const isChecked = e.target.checked;
+        const visibleLevels = this.getCurrentVisibleLevels();
+        visibleLevels.forEach(lvl => {
+          const strId = String(lvl.id);
+          if (isChecked) {
+            this.state.selectedLevelIds.add(strId);
+          } else {
+            this.state.selectedLevelIds.delete(strId);
+          }
+        });
+        this.renderLevelsTable();
+      });
+    }
+
+    if (this.dom.btnBulkDeleteLevels) {
+      this.dom.btnBulkDeleteLevels.addEventListener('click', () => {
+        this.confirmBulkDeleteLevels();
+      });
+    }
+
+    if (this.dom.btnBulkClearSelection) {
+      this.dom.btnBulkClearSelection.addEventListener('click', () => {
+        this.state.selectedLevelIds.clear();
         this.renderLevelsTable();
       });
     }
@@ -766,11 +804,8 @@ class DashboardApp {
     }
   }
 
-  renderLevelsTable() {
-    if (!this.dom.tableLevelsBody) return;
-    this.dom.tableLevelsBody.innerHTML = '';
-
-    const filtered = this.state.levels.filter(lvl => {
+  getCurrentVisibleLevels() {
+    return this.state.levels.filter(lvl => {
       const matchCat = this.state.categoryFilter === 'all' || lvl.categoryId === this.state.categoryFilter;
       const search = this.state.searchQuery;
       const matchSearch = !search || 
@@ -779,6 +814,13 @@ class DashboardApp {
         ((lvl.words || []).some(w => (w.word || w).toLowerCase().includes(search)));
       return matchCat && matchSearch;
     });
+  }
+
+  renderLevelsTable() {
+    if (!this.dom.tableLevelsBody) return;
+    this.dom.tableLevelsBody.innerHTML = '';
+
+    const filtered = this.getCurrentVisibleLevels();
 
     // Función auxiliar para obtener timestamp determinista de creación
     const getLevelTimestamp = (lvl, idx = 0) => {
@@ -815,12 +857,16 @@ class DashboardApp {
     this.updateSortHeaderArrows();
 
     if (filtered.length === 0) {
-      this.dom.tableLevelsBody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding:32px; color:#94a3b8;">No se encontraron niveles que coincidan con la búsqueda.</td></tr>`;
+      this.dom.tableLevelsBody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding:32px; color:#94a3b8;">No se encontraron niveles que coincidan con la búsqueda.</td></tr>`;
+      this.updateBulkActionBar(filtered);
       return;
     }
 
     filtered.forEach((lvl, idx) => {
       const tr = document.createElement('tr');
+      const isSelected = this.state.selectedLevelIds.has(String(lvl.id));
+      if (isSelected) tr.classList.add('row-selected');
+
       const wordsList = (lvl.words || []).map(w => {
         const wordText = typeof w === 'string' ? w : w.word;
         return `<span class="word-badge">${wordText}</span>`;
@@ -836,6 +882,9 @@ class DashboardApp {
       }
 
       tr.innerHTML = `
+        <td style="text-align: center; width: 44px;">
+          <input type="checkbox" class="custom-checkbox check-level-item" data-id="${lvl.id}" ${isSelected ? 'checked' : ''} aria-label="Seleccionar nivel ${lvl.title}" />
+        </td>
         <td style="font-weight:700; color:#94a3b8; font-size:0.84rem;">
           <div>#${lvl.id || (idx + 1)}</div>
           ${dateBadge}
@@ -859,6 +908,22 @@ class DashboardApp {
         </td>
       `;
 
+      // Checkbox individual
+      const chkItem = tr.querySelector('.check-level-item');
+      if (chkItem) {
+        chkItem.addEventListener('change', (e) => {
+          const strId = String(lvl.id);
+          if (e.target.checked) {
+            this.state.selectedLevelIds.add(strId);
+            tr.classList.add('row-selected');
+          } else {
+            this.state.selectedLevelIds.delete(strId);
+            tr.classList.remove('row-selected');
+          }
+          this.updateBulkActionBar(filtered);
+        });
+      }
+
       // Eventos de creación derivada, edición y borrado
       const btnAddNext = tr.querySelector('.btn-add-next-level');
       const btnEdit = tr.querySelector('.btn-edit-level');
@@ -870,6 +935,41 @@ class DashboardApp {
 
       this.dom.tableLevelsBody.appendChild(tr);
     });
+
+    this.updateBulkActionBar(filtered);
+  }
+
+  updateBulkActionBar(visibleLevels = []) {
+    const totalSelected = this.state.selectedLevelIds.size;
+
+    if (this.dom.bulkActionsBanner) {
+      if (totalSelected > 0) {
+        this.dom.bulkActionsBanner.style.display = 'flex';
+        if (this.dom.bulkSelectedCount) this.dom.bulkSelectedCount.textContent = totalSelected;
+        if (this.dom.bulkBtnCount) this.dom.bulkBtnCount.textContent = totalSelected;
+      } else {
+        this.dom.bulkActionsBanner.style.display = 'none';
+      }
+    }
+
+    if (this.dom.checkAllLevels) {
+      if (!visibleLevels || visibleLevels.length === 0) {
+        this.dom.checkAllLevels.checked = false;
+        this.dom.checkAllLevels.indeterminate = false;
+      } else {
+        const visibleSelectedCount = visibleLevels.filter(l => this.state.selectedLevelIds.has(String(l.id))).length;
+        if (visibleSelectedCount === visibleLevels.length) {
+          this.dom.checkAllLevels.checked = true;
+          this.dom.checkAllLevels.indeterminate = false;
+        } else if (visibleSelectedCount > 0) {
+          this.dom.checkAllLevels.checked = false;
+          this.dom.checkAllLevels.indeterminate = true;
+        } else {
+          this.dom.checkAllLevels.checked = false;
+          this.dom.checkAllLevels.indeterminate = false;
+        }
+      }
+    }
   }
 
   updateSortHeaderArrows() {
@@ -1686,12 +1786,61 @@ class DashboardApp {
         console.warn('Error borrando de Firestore:', err);
       }
 
+      this.state.selectedLevelIds.delete(String(id));
       this.state.levels = this.state.levels.filter(l => String(l.id) !== String(id));
       this.saveLocalBackup();
       this.updateKPIs();
       this.renderLevelsTable();
       this.renderOverview();
     }
+  }
+
+  async confirmBulkDeleteLevels() {
+    const idsToDelete = Array.from(this.state.selectedLevelIds);
+    const count = idsToDelete.length;
+    if (count === 0) return;
+
+    const confirmMsg = count === 1
+      ? '¿Seguro que deseas eliminar el nivel/tema seleccionado permanentemente?'
+      : `¿Seguro que deseas eliminar los ${count} temas/niveles seleccionados permanentemente de la base de datos?`;
+
+    if (!confirm(confirmMsg)) return;
+
+    const btn = this.dom.btnBulkDeleteLevels;
+    const originalText = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = `⏳ Eliminando ${count}...`;
+    }
+
+    try {
+      const batchSize = 400;
+      for (let i = 0; i < idsToDelete.length; i += batchSize) {
+        const chunk = idsToDelete.slice(i, i + batchSize);
+        const batch = writeBatch(db);
+        chunk.forEach(id => {
+          batch.delete(doc(db, 'levels', String(id)));
+        });
+        await batch.commit();
+      }
+      this.showToast(`🗑️ Se han eliminado ${count} temas/niveles correctamente.`);
+    } catch (err) {
+      console.warn('Error eliminando niveles en lote de Firestore:', err);
+      this.showToast(`⚠️ Eliminados localmente (${count} niveles).`);
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+      }
+    }
+
+    const deleteSet = new Set(idsToDelete.map(String));
+    this.state.levels = this.state.levels.filter(lvl => !deleteSet.has(String(lvl.id)));
+    this.state.selectedLevelIds.clear();
+    this.saveLocalBackup();
+    this.updateKPIs();
+    this.renderLevelsTable();
+    this.renderOverview();
   }
 
   /* ================= MODAL CURIOSIDADES ================= */

@@ -265,10 +265,29 @@
               </button>
             </div>
 
+            <!-- Barra de Acciones Masivas -->
+            <div class="bulk-actions-banner" id="levels-bulk-actions" style="display: none;">
+              <div class="bulk-info">
+                <span class="bulk-badge-icon">☑️</span>
+                <span class="bulk-text"><strong id="bulk-selected-count">0</strong> niveles seleccionados</span>
+              </div>
+              <div class="bulk-actions-btns">
+                <button type="button" class="btn-bulk-delete" id="btn-bulk-delete-levels" title="Eliminar todos los niveles seleccionados">
+                  🗑️ Eliminar Seleccionados (<span id="bulk-btn-count">0</span>)
+                </button>
+                <button type="button" class="btn-bulk-clear" id="btn-bulk-clear-selection">
+                  Deseleccionar
+                </button>
+              </div>
+            </div>
+
             <div class="full-table-wrap">
               <table class="data-table main-table" id="table-levels-full">
                 <thead>
                   <tr>
+                    <th style="width: 44px; text-align: center;" class="th-checkbox">
+                      <input type="checkbox" id="check-all-levels" class="custom-checkbox" title="Seleccionar todos los niveles visibles" aria-label="Seleccionar todos los niveles" />
+                    </th>
                     <th style="width: 140px;" class="sortable-th" id="th-sort-date" title="Ordenar por Fecha de Creación (Más recientes / Más antiguos)">
                       ID / Fecha <span class="sort-arrow" id="arrow-sort-date">▼</span>
                     </th>
