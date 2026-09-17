@@ -65,6 +65,11 @@
           <span class="nav-label">Jugadores</span>
           <span class="nav-counter" id="nav-count-users">0</span>
         </button>
+        <button class="nav-item" data-tab="ranking">
+          <span class="nav-icon">👑</span>
+          <span class="nav-label">Ranking y Podio</span>
+          <span class="nav-counter" id="nav-count-ranking">50</span>
+        </button>
         <button class="nav-item" data-tab="sponsorship">
           <span class="nav-icon">🤝</span>
           <span class="nav-label">Patrocinio AEGLE</span>
@@ -154,6 +159,14 @@
               <div class="kpi-data">
                 <span class="kpi-num" id="stat-total-trophies">5</span>
                 <span class="kpi-title">Trofeos & Récords</span>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-card" style="cursor: pointer;" data-go-tab="ranking" title="Ver Salón de Honor y Ranking Oficial">
+              <div class="kpi-icon-wrap icon-gold">👑</div>
+              <div class="kpi-data">
+                <span class="kpi-num">Top 50</span>
+                <span class="kpi-title">Salón de Honor</span>
               </div>
             </div>
           </div>
@@ -624,6 +637,101 @@
           </div>
         </section>
 
+        <!-- ===== TAB 10: SALÓN DE HONOR Y RANKING GLOBAL ===== -->
+        <section class="tab-view" id="view-ranking">
+          <div class="card-panel" style="margin-bottom: 20px; background: linear-gradient(135deg, #0d1e3d 0%, #16284c 100%); border: 1px solid rgba(245, 158, 11, 0.35); box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(245, 158, 11, 0.4); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                  🏆
+                </div>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <h2 style="font-size: 1.35rem; margin: 0; color: #f8fafc; font-weight: 800;">Salón de Honor y Ranking Oficial</h2>
+                    <span class="badge-aegle-mini" style="background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.35); font-size: 0.70rem; font-weight: 700; padding: 2px 8px; border-radius: 6px;">OFICIAL AEGLE 🇬🇶</span>
+                  </div>
+                  <p style="margin: 4px 0 0; color: #94a3b8; font-size: 0.84rem;">Clasificación de sabiduría cultural y lingüística con las dos modalidades oficiales de ApalabraGE</p>
+                </div>
+              </div>
+
+              <!-- Conmutador de Modalidades idéntico a la app -->
+              <div class="ranking-mode-switcher-dashboard">
+                <button class="btn-ranking-mode active" id="btn-dash-rank-podium" data-mode="podium">
+                  <span class="btn-icon">👑</span> Salón de Honor (Podio)
+                </button>
+                <button class="btn-ranking-mode" id="btn-dash-rank-table" data-mode="table">
+                  <span class="btn-icon">📊</span> Tabla Top 50
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODALIDAD 1: PODIO / SALÓN DE HONOR -->
+          <div id="dash-ranking-view-podium" class="dash-ranking-pane active">
+            <!-- Gran Podio 3D -->
+            <div class="card-panel dash-podium-card" style="background: radial-gradient(circle at 50% 20%, #152749 0%, #0c1830 100%); border: 1px solid rgba(245, 158, 11, 0.25); text-align: center; padding: 28px 20px 24px;">
+              <div style="margin-bottom: 24px;">
+                <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: #f59e0b; font-weight: 800;">CÚSPIDE DE LA SABIDURÍA GUINEANA</span>
+                <h3 style="font-size: 1.5rem; margin: 4px 0 0; color: #ffffff; font-weight: 900;">👑 Los Tres Grandes Sabios Culturales</h3>
+              </div>
+
+              <div class="dash-podium-container" id="dash-podium-container">
+                <!-- Generado dinámicamente con pedestales Plata, Oro y Bronce -->
+              </div>
+            </div>
+
+            <!-- Grid de Sabios Destacados (Puestos 4 al 12) -->
+            <div class="card-panel" style="margin-top: 22px;">
+              <div class="card-panel-header" style="margin-bottom: 16px;">
+                <div>
+                  <h3 style="margin: 0; font-size: 1.15rem; color: #f8fafc;">🎖️ Sabios y Pioneros en la Élite Cultural</h3>
+                  <p style="margin: 3px 0 0; color: #94a3b8; font-size: 0.82rem;">Personalidades que completan el cuadro de honor de la lengua y cultura ecuatoguineana</p>
+                </div>
+              </div>
+              <div class="dash-top-sabios-grid" id="dash-top-sabios-grid">
+                <!-- Inyectado dinámicamente -->
+              </div>
+            </div>
+          </div>
+
+          <!-- MODALIDAD 2: TABLA TOP 50 -->
+          <div id="dash-ranking-view-table" class="dash-ranking-pane" style="display: none;">
+            <div class="card-panel">
+              <div class="table-toolbar">
+                <div class="search-input-wrap" style="flex: 1; max-width: 400px;">
+                  <span class="search-icon">🔍</span>
+                  <input type="text" id="filter-dash-ranking-search" placeholder="Buscar sabio por nombre, ciudad o título..." />
+                </div>
+                <div style="font-size: 0.88rem; color: #f59e0b; font-weight: 700; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); padding: 6px 14px; border-radius: 8px;" id="dash-ranking-count-label">
+                  🏆 Top 50 Sabios Clasificados
+                </div>
+              </div>
+
+              <div class="full-table-wrap">
+                <table class="data-table main-table" id="table-dash-ranking-full">
+                  <thead>
+                    <tr>
+                      <th style="width: 80px; text-align: center;">Puesto</th>
+                      <th>Sabio / Jugador</th>
+                      <th>Procedencia</th>
+                      <th>Rango Cultural</th>
+                      <th>Estrellas ⭐</th>
+                      <th>Niveles Superados</th>
+                      <th>Palabras Encontradas</th>
+                      <th>Récord Velocidad ⚡</th>
+                      <th>Racha 🔥</th>
+                      <th style="width: 90px; text-align: center;">Perfil</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody-dash-ranking">
+                    <!-- Inyectado dinámicamente -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
   </div>
@@ -769,6 +877,56 @@
           <button type="submit" class="btn-primary">💾 Guardar Trofeo en Firestore</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: PERFIL DE JUGADOR / SABIO ================= -->
+  <div class="modal-overlay" id="modal-dashboard-player-profile">
+    <div class="modal-card" style="max-width: 440px; text-align: center; padding: 26px 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <span style="font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; color: #f59e0b; text-transform: uppercase;" id="dash-pp-badge">PERFIL DE SABIO CULTURAL</span>
+        <button class="btn-close-modal" id="btn-close-dash-pp-modal">✕</button>
+      </div>
+
+      <div style="margin: 0 auto 14px; width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1e293b, #0f172a); border: 3px solid #f59e0b; box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); display: flex; align-items: center; justify-content: center; font-size: 2.8rem;" id="dash-pp-avatar">
+        🗿
+      </div>
+
+      <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0; color: #ffffff;" id="dash-pp-name">Leandro Mbomio</h3>
+      <div style="font-size: 0.88rem; color: #38bdf8; font-weight: 600; margin-top: 4px;" id="dash-pp-title">Gran Escultor & Sabio Nacional</div>
+      
+      <div style="display: flex; justify-content: center; gap: 8px; margin: 10px 0 20px;">
+        <span style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; color: #cbd5e1;" id="dash-pp-city">📍 Malabo</span>
+        <span style="background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.4); padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 800; color: #fbbf24;" id="dash-pp-rank">Posición #1</span>
+      </div>
+
+      <!-- Grid de 4 Estadísticas -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 22px;">
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
+          <div style="font-size: 1.4rem;">⭐</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #fbbf24; margin-top: 2px;" id="dash-pp-stars">98</div>
+          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Estrellas Ganadas</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
+          <div style="font-size: 1.4rem;">🏆</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #38bdf8; margin-top: 2px;" id="dash-pp-levels">25</div>
+          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Niveles Superados</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
+          <div style="font-size: 1.4rem;">🔤</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #4ade80; margin-top: 2px;" id="dash-pp-words">85</div>
+          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Palabras Descubiertas</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px;">
+          <div style="font-size: 1.4rem;">⚡</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: #c084fc; margin-top: 2px;" id="dash-pp-speed">1200 pts</div>
+          <div style="font-size: 0.72rem; color: #94a3b8; text-transform: uppercase;">Récord Velocidad</div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btn-close-dash-pp-btn" style="width: 100%; justify-content: center; padding: 12px;">
+        Volver al Ranking
+      </button>
     </div>
   </div>
 

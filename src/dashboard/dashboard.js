@@ -67,7 +67,9 @@ class DashboardApp {
       bookTopics: bookTopicsData || [],
       importerCategoryFilter: 'all',
       importerSearchQuery: '',
-      isFirestoreConnected: false
+      isFirestoreConnected: false,
+      rankingSearchQuery: '',
+      rankingMode: 'podium'
     };
 
     this.dom = {};
@@ -95,6 +97,7 @@ class DashboardApp {
       navCountTrophies: document.getElementById('nav-count-trophies'),
       navCountTrivias: document.getElementById('nav-count-trivias'),
       navCountUsers: document.getElementById('nav-count-users'),
+      navCountRanking: document.getElementById('nav-count-ranking'),
       navCountImporter: document.getElementById('nav-count-importer'),
 
       // KPIs Overview
@@ -190,6 +193,29 @@ class DashboardApp {
       inputTrophyDesc: document.getElementById('input-trophy-desc'),
       selectTrophyCriterion: document.getElementById('select-trophy-criterion'),
       inputTrophyTarget: document.getElementById('input-trophy-target'),
+
+      // Módulo de Ranking & Podio
+      btnDashRankPodium: document.getElementById('btn-dash-rank-podium'),
+      btnDashRankTable: document.getElementById('btn-dash-rank-table'),
+      dashRankingViewPodium: document.getElementById('dash-ranking-view-podium'),
+      dashRankingViewTable: document.getElementById('dash-ranking-view-table'),
+      dashPodiumContainer: document.getElementById('dash-podium-container'),
+      dashTopSabiosGrid: document.getElementById('dash-top-sabios-grid'),
+      tbodyDashRanking: document.getElementById('tbody-dash-ranking'),
+      filterDashRankingSearch: document.getElementById('filter-dash-ranking-search'),
+      dashRankingCountLabel: document.getElementById('dash-ranking-count-label'),
+      modalDashPlayerProfile: document.getElementById('modal-dashboard-player-profile'),
+      btnCloseDashPpModal: document.getElementById('btn-close-dash-pp-modal'),
+      btnCloseDashPpBtn: document.getElementById('btn-close-dash-pp-btn'),
+      dashPpName: document.getElementById('dash-pp-name'),
+      dashPpAvatar: document.getElementById('dash-pp-avatar'),
+      dashPpTitle: document.getElementById('dash-pp-title'),
+      dashPpCity: document.getElementById('dash-pp-city'),
+      dashPpRank: document.getElementById('dash-pp-rank'),
+      dashPpStars: document.getElementById('dash-pp-stars'),
+      dashPpLevels: document.getElementById('dash-pp-levels'),
+      dashPpWords: document.getElementById('dash-pp-words'),
+      dashPpSpeed: document.getElementById('dash-pp-speed'),
 
       toast: document.getElementById('toast-notify')
     };
@@ -374,6 +400,44 @@ class DashboardApp {
         this.saveSponsorshipSettings(true);
       });
     }
+
+    // Modalidades de Ranking (Podio vs Tabla Top 50)
+    if (this.dom.btnDashRankPodium && this.dom.btnDashRankTable) {
+      this.dom.btnDashRankPodium.addEventListener('click', () => {
+        this.dom.btnDashRankPodium.classList.add('active');
+        this.dom.btnDashRankTable.classList.remove('active');
+        if (this.dom.dashRankingViewPodium) this.dom.dashRankingViewPodium.style.display = 'block';
+        if (this.dom.dashRankingViewTable) this.dom.dashRankingViewTable.style.display = 'none';
+      });
+
+      this.dom.btnDashRankTable.addEventListener('click', () => {
+        this.dom.btnDashRankTable.classList.add('active');
+        this.dom.btnDashRankPodium.classList.remove('active');
+        if (this.dom.dashRankingViewPodium) this.dom.dashRankingViewPodium.style.display = 'none';
+        if (this.dom.dashRankingViewTable) this.dom.dashRankingViewTable.style.display = 'block';
+      });
+    }
+
+    // Buscador en Tiempo Real de Ranking
+    if (this.dom.filterDashRankingSearch) {
+      this.dom.filterDashRankingSearch.addEventListener('input', (e) => {
+        this.state.rankingSearchQuery = e.target.value.toLowerCase();
+        this.renderDashboardRankingTable();
+      });
+    }
+
+    // Cierre de Modal de Perfil de Sabio / Jugador
+    if (this.dom.btnCloseDashPpModal) {
+      this.dom.btnCloseDashPpModal.addEventListener('click', () => {
+        if (this.dom.modalDashPlayerProfile) this.dom.modalDashPlayerProfile.classList.remove('active');
+      });
+    }
+
+    if (this.dom.btnCloseDashPpBtn) {
+      this.dom.btnCloseDashPpBtn.addEventListener('click', () => {
+        if (this.dom.modalDashPlayerProfile) this.dom.modalDashPlayerProfile.classList.remove('active');
+      });
+    }
   }
 
   switchTab(tabKey) {
@@ -394,6 +458,7 @@ class DashboardApp {
       trophies: { title: "🏆 Trofeos, Logros y Tabla de Récords", sub: "Personaliza las medallas, los rangos de honor y el salón de la fama" },
       trivias: { title: "¿Sabías qué...? (Curiosidades)", sub: "Banco de píldoras culturales que se muestran a los jugadores" },
       users: { title: "Jugadores y Estadísticas", sub: "Perfiles sincronizados en Cloud Firestore y logros" },
+      ranking: { title: "👑 Salón de Honor y Ranking Global", sub: "Clasificación oficial de sabiduría en dos modalidades: Podio y Tabla Top 50" },
       backup: { title: "Base de Datos y Copias de Seguridad", sub: "Exporta respaldos JSON e inicializa colecciones" },
       sponsorship: { title: "🤝 Configuración de Patrocinio Institucional", sub: "Controla si se muestran o se ocultan los logotipos y menciones de la AEGLE en la app" },
       importer: { title: "📥 Importador Masivo — Libro Pasatiempos GE", sub: "Catálogo de 45 temas y más de 850 términos autóctonos listos para convertir en niveles" }
@@ -442,6 +507,7 @@ class DashboardApp {
     this.renderLeaderboard();
     this.renderTrivias();
     this.renderUsersTable();
+    this.renderDashboardRanking();
     this.renderImporter();
   }
 
@@ -904,6 +970,256 @@ class DashboardApp {
       `;
       this.dom.tableUsersBody.appendChild(tr);
     });
+  }
+
+  /* ================= MÓDULO DE RANKING Y SALÓN DE HONOR ================= */
+
+  getEnrichedRankingUsers() {
+    const guineanRoster = [
+      { name: 'Leandro Mbomio', avatar: '🗿', city: 'Malabo', stars: 98, wordsFound: 85, levelsCompleted: 25, timeAttackHighScore: 1200, title: 'Gran Escultor & Sabio Nacional' },
+      { name: 'Martiniano Ele', avatar: '✍️', city: 'Bata', stars: 94, wordsFound: 80, levelsCompleted: 24, timeAttackHighScore: 1150, title: 'Cronista Mayor de Río Muni' },
+      { name: 'Leoncio Evita', avatar: '📖', city: 'Udubuamlange', stars: 90, wordsFound: 76, levelsCompleted: 23, timeAttackHighScore: 1100, title: 'Pionero de la Novela Guineana' },
+      { name: 'Nchama Mangue', avatar: '👑', city: 'Malabo', stars: 58, wordsFound: 52, levelsCompleted: 18, timeAttackHighScore: 920, title: 'Académica de Honor' },
+      { name: 'Mba Ondo', avatar: '🐆', city: 'Bata', stars: 54, wordsFound: 48, levelsCompleted: 16, timeAttackHighScore: 870, title: 'Guardián del Bosque Fang' },
+      { name: 'Mari Paz Abaha', avatar: '🌺', city: 'Ebebiyín', stars: 50, wordsFound: 45, levelsCompleted: 15, timeAttackHighScore: 810, title: 'Maestra de Tradiciones' },
+      { name: 'Cándido Esono', avatar: '🛶', city: 'Luba', stars: 47, wordsFound: 41, levelsCompleted: 14, timeAttackHighScore: 760, title: 'Navegante de la Bahía' },
+      { name: 'Esperanza Bolekia', avatar: '🌋', city: 'Mongomo', stars: 44, wordsFound: 39, levelsCompleted: 13, timeAttackHighScore: 710, title: 'Erudita Bubi & Fang' },
+      { name: 'Juanita Mayé', avatar: '🌳', city: 'Madrid', stars: 40, wordsFound: 35, levelsCompleted: 12, timeAttackHighScore: 650, title: 'Embajadora Lingüística' },
+      { name: 'Donato Ndongo', avatar: '📚', city: 'Bata', stars: 39, wordsFound: 34, levelsCompleted: 12, timeAttackHighScore: 630, title: 'Maestro de las Letras' },
+      { name: 'Cristina Mikue', avatar: '🌸', city: 'Barcelona', stars: 37, wordsFound: 33, levelsCompleted: 11, timeAttackHighScore: 600, title: 'Narradora del Mvet' },
+      { name: 'Joaquín Mbomio', avatar: '🌊', city: 'Annobón', stars: 36, wordsFound: 31, levelsCompleted: 11, timeAttackHighScore: 580, title: 'Voz del Fa d’Ambô' },
+      { name: 'Regina Nse', avatar: '🌿', city: 'Evinayong', stars: 35, wordsFound: 30, levelsCompleted: 10, timeAttackHighScore: 560, title: 'Sabia de Plantas Medicinales' },
+      { name: 'Silverio Ncogo', avatar: '🦁', city: 'Valencia', stars: 33, wordsFound: 29, levelsCompleted: 10, timeAttackHighScore: 540, title: 'Defensor de la Lengua' },
+      { name: 'Teresa Bindang', avatar: '🍲', city: 'Riaba', stars: 32, wordsFound: 28, levelsCompleted: 9, timeAttackHighScore: 520, title: 'Cocinera del Pepesup Real' },
+      { name: 'Diosdado Mocache', avatar: '🦅', city: 'Libreville', stars: 31, wordsFound: 27, levelsCompleted: 9, timeAttackHighScore: 500, title: 'Explorador Ecuatoguineano' },
+      { name: 'Inmaculada Obono', avatar: '💫', city: 'Malabo', stars: 30, wordsFound: 26, levelsCompleted: 9, timeAttackHighScore: 480, title: 'Líder Juvenil de Palabras' },
+      { name: 'Anacleto Bokesa', avatar: '🎯', city: 'Bata', stars: 29, wordsFound: 25, levelsCompleted: 8, timeAttackHighScore: 460, title: 'Tirador de Enigmas' },
+      { name: 'Fátima Nzang', avatar: '✨', city: 'Zaragoza', stars: 28, wordsFound: 24, levelsCompleted: 8, timeAttackHighScore: 440, title: 'Culturista del Léxico' },
+      { name: 'Leandro Edú', avatar: '🛡️', city: 'Añisok', stars: 27, wordsFound: 23, levelsCompleted: 8, timeAttackHighScore: 430, title: 'Guardián del Mvet' },
+      { name: 'Rosalía Avomo', avatar: '🌟', city: 'Douala', stars: 26, wordsFound: 22, levelsCompleted: 7, timeAttackHighScore: 410, title: 'Poetisa de Kie-Ntem' },
+      { name: 'Bonifacio Obama', avatar: '🏆', city: 'Nsork', stars: 25, wordsFound: 21, levelsCompleted: 7, timeAttackHighScore: 390, title: 'Campeón de Sopa de Letras' },
+      { name: 'Clara Mecheba', avatar: '🍃', city: 'Malabo', stars: 24, wordsFound: 20, levelsCompleted: 7, timeAttackHighScore: 380, title: 'Descubridora de Topónimos' },
+      { name: 'Marcos Ela', avatar: '🔥', city: 'Bata', stars: 23, wordsFound: 19, levelsCompleted: 6, timeAttackHighScore: 360, title: 'Palabrero Ágil' },
+      { name: 'Beatriz Mitogo', avatar: '🌺', city: 'Londres', stars: 22, wordsFound: 18, levelsCompleted: 6, timeAttackHighScore: 350, title: 'Coleccionista de Pistas' },
+      { name: 'Secundino Ntutumu', avatar: '🌾', city: 'Mikomeseng', stars: 21, wordsFound: 18, levelsCompleted: 6, timeAttackHighScore: 330, title: 'Erudito del Cacao' },
+      { name: 'Dolores Eyenga', avatar: '🌴', city: 'Sevilla', stars: 20, wordsFound: 17, levelsCompleted: 5, timeAttackHighScore: 320, title: 'Raíces Guineanas' },
+      { name: 'Plácido Miko', avatar: '☀️', city: 'Malabo', stars: 19, wordsFound: 16, levelsCompleted: 5, timeAttackHighScore: 300, title: 'Analista de Leyendas' },
+      { name: 'Esther Asue', avatar: '🦋', city: 'Cogo', stars: 19, wordsFound: 16, levelsCompleted: 5, timeAttackHighScore: 290, title: 'Descifradora de Modismos' },
+      { name: 'Genaro Ndong', avatar: '🏹', city: 'Bata', stars: 18, wordsFound: 15, levelsCompleted: 5, timeAttackHighScore: 280, title: 'Cazador de Vocablos' },
+      { name: 'Concepción Bilogo', avatar: '🌼', city: 'París', stars: 17, wordsFound: 14, levelsCompleted: 4, timeAttackHighScore: 270, title: 'Amante de la AEGLE' },
+      { name: 'Faustino Nguema', avatar: '🌍', city: 'Mbini', stars: 16, wordsFound: 14, levelsCompleted: 4, timeAttackHighScore: 250, title: 'Geógrafo del Benito' },
+      { name: 'Milagrosa Okomo', avatar: '💐', city: 'Malabo', stars: 16, wordsFound: 13, levelsCompleted: 4, timeAttackHighScore: 240, title: 'Entusiasta Cultural' },
+      { name: 'Eulogio Abeso', avatar: '⚓', city: 'Kogo', stars: 15, wordsFound: 13, levelsCompleted: 4, timeAttackHighScore: 230, title: 'Patrón del Estuario' },
+      { name: 'Verónica Angue', avatar: '🌙', city: 'Bilbao', stars: 14, wordsFound: 12, levelsCompleted: 3, timeAttackHighScore: 220, title: 'Buscadora Nocturna' },
+      { name: 'Felipe Ondo', avatar: '🌲', city: 'Acurenam', stars: 14, wordsFound: 12, levelsCompleted: 3, timeAttackHighScore: 210, title: 'Botánico de Monte Alén' },
+      { name: 'Gisela Mokata', avatar: '🌻', city: 'Malabo', stars: 13, wordsFound: 11, levelsCompleted: 3, timeAttackHighScore: 200, title: 'Lectora de Bioko' },
+      { name: 'Santiago Bee', avatar: '⛵', city: 'Bata', stars: 12, wordsFound: 10, levelsCompleted: 3, timeAttackHighScore: 190, title: 'Marinero de Utonde' },
+      { name: 'Lidia Mbasogo', avatar: '🕊️', city: 'Washington D.C.', stars: 12, wordsFound: 10, levelsCompleted: 3, timeAttackHighScore: 180, title: 'Voz Transatlántica' },
+      { name: 'Armando Nguema', avatar: '🧭', city: 'Niefang', stars: 11, wordsFound: 9, levelsCompleted: 2, timeAttackHighScore: 170, title: 'Pionero de Niefang' },
+      { name: 'Purificación Moto', avatar: '🌺', city: 'Malabo', stars: 10, wordsFound: 9, levelsCompleted: 2, timeAttackHighScore: 160, title: 'Exploradora de Rebolla' },
+      { name: 'Lucas Obama', avatar: '⚡', city: 'Ebebiyín', stars: 10, wordsFound: 8, levelsCompleted: 2, timeAttackHighScore: 150, title: 'Relámpago de la Frontera' },
+      { name: 'Sonsoles Nfumu', avatar: '🌴', city: 'Madrid', stars: 9, wordsFound: 8, levelsCompleted: 2, timeAttackHighScore: 140, title: 'Palavera Viva' },
+      { name: 'Emilio Sima', avatar: '🛶', city: 'Luba', stars: 9, wordsFound: 7, levelsCompleted: 2, timeAttackHighScore: 130, title: 'Guía de Ureca' },
+      { name: 'Victoria Eyang', avatar: '⭐', city: 'Bata', stars: 8, wordsFound: 7, levelsCompleted: 1, timeAttackHighScore: 120, title: 'Nueva Estrella Cultural' },
+      { name: 'Celestino Ekua', avatar: '🛡️', city: 'Mongomo', stars: 8, wordsFound: 6, levelsCompleted: 1, timeAttackHighScore: 110, title: 'Custodio de Tradiciones' },
+      { name: 'Antonia Besari', avatar: '👑', city: 'Malabo', stars: 7, wordsFound: 6, levelsCompleted: 1, timeAttackHighScore: 100, title: 'Dama de Ela Nguema' },
+      { name: 'Prisciliano Ndong', avatar: '🌾', city: 'Evinayong', stars: 6, wordsFound: 5, levelsCompleted: 1, timeAttackHighScore: 90, title: 'Sabio de Centro Sur' },
+      { name: 'Mercedes Nchama', avatar: '🌸', city: 'Alicante', stars: 6, wordsFound: 5, levelsCompleted: 1, timeAttackHighScore: 85, title: 'Estudiante de Guinea' },
+      { name: 'Hilario Mba', avatar: '🌳', city: 'Bata', stars: 5, wordsFound: 4, levelsCompleted: 1, timeAttackHighScore: 80, title: 'Amigo de ApalabraGE' }
+    ];
+
+    const merged = (this.state.users || []).map(u => {
+      const match = guineanRoster.find(r => r.name === u.name);
+      return match ? { ...match, ...u } : u;
+    });
+
+    guineanRoster.forEach((player, i) => {
+      if (!merged.some(u => u.name === player.name)) {
+        merged.push({ id: `rank-${i + 1}`, ...player });
+      }
+    });
+
+    merged.sort((a, b) => (b.stars || 0) - (a.stars || 0) || (b.wordsFound || 0) - (a.wordsFound || 0) || (b.levelsCompleted || 0) - (a.levelsCompleted || 0));
+    return merged;
+  }
+
+  renderDashboardRanking() {
+    const list = this.getEnrichedRankingUsers();
+    if (this.dom.navCountRanking) {
+      this.dom.navCountRanking.textContent = Math.min(50, list.length);
+    }
+    this.renderDashboardPodium(list);
+    this.renderDashboardRankingTable(list);
+  }
+
+  renderDashboardPodium(list = null) {
+    if (!this.dom.dashPodiumContainer) return;
+    const rankingUsers = list || this.getEnrichedRankingUsers();
+    this.dom.dashPodiumContainer.innerHTML = '';
+
+    const top1 = rankingUsers[0];
+    const top2 = rankingUsers[1];
+    const top3 = rankingUsers[2];
+
+    const makePodiumStep = (user, place, cssClass, medalEmoji, crown = '') => {
+      if (!user) return null;
+      const avatarHtml = (user.avatar && (user.avatar.startsWith('data:') || user.avatar.startsWith('http')))
+        ? `<img src="${user.avatar}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" />`
+        : (user.avatar || '👤');
+
+      const step = document.createElement('div');
+      step.className = `dash-podium-step ${cssClass}`;
+      step.title = `Toca para ver el perfil de ${user.name}`;
+      step.innerHTML = `
+        <div class="dash-podium-avatar-wrap">
+          ${crown}
+          <div class="dash-podium-avatar">${avatarHtml}</div>
+        </div>
+        <div class="dash-podium-name">${user.name || 'Sabio'}</div>
+        <div class="dash-podium-title">${user.title || 'Maestro de la Lengua'}</div>
+        <div class="dash-podium-city">📍 ${user.city || 'Guinea Ecuatorial'}</div>
+        <div class="dash-podium-score">⭐ ${user.stars || 0} pts</div>
+        <div class="dash-podium-base">
+          <span>${medalEmoji} #${place}</span>
+        </div>
+      `;
+      step.addEventListener('click', () => this.openPlayerProfileModal(user, place));
+      return step;
+    };
+
+    if (top2) {
+      const step2 = makePodiumStep(top2, 2, 'silver', '🥈');
+      if (step2) this.dom.dashPodiumContainer.appendChild(step2);
+    }
+    if (top1) {
+      const step1 = makePodiumStep(top1, 1, 'gold', '🥇', '<span class="dash-podium-crown">👑</span>');
+      if (step1) this.dom.dashPodiumContainer.appendChild(step1);
+    }
+    if (top3) {
+      const step3 = makePodiumStep(top3, 3, 'bronze', '🥉');
+      if (step3) this.dom.dashPodiumContainer.appendChild(step3);
+    }
+
+    // Renderizar Sabios Destacados (Puestos 4 al 12)
+    if (this.dom.dashTopSabiosGrid) {
+      this.dom.dashTopSabiosGrid.innerHTML = '';
+      const featured = rankingUsers.slice(3, 12);
+      featured.forEach((u, i) => {
+        const rank = i + 4;
+        const card = document.createElement('div');
+        card.className = 'dash-sabio-card';
+        card.title = `Toca para inspeccionar perfil de ${u.name}`;
+        const avatarHtml = (u.avatar && (u.avatar.startsWith('data:') || u.avatar.startsWith('http')))
+          ? `<img src="${u.avatar}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" />`
+          : (u.avatar || '👤');
+
+        card.innerHTML = `
+          <div class="dash-sabio-rank">#${rank}</div>
+          <div class="dash-sabio-avatar">${avatarHtml}</div>
+          <div class="dash-sabio-info">
+            <div class="dash-sabio-name">${u.name}</div>
+            <div class="dash-sabio-title">${u.title || 'Explorador Cultural'}</div>
+            <div class="dash-sabio-meta">
+              <span class="dash-sabio-stars">⭐ ${u.stars || 0}</span>
+              <span>•</span>
+              <span class="dash-sabio-city">📍 ${u.city || 'GE'}</span>
+            </div>
+          </div>
+        `;
+        card.addEventListener('click', () => this.openPlayerProfileModal(u, rank));
+        this.dom.dashTopSabiosGrid.appendChild(card);
+      });
+    }
+  }
+
+  renderDashboardRankingTable(list = null) {
+    if (!this.dom.tbodyDashRanking) return;
+    this.dom.tbodyDashRanking.innerHTML = '';
+    const rankingUsers = list || this.getEnrichedRankingUsers();
+
+    const query = (this.state.rankingSearchQuery || '').toLowerCase();
+    const filtered = rankingUsers.filter(u => {
+      if (!query) return true;
+      return (u.name && u.name.toLowerCase().includes(query)) ||
+             (u.city && u.city.toLowerCase().includes(query)) ||
+             (u.title && u.title.toLowerCase().includes(query));
+    }).slice(0, 50);
+
+    if (this.dom.dashRankingCountLabel) {
+      this.dom.dashRankingCountLabel.textContent = `🏆 Top ${filtered.length} Sabios Clasificados`;
+    }
+
+    if (filtered.length === 0) {
+      this.dom.tbodyDashRanking.innerHTML = `<tr><td colspan="10" style="text-align:center; padding:30px; color:#94a3b8;">No se encontraron sabios que coincidan con la búsqueda.</td></tr>`;
+      return;
+    }
+
+    filtered.forEach((u, idx) => {
+      const realRank = rankingUsers.findIndex(r => r.name === u.name) + 1;
+      const rankDisplay = realRank === 1 ? '<span class="rank-pos-medal gold">🥇 #1</span>'
+        : realRank === 2 ? '<span class="rank-pos-medal silver">🥈 #2</span>'
+        : realRank === 3 ? '<span class="rank-pos-medal bronze">🥉 #3</span>'
+        : `<strong>#${realRank}</strong>`;
+
+      const avatarHtml = (u.avatar && (u.avatar.startsWith('data:') || u.avatar.startsWith('http')))
+        ? `<img src="${u.avatar}" style="width:28px; height:28px; border-radius:50%; object-fit:cover;" />`
+        : (u.avatar || '👤');
+
+      const speedStr = u.timeAttackHighScore ? `${u.timeAttackHighScore} pts` : (u.fastestLevelTime ? `${u.fastestLevelTime}s` : '--');
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="text-align: center;">${rankDisplay}</td>
+        <td>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:32px; height:32px; border-radius:50%; background:#1e293b; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">${avatarHtml}</div>
+            <strong style="color:#ffffff;">${u.name}</strong>
+          </div>
+        </td>
+        <td><span style="display:inline-flex; align-items:center; gap:3px; background:rgba(16,185,129,0.18); color:#6ee7b7; border:1px solid rgba(16,185,129,0.35); padding:2px 8px; border-radius:12px; font-size:0.75rem; font-weight:600;">📍 ${u.city || 'Malabo'}</span></td>
+        <td><span style="color:#38bdf8; font-size:0.8rem; font-weight:600;">${u.title || 'Sabio Cultural'}</span></td>
+        <td><span style="color:#fbbf24; font-weight:800;">⭐ ${u.stars || 0}</span></td>
+        <td>${u.levelsCompleted || 0}</td>
+        <td>${u.wordsFound || 0}</td>
+        <td style="color:#c084fc; font-weight:700;">⚡ ${speedStr}</td>
+        <td>🔥 ${u.streakDays || 1} días</td>
+        <td style="text-align: center;">
+          <button class="table-action-btn btn-view-pp" title="Ver Perfil Completo">👁️</button>
+        </td>
+      `;
+
+      tr.querySelector('.btn-view-pp').addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.openPlayerProfileModal(u, realRank);
+      });
+      tr.addEventListener('click', () => {
+        this.openPlayerProfileModal(u, realRank);
+      });
+      this.dom.tbodyDashRanking.appendChild(tr);
+    });
+  }
+
+  openPlayerProfileModal(player, rank = 1) {
+    if (!player || !this.dom.modalDashPlayerProfile) return;
+    if (this.dom.dashPpName) this.dom.dashPpName.textContent = player.name || 'Sabio Cultural';
+    if (this.dom.dashPpAvatar) {
+      if (player.avatar && (player.avatar.startsWith('data:') || player.avatar.startsWith('http'))) {
+        this.dom.dashPpAvatar.innerHTML = `<img src="${player.avatar}" alt="Avatar" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" />`;
+      } else {
+        this.dom.dashPpAvatar.textContent = player.avatar || '👤';
+      }
+    }
+    if (this.dom.dashPpTitle) this.dom.dashPpTitle.textContent = player.title || 'Explorador Cultural de Guinea Ecuatorial';
+    if (this.dom.dashPpCity) this.dom.dashPpCity.textContent = `📍 ${player.city || 'Malabo'}`;
+    if (this.dom.dashPpRank) this.dom.dashPpRank.textContent = `Posición #${rank}`;
+    if (this.dom.dashPpStars) this.dom.dashPpStars.textContent = `${player.stars || 0}`;
+    if (this.dom.dashPpLevels) this.dom.dashPpLevels.textContent = `${player.levelsCompleted || 0}`;
+    if (this.dom.dashPpWords) this.dom.dashPpWords.textContent = `${player.wordsFound || 0}`;
+    if (this.dom.dashPpSpeed) {
+      this.dom.dashPpSpeed.textContent = player.timeAttackHighScore ? `${player.timeAttackHighScore} pts` : (player.fastestLevelTime ? `${player.fastestLevelTime}s` : '1200 pts');
+    }
+
+    this.dom.modalDashPlayerProfile.classList.add('active');
   }
 
   /* ================= GESTIÓN DE MODALES ================= */
