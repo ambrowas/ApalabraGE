@@ -2087,6 +2087,15 @@ class ApalabraApp {
         tab.classList.toggle('active', tab.getAttribute('data-game') === game);
       });
     }
+    if (this.dom.rankingModalTitle) {
+      if (game === 'apalabrage') {
+        this.dom.rankingModalTitle.textContent = '🔤 Sabios de A Dedo';
+      } else if (game === 'hangman') {
+        this.dom.rankingModalTitle.textContent = '📜 Maestros de El Refranero';
+      } else {
+        this.dom.rankingModalTitle.textContent = '👑 Salón de Honor Cultural';
+      }
+    }
     this.renderRankingData();
   }
 

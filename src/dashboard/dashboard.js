@@ -997,9 +997,9 @@ class DashboardApp {
     }
     if (this.dom.dashPodiumTitle) {
       if (game === 'apalabrage') {
-        this.dom.dashPodiumTitle.textContent = '🔤 Sabios de ApalabraGE (Niveles y Palabras)';
+        this.dom.dashPodiumTitle.textContent = '🔤 Sabios de A Dedo (Niveles y Palabras)';
       } else if (game === 'hangman') {
-        this.dom.dashPodiumTitle.textContent = '🪢 Maestros de El Ahorcado (Refranes Descifrados)';
+        this.dom.dashPodiumTitle.textContent = '📜 Maestros de El Refranero (Proverbios Descifrados)';
       } else {
         this.dom.dashPodiumTitle.textContent = '👑 Los Tres Grandes Sabios Culturales';
       }
