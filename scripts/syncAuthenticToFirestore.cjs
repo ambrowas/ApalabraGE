@@ -88,8 +88,16 @@ async function syncAuthentic() {
   }
   console.log(`✅ ${saveCount} niveles auténticos guardados en Firestore.`);
 
-  // 5. Actualizar categorías
+  // 5. Actualizar categorías y eliminar categorías obsoletas
+  const existingCatsSnap = await getDocs(collection(db, 'categories'));
+  const validCatIds = new Set(levelsData.categories.map(c => c.id));
   const catBatch = writeBatch(db);
+  for (const cDoc of existingCatsSnap.docs) {
+    if (!validCatIds.has(cDoc.id)) {
+      catBatch.delete(doc(db, 'categories', cDoc.id));
+      console.log(`🗑️ Eliminando categoría obsoleta: ${cDoc.id}`);
+    }
+  }
   for (const cat of levelsData.categories) {
     const catRef = doc(db, 'categories', cat.id);
     catBatch.set(catRef, {

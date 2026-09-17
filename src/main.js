@@ -380,14 +380,14 @@ class ApalabraApp {
         let localLevelsCount = 0;
         (levelsData.categories || []).forEach(c => localLevelsCount += (c.levels ? c.levels.length : 0));
 
-        // Usar caché si contiene al menos tantos niveles como el catálogo empaquetado (71 niveles)
-        if (Array.isArray(parsed) && parsed.length > 0 && cachedLevelsCount >= localLevelsCount) {
+        // Usar caché si coincide la estructura de categorías y contiene al menos tantos niveles
+        if (Array.isArray(parsed) && parsed.length === (levelsData.categories || []).length && cachedLevelsCount >= localLevelsCount) {
           this.categories = parsed;
           console.log(`💾 Cargadas ${parsed.length} categorías desde caché local offline (${cachedLevelsCount} niveles).`);
         } else {
           this.categories = (levelsData.categories || []);
           localStorage.setItem('apalabrage_cached_categories', JSON.stringify(this.categories));
-          console.log(`📦 Actualizado catálogo offline a ${localLevelsCount} niveles culturales del libro.`);
+          console.log(`📦 Actualizado catálogo offline a ${localLevelsCount} niveles y ${this.categories.length} categorías.`);
         }
       } else {
         this.categories = (levelsData.categories || []);

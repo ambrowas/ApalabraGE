@@ -178,8 +178,8 @@ export class ProfileManager {
       if (ach.id === 'first_word' && p.wordsFound >= 1) ach.unlocked = true;
       if (ach.id === 'master_gastro' && (p.categoryProgress['gastronomia'] || 0) >= 2) ach.unlocked = true;
       if (ach.id === 'explorer_bioko' && (p.categoryProgress['geografia'] || 0) >= 2) ach.unlocked = true;
-      if (ach.id === 'mvet_player' && (p.categoryProgress['cultura'] || 0) >= 2) ach.unlocked = true;
-      if (ach.id === 'street_slang' && (p.categoryProgress['modismos'] || 0) >= 1) ach.unlocked = true;
+      if (ach.id === 'mvet_player' && ((p.categoryProgress['musica_arte'] || 0) >= 2 || (p.categoryProgress['cultura'] || 0) >= 2)) ach.unlocked = true;
+      if (ach.id === 'street_slang' && ((p.categoryProgress['sociedad'] || 0) >= 1 || (p.categoryProgress['modismos'] || 0) >= 1)) ach.unlocked = true;
       if (ach.id === 'academico_aegle') {
         ach.title = isAegle ? 'Académico de la AEGLE' : 'Gran Sabio Cultural';
         ach.desc = isAegle ? 'Máximo galardón honorífico de la Academia Ecuatoguineana de la Lengua Española' : 'Máximo galardón honorífico de sabiduría cultural de Guinea Ecuatorial';
