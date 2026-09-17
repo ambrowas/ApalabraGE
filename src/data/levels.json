@@ -3320,7 +3320,7 @@
         "musica_arte",
         "entretenimiento"
       ],
-      "name": "Entretenimiento (Música, Cine y Leyendas)",
+      "name": "Entretenimiento",
       "icon": "🎭",
       "description": "Ritmos, mvet, cinematografía, artistas y leyendas culturales",
       "levels": [
@@ -3347,7 +3347,7 @@
               "clue": "Voz que narra las epopeyas"
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭",
           "gridSize": {
             "cols": 4,
@@ -3378,7 +3378,7 @@
               "clue": "Expresión viva de la tradición"
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭",
           "gridSize": {
             "cols": 4,
@@ -3409,7 +3409,7 @@
               "clue": "Apellido natal de la leyenda"
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭",
           "gridSize": {
             "cols": 4,
@@ -3440,7 +3440,7 @@
               "clue": "Alma viva del pueblo guineano"
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭",
           "gridSize": {
             "cols": 4,
@@ -3475,7 +3475,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3505,7 +3505,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3535,7 +3535,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3565,7 +3565,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3595,7 +3595,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3625,7 +3625,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3655,7 +3655,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3685,7 +3685,7 @@
               "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3715,7 +3715,7 @@
               "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3745,7 +3745,7 @@
               "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3775,7 +3775,7 @@
               "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3805,7 +3805,7 @@
               "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3839,7 +3839,7 @@
               "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3869,7 +3869,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3899,7 +3899,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3929,7 +3929,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3959,7 +3959,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -3985,7 +3985,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4015,7 +4015,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4045,7 +4045,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4075,7 +4075,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4105,7 +4105,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4131,7 +4131,7 @@
               "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4161,7 +4161,7 @@
               "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4191,7 +4191,7 @@
               "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4221,7 +4221,7 @@
               "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4251,7 +4251,7 @@
               "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4289,7 +4289,7 @@
               "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4319,7 +4319,7 @@
               "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4349,7 +4349,7 @@
               "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4379,7 +4379,7 @@
               "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4409,7 +4409,7 @@
               "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4439,7 +4439,7 @@
               "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         },
         {
@@ -4473,7 +4473,7 @@
               "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
             }
           ],
-          "categoryName": "Entretenimiento (Música, Cine y Leyendas)",
+          "categoryName": "Entretenimiento",
           "categoryIcon": "🎭"
         }
       ]
@@ -4484,7 +4484,7 @@
         "selva_fauna",
         "naturaleza"
       ],
-      "name": "Naturaleza (Selva Fang)",
+      "name": "Naturaleza",
       "icon": "🌿",
       "description": "Biodiversidad única, fauna de la selva ecuatorial y reservas naturales",
       "levels": [
@@ -4511,7 +4511,7 @@
               "clue": "Elefante de bosque de colmillos rectos"
             }
           ],
-          "categoryName": "Naturaleza (Selva Fang)",
+          "categoryName": "Naturaleza",
           "categoryIcon": "🌿",
           "gridSize": {
             "cols": 4,
@@ -4542,7 +4542,7 @@
               "clue": "Serpiente verde de las copas altas"
             }
           ],
-          "categoryName": "Naturaleza (Selva Fang)",
+          "categoryName": "Naturaleza",
           "categoryIcon": "🌿",
           "gridSize": {
             "cols": 4,
@@ -4577,7 +4577,7 @@
               "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
             }
           ],
-          "categoryName": "Naturaleza (Selva Fang)",
+          "categoryName": "Naturaleza",
           "categoryIcon": "🌿"
         },
         {
@@ -4619,7 +4619,7 @@
               "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
             }
           ],
-          "categoryName": "Naturaleza (Selva Fang)",
+          "categoryName": "Naturaleza",
           "categoryIcon": "🌿"
         }
       ]
