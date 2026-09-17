@@ -120,8 +120,10 @@ class DashboardApp {
       selectLevelsSort: document.getElementById('select-levels-sort'),
       thSortDate: document.getElementById('th-sort-date'),
       thSortTitle: document.getElementById('th-sort-title'),
+      thSortLetters: document.getElementById('th-sort-letters'),
       arrowSortDate: document.getElementById('arrow-sort-date'),
       arrowSortTitle: document.getElementById('arrow-sort-title'),
+      arrowSortLetters: document.getElementById('arrow-sort-letters'),
       checkAllLevels: document.getElementById('check-all-levels'),
       bulkActionsBanner: document.getElementById('levels-bulk-actions'),
       bulkSelectedCount: document.getElementById('bulk-selected-count'),
@@ -306,6 +308,19 @@ class DashboardApp {
         } else {
           this.state.levelSortBy = 'title';
           this.state.levelSortOrder = 'asc';
+        }
+        this.updateSortHeaderArrows();
+        this.renderLevelsTable();
+      });
+    }
+
+    if (this.dom.thSortLetters) {
+      this.dom.thSortLetters.addEventListener('click', () => {
+        if (this.state.levelSortBy === 'letters') {
+          this.state.levelSortOrder = this.state.levelSortOrder === 'desc' ? 'asc' : 'desc';
+        } else {
+          this.state.levelSortBy = 'letters';
+          this.state.levelSortOrder = 'desc';
         }
         this.updateSortHeaderArrows();
         this.renderLevelsTable();
@@ -840,13 +855,26 @@ class DashboardApp {
       return 1700000000000 + numVal;
     };
 
-    // Ordenación en ambos sentidos (Fecha o Título Alfabético)
+    // Función auxiliar para contar letras limpias de un nivel
+    const getLevelLettersCount = (lvl) => {
+      return (lvl.words || []).reduce((acc, w) => {
+        const wordText = typeof w === 'string' ? w : (w.word || '');
+        const clean = wordText.toUpperCase().replace(/[^A-ZÑ]/g, '');
+        return acc + clean.length;
+      }, 0);
+    };
+
+    // Ordenación en ambos sentidos (Fecha, Título Alfabético o Total de Letras)
     filtered.sort((a, b) => {
       if (this.state.levelSortBy === 'title') {
         const titleA = (a.title || '').trim();
         const titleB = (b.title || '').trim();
         const cmp = titleA.localeCompare(titleB, 'es', { sensitivity: 'base', numeric: true });
         return this.state.levelSortOrder === 'desc' ? -cmp : cmp;
+      } else if (this.state.levelSortBy === 'letters') {
+        const countA = getLevelLettersCount(a);
+        const countB = getLevelLettersCount(b);
+        return this.state.levelSortOrder === 'asc' ? countA - countB : countB - countA;
       } else {
         const timeA = getLevelTimestamp(a);
         const timeB = getLevelTimestamp(b);
@@ -857,7 +885,7 @@ class DashboardApp {
     this.updateSortHeaderArrows();
 
     if (filtered.length === 0) {
-      this.dom.tableLevelsBody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding:32px; color:#94a3b8;">No se encontraron niveles que coincidan con la búsqueda.</td></tr>`;
+      this.dom.tableLevelsBody.innerHTML = `<tr><td colspan="8" style="text-align:center; padding:32px; color:#94a3b8;">No se encontraron niveles que coincidan con la búsqueda.</td></tr>`;
       this.updateBulkActionBar(filtered);
       return;
     }
@@ -871,6 +899,17 @@ class DashboardApp {
         const wordText = typeof w === 'string' ? w : w.word;
         return `<span class="word-badge draggable-word" draggable="true" data-level-id="${lvl.id}" data-word-idx="${wIdx}" title="Arrastra este término a otro nivel"><span class="drag-icon">⠿</span>${wordText}</span>`;
       }).join(' ');
+
+      const totalLetters = getLevelLettersCount(lvl);
+      let statusClass = 'letters-optimal';
+      let statusTitle = `${totalLetters} letras: Rango óptimo (18-24) para cuadrícula 4x5 o 4x6 en pantalla móvil`;
+      if (totalLetters < 18) {
+        statusClass = 'letters-low';
+        statusTitle = `${totalLetters} letras: Tablero corto (< 18 letras)`;
+      } else if (totalLetters > 24) {
+        statusClass = 'letters-high';
+        statusTitle = `${totalLetters} letras: Tablero denso (> 24 letras, fichas más pequeñas)`;
+      }
 
       const rawTime = getLevelTimestamp(lvl, idx);
       let dateBadge = '';
@@ -900,6 +939,11 @@ class DashboardApp {
         <td style="color:#94a3b8; font-size:0.85rem;">${lvl.clue || '-'}</td>
         <td>
           <div class="words-pill-list drop-zone-words" data-level-id="${lvl.id}" title="Suelta términos aquí para moverlos a este nivel">${wordsList}</div>
+        </td>
+        <td style="text-align: center; white-space: nowrap;">
+          <div class="letters-badge ${statusClass}" title="${statusTitle}">
+            <strong>${totalLetters}</strong> <span class="letters-unit">letras</span>
+          </div>
         </td>
         <td style="text-align: right; white-space: nowrap;">
           <button class="table-action-btn add-next btn-add-next-level" data-id="${lvl.id}" title="Crear siguiente nivel derivado (misma categoría y pista)">➕</button>
@@ -1051,6 +1095,16 @@ class DashboardApp {
         this.dom.arrowSortTitle.textContent = '↕';
       }
     }
+
+    if (this.dom.thSortLetters && this.dom.arrowSortLetters) {
+      if (this.state.levelSortBy === 'letters') {
+        this.dom.thSortLetters.classList.add('active-sort');
+        this.dom.arrowSortLetters.textContent = this.state.levelSortOrder === 'desc' ? '▼' : '▲';
+      } else {
+        this.dom.thSortLetters.classList.remove('active-sort');
+        this.dom.arrowSortLetters.textContent = '↕';
+      }
+    }
   }
 
   renderCategoriesGrid() {
@@ -1060,7 +1114,14 @@ class DashboardApp {
     this.state.categories.forEach(cat => {
       const card = document.createElement('div');
       card.className = 'cat-admin-card';
-      const levelCount = this.state.levels.filter(l => l.categoryId === cat.id).length;
+      const categoryLevels = this.state.levels.filter(l => l.categoryId === cat.id);
+      const levelCount = categoryLevels.length;
+      const categoryLetters = categoryLevels.reduce((sum, lvl) => {
+        return sum + (lvl.words || []).reduce((acc, w) => {
+          const txt = typeof w === 'string' ? w : (w.word || '');
+          return acc + txt.toUpperCase().replace(/[^A-ZÑ]/g, '').length;
+        }, 0);
+      }, 0);
 
       card.innerHTML = `
         <div class="cat-admin-top">
@@ -1072,7 +1133,7 @@ class DashboardApp {
         </div>
         <p class="cat-admin-desc">${cat.description || 'Categoría del acervo cultural ecuatoguineano.'}</p>
         <div class="cat-admin-meta">
-          <span><strong>${levelCount}</strong> niveles creados</span>
+          <span><strong>${levelCount}</strong> niveles (<strong>${categoryLetters}</strong> letras)</span>
           <span style="color:#38bdf8;">✓ Sincronizado</span>
         </div>
       `;

@@ -894,6 +894,64 @@ body.dashboard-body {
   color: #38bdf8;
 }
 
+/* Badge de Total de Letras */
+.letters-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  user-select: none;
+  transition: var(--transition-smooth);
+}
+
+.letters-badge strong {
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.letters-badge .letters-unit {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.letters-badge.letters-optimal {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.letters-badge.letters-optimal:hover {
+  background: rgba(34, 197, 94, 0.25);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+.letters-badge.letters-low {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border-color: rgba(234, 179, 8, 0.35);
+}
+
+.letters-badge.letters-low:hover {
+  background: rgba(234, 179, 8, 0.25);
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+}
+
+.letters-badge.letters-high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.letters-badge.letters-high:hover {
+  background: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
 /* Botones de Acción en Tablas */
 .table-action-btn {
   background: none;
