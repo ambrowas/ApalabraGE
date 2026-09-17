@@ -26,6 +26,43 @@ export class SoundEngine {
     return this.muted;
   }
 
+  get isMuted() {
+    return this.muted;
+  }
+
+  /**
+   * Tono al acertar una letra en El Refranero
+   */
+  playMatch() {
+    if (this.muted) return;
+    this._init();
+    if (!this.ctx) return;
+
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(587.33, now); // Re agudo
+    osc.frequency.exponentialRampToValueAtTime(880, now + 0.12); // La
+
+    gain.gain.setValueAtTime(0.12, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+
+    osc.start(now);
+    osc.stop(now + 0.12);
+  }
+
+  /**
+   * Tono al fallar una letra en El Refranero
+   */
+  playWrong() {
+    this.playInvalid();
+  }
+
   /**
    * Tono al deslizarse sobre una ficha consecutiva (la escala sube conforme la palabra crece)
    */

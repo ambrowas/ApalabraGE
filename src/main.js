@@ -112,6 +112,9 @@ class ApalabraApp {
       hangmanCategoryBadge: document.getElementById('hangman-category-badge'),
       hangmanPhraseGrid: document.getElementById('hangman-phrase-grid'),
       btnHangmanHint: document.getElementById('btn-hangman-hint'),
+      btnHangmanNativeKb: document.getElementById('btn-hangman-native-kb'),
+      hangmanNativeInput: document.getElementById('hangman-native-input'),
+      hangmanBoardCard: document.querySelector('.hangman-board-card'),
       hangmanHintTextBox: document.getElementById('hangman-hint-text-box'),
       hangmanHintMessage: document.getElementById('hangman-hint-message'),
       hangmanKeyboardWrap: document.getElementById('hangman-keyboard-wrap'),
@@ -533,8 +536,7 @@ class ApalabraApp {
           console.log('🔄 Actualización detectada en Firestore desde Dashboard!');
           const updated = await this.loadCulturalContentFromFirebase();
           if (updated) {
-            this.renderHomeCategories();
-            this.renderCategoriesModal();
+            this.renderHomeScreen();
           }
         }
       }, (err) => console.warn('Snapshot listener error:', err));
@@ -654,6 +656,50 @@ class ApalabraApp {
         this.useHangmanHint();
       });
     }
+
+    // Hangman: Teclado Nativo del Móvil y Físico
+    const triggerHangmanNativeKb = () => {
+      if (this.dom.hangmanNativeInput) {
+        this.dom.hangmanNativeInput.focus();
+      }
+    };
+
+    if (this.dom.btnHangmanNativeKb) {
+      this.dom.btnHangmanNativeKb.addEventListener('click', () => {
+        sound.playSparkle();
+        triggerHangmanNativeKb();
+      });
+    }
+
+    if (this.dom.hangmanBoardCard) {
+      this.dom.hangmanBoardCard.addEventListener('click', () => {
+        triggerHangmanNativeKb();
+      });
+    }
+
+    if (this.dom.hangmanNativeInput) {
+      this.dom.hangmanNativeInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        if (!val) return;
+        const char = val.slice(-1).toUpperCase();
+        e.target.value = '';
+        if (/^[A-ZÑÁÉÍÓÚÜ]$/i.test(char)) {
+          this.handleHangmanLetter(char);
+        }
+      });
+    }
+
+    // Soporte para teclado de hardware / PC / móvil global
+    window.addEventListener('keydown', (e) => {
+      if (this.currentScreen !== 'hangman') return;
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        if (e.target !== this.dom.hangmanNativeInput) return;
+      }
+      const key = e.key.toUpperCase();
+      if (/^[A-ZÑ]$/.test(key)) {
+        this.handleHangmanLetter(key);
+      }
+    });
     if (this.dom.btnHmNext) {
       this.dom.btnHmNext.addEventListener('click', () => {
         sound.playSparkle();
@@ -1180,7 +1226,16 @@ class ApalabraApp {
           btn.classList.add(isHit ? 'correct' : 'wrong');
         }
 
-        btn.addEventListener('click', () => {
+        let handled = false;
+        btn.addEventListener('pointerdown', (e) => {
+          handled = true;
+          this.handleHangmanLetter(letter);
+        });
+        btn.addEventListener('click', (e) => {
+          if (handled) {
+            handled = false;
+            return;
+          }
           this.handleHangmanLetter(letter);
         });
 

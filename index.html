@@ -350,17 +350,26 @@
             </div>
           </div>
 
-          <!-- Barra de Pista Cultural -->
+          <!-- Barra de Pista Cultural y Teclado del Teléfono -->
           <div class="hangman-hint-dock">
-            <button class="dock-btn" id="btn-hangman-hint" title="Pedir pista cultural (1 por refrán)">
-              <div class="dock-btn-icon">💡</div>
-              <span class="dock-btn-label">Pista (1)</span>
-            </button>
+            <div class="hangman-actions-row">
+              <button class="dock-btn" id="btn-hangman-hint" title="Pedir pista cultural (1 por refrán)">
+                <div class="dock-btn-icon">💡</div>
+                <span class="dock-btn-label">Pista (1)</span>
+              </button>
+              <button class="dock-btn" id="btn-hangman-native-kb" title="Abrir el teclado de tu móvil">
+                <div class="dock-btn-icon">⌨️</div>
+                <span class="dock-btn-label">Teclado Móvil</span>
+              </button>
+            </div>
             <div class="hangman-hint-text-box" id="hangman-hint-text-box" style="display: none;">
               <span class="hint-tag">Pista Cultural:</span>
               <span id="hangman-hint-message">...</span>
             </div>
           </div>
+
+          <!-- Input accesible para el teclado nativo de Android / iOS -->
+          <input type="text" id="hangman-native-input" class="hangman-native-input" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" maxlength="2" aria-label="Escribir letra con teclado del móvil" />
 
           <!-- Teclado Táctil en Pantalla -->
           <div class="hangman-keyboard-wrap" id="hangman-keyboard-wrap">

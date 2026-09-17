@@ -2995,6 +2995,28 @@
   gap: 8px;
 }
 
+.hangman-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.hangman-native-input {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
 .hangman-hint-text-box {
   width: 100%;
   background: rgba(245, 158, 11, 0.15);
