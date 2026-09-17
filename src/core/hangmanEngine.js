@@ -11,6 +11,7 @@ export class HangmanEngine {
     this.remainingLives = 6;
     this.guessedLetters = new Set();
     this.wrongLetters = new Set();
+    this.revealedLetters = new Set();
     this.hintsUsedThisProverb = 0;
     this.status = 'idle'; // 'idle', 'playing', 'won', 'lost'
   }
@@ -27,6 +28,41 @@ export class HangmanEngine {
     return /[\s.,;:¡!¿?'"()«»-]/.test(char);
   }
 
+  get lives() {
+    return this.remainingLives;
+  }
+
+  get mistakes() {
+    return this.wrongLetters.size;
+  }
+
+  get isGameOver() {
+    return this.status === 'won' || this.status === 'lost';
+  }
+
+  get targetLetters() {
+    if (!this.currentProverb) return new Set();
+    const set = new Set();
+    for (const char of this.currentProverb.phrase) {
+      if (!HangmanEngine.isPunctuation(char)) {
+        set.add(HangmanEngine.normalizeChar(char));
+      }
+    }
+    return set;
+  }
+
+  normalizeChar(char) {
+    return HangmanEngine.normalizeChar(char);
+  }
+
+  isLetter(char) {
+    return !HangmanEngine.isPunctuation(char);
+  }
+
+  hasUsedHint() {
+    return this.hintsUsedThisProverb >= 1;
+  }
+
   startProverb(index = 0) {
     if (this.proverbs.length === 0) return null;
     if (index < 0 || index >= this.proverbs.length) index = 0;
@@ -36,15 +72,33 @@ export class HangmanEngine {
     this.remainingLives = this.maxLives;
     this.guessedLetters = new Set();
     this.wrongLetters = new Set();
+    this.revealedLetters = new Set();
     this.hintsUsedThisProverb = 0;
     this.status = 'playing';
 
     return this.getGameState();
   }
 
+  loadProverb(index = 0) {
+    this.startProverb(index);
+    return this.currentProverb;
+  }
+
   nextProverb() {
     const nextIdx = (this.currentProverbIndex + 1) % this.proverbs.length;
     return this.startProverb(nextIdx);
+  }
+
+  guessLetter(rawLetter) {
+    const res = this.guess(rawLetter);
+    return {
+      alreadyGuessed: res.status === 'already_guessed' || res.status === 'invalid',
+      isHit: res.status === 'correct',
+      isWon: !!res.isWon,
+      isLost: !!res.isLost,
+      remainingLives: this.remainingLives,
+      state: this.getGameState()
+    };
   }
 
   guess(rawLetter) {

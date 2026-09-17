@@ -1048,7 +1048,7 @@ class ApalabraApp {
 
     // Actualizar encabezados y datos
     if (this.dom.hangmanOriginLabel) {
-      this.dom.hangmanOriginLabel.textContent = `${proverb.ethnicGroup} • ${proverb.category}`;
+      this.dom.hangmanOriginLabel.textContent = `${proverb.culture || proverb.ethnicGroup || 'Tradición Africana'} • ${proverb.category}`;
     }
     if (this.dom.hangmanCategoryBadge) {
       this.dom.hangmanCategoryBadge.textContent = `🌿 ${proverb.category}`;
@@ -1120,7 +1120,7 @@ class ApalabraApp {
 
         if (this.hangmanEngine.isLetter(char)) {
           const isGuessed = this.hangmanEngine.guessedLetters.has(normalized);
-          const isRevealed = isGuessed || this.hangmanEngine.revealedLetters.has(normalized);
+          const isRevealed = isGuessed || (this.hangmanEngine.revealedLetters && this.hangmanEngine.revealedLetters.has(normalized)) || this.hangmanEngine.status === 'lost';
 
           const slot = document.createElement('div');
           slot.className = `hangman-letter-slot ${isRevealed ? 'revealed' : ''}`;
@@ -1226,7 +1226,8 @@ class ApalabraApp {
       return;
     }
 
-    const hint = this.hangmanEngine.useHint();
+    const res = this.hangmanEngine.useHint();
+    const hint = (res && typeof res === 'object') ? res.hint : res;
     if (hint) {
       sound.playSparkle();
       if (this.dom.hangmanHintTextBox) {
@@ -1265,7 +1266,7 @@ class ApalabraApp {
       this.dom.hmResNative.textContent = proverb.native ? `«${proverb.native}»` : '';
     }
     if (this.dom.hmResCulture) {
-      this.dom.hmResCulture.textContent = `📜 ${proverb.ethnicGroup} • ${proverb.category}`;
+      this.dom.hmResCulture.textContent = `📜 ${proverb.culture || proverb.ethnicGroup || 'Tradición Africana'} • ${proverb.category}`;
     }
     if (this.dom.hmResMeaning) {
       this.dom.hmResMeaning.textContent = proverb.meaning;

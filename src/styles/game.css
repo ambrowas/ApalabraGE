@@ -2938,10 +2938,13 @@
   gap: 12px 14px;
 }
 
-.hangman-word-group {
+.hangman-word-group,
+.hangman-word-wrap {
   display: inline-flex;
-  gap: 5px;
+  flex-direction: row;
+  gap: 4px;
   align-items: flex-end;
+  flex-wrap: nowrap;
 }
 
 .hangman-letter-slot {
