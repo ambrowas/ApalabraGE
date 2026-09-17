@@ -249,6 +249,17 @@
                 <button class="chip" data-cat="sociedad">👥 Sociedad</button>
               </div>
 
+              <div class="sort-selector-wrap">
+                <span class="sort-icon">⇅</span>
+                <label for="select-levels-sort" class="sort-label">Ordenar:</label>
+                <select id="select-levels-sort" class="table-sort-select" aria-label="Criterio de ordenación">
+                  <option value="date-desc">📅 Fecha (Más recientes)</option>
+                  <option value="date-asc">📅 Fecha (Más antiguos)</option>
+                  <option value="title-asc">🔤 Título (A → Z)</option>
+                  <option value="title-desc">🔤 Título (Z → A)</option>
+                </select>
+              </div>
+
               <button class="btn-primary" id="btn-create-level">
                 <span class="btn-icon">➕</span> Añadir Nivel
               </button>
@@ -258,12 +269,16 @@
               <table class="data-table main-table" id="table-levels-full">
                 <thead>
                   <tr>
-                    <th style="width: 70px;">ID</th>
-                    <th>Título del Nivel</th>
+                    <th style="width: 140px;" class="sortable-th" id="th-sort-date" title="Ordenar por Fecha de Creación (Más recientes / Más antiguos)">
+                      ID / Fecha <span class="sort-arrow" id="arrow-sort-date">▼</span>
+                    </th>
+                    <th class="sortable-th" id="th-sort-title" title="Ordenar por Título Alfabético (A-Z / Z-A)">
+                      Título del Nivel <span class="sort-arrow" id="arrow-sort-title">↕</span>
+                    </th>
                     <th>Categoría</th>
                     <th>Pista Descriptiva</th>
                     <th>Palabras Objetivo</th>
-                    <th style="width: 130px; text-align: right;">Acciones</th>
+                    <th style="width: 140px; text-align: right;">Acciones</th>
                   </tr>
                 </thead>
                 <tbody id="tbody-levels">

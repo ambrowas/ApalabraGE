@@ -64,6 +64,8 @@ class DashboardApp {
       currentTab: 'overview',
       categoryFilter: 'all',
       searchQuery: '',
+      levelSortBy: 'date',
+      levelSortOrder: 'desc',
       bookTopics: bookTopicsData || [],
       importerCategoryFilter: 'all',
       importerSearchQuery: '',
@@ -113,6 +115,11 @@ class DashboardApp {
       // Levels
       tableLevelsBody: document.getElementById('tbody-levels'),
       filterLevelsSearch: document.getElementById('filter-levels-search'),
+      selectLevelsSort: document.getElementById('select-levels-sort'),
+      thSortDate: document.getElementById('th-sort-date'),
+      thSortTitle: document.getElementById('th-sort-title'),
+      arrowSortDate: document.getElementById('arrow-sort-date'),
+      arrowSortTitle: document.getElementById('arrow-sort-title'),
       categoryChips: document.querySelectorAll('#level-category-chips .chip'),
       btnCreateLevel: document.getElementById('btn-create-level'),
       btnAddLevelTop: document.getElementById('btn-add-level-top'),
@@ -257,6 +264,43 @@ class DashboardApp {
           this.state.categoryFilter = chip.dataset.cat;
           this.renderLevelsTable();
         });
+      });
+    }
+
+    // Ordenación de Niveles (Selector y Encabezados de Tabla)
+    if (this.dom.selectLevelsSort) {
+      this.dom.selectLevelsSort.addEventListener('change', (e) => {
+        const parts = e.target.value.split('-');
+        this.state.levelSortBy = parts[0];
+        this.state.levelSortOrder = parts[1] || 'desc';
+        this.updateSortHeaderArrows();
+        this.renderLevelsTable();
+      });
+    }
+
+    if (this.dom.thSortDate) {
+      this.dom.thSortDate.addEventListener('click', () => {
+        if (this.state.levelSortBy === 'date') {
+          this.state.levelSortOrder = this.state.levelSortOrder === 'desc' ? 'asc' : 'desc';
+        } else {
+          this.state.levelSortBy = 'date';
+          this.state.levelSortOrder = 'desc';
+        }
+        this.updateSortHeaderArrows();
+        this.renderLevelsTable();
+      });
+    }
+
+    if (this.dom.thSortTitle) {
+      this.dom.thSortTitle.addEventListener('click', () => {
+        if (this.state.levelSortBy === 'title') {
+          this.state.levelSortOrder = this.state.levelSortOrder === 'asc' ? 'desc' : 'asc';
+        } else {
+          this.state.levelSortBy = 'title';
+          this.state.levelSortOrder = 'asc';
+        }
+        this.updateSortHeaderArrows();
+        this.renderLevelsTable();
       });
     }
 
@@ -736,6 +780,40 @@ class DashboardApp {
       return matchCat && matchSearch;
     });
 
+    // Función auxiliar para obtener timestamp determinista de creación
+    const getLevelTimestamp = (lvl, idx = 0) => {
+      if (lvl.createdAt) {
+        const t = new Date(lvl.createdAt).getTime();
+        if (!isNaN(t)) return t;
+      }
+      if (lvl.updatedAt) {
+        const t = new Date(lvl.updatedAt).getTime();
+        if (!isNaN(t)) return t;
+      }
+      if (lvl.id && /^\d{10,15}$/.test(String(lvl.id))) {
+        return Number(lvl.id);
+      }
+      const numMatch = String(lvl.id || '').match(/\d+/);
+      const numVal = numMatch ? parseInt(numMatch[0], 10) : idx;
+      return 1700000000000 + numVal;
+    };
+
+    // Ordenación en ambos sentidos (Fecha o Título Alfabético)
+    filtered.sort((a, b) => {
+      if (this.state.levelSortBy === 'title') {
+        const titleA = (a.title || '').trim();
+        const titleB = (b.title || '').trim();
+        const cmp = titleA.localeCompare(titleB, 'es', { sensitivity: 'base', numeric: true });
+        return this.state.levelSortOrder === 'desc' ? -cmp : cmp;
+      } else {
+        const timeA = getLevelTimestamp(a);
+        const timeB = getLevelTimestamp(b);
+        return this.state.levelSortOrder === 'asc' ? timeA - timeB : timeB - timeA;
+      }
+    });
+
+    this.updateSortHeaderArrows();
+
     if (filtered.length === 0) {
       this.dom.tableLevelsBody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding:32px; color:#94a3b8;">No se encontraron niveles que coincidan con la búsqueda.</td></tr>`;
       return;
@@ -748,8 +826,20 @@ class DashboardApp {
         return `<span class="word-badge">${wordText}</span>`;
       }).join(' ');
 
+      const rawTime = getLevelTimestamp(lvl, idx);
+      let dateBadge = '';
+      if (rawTime > 1700000100000) {
+        const d = new Date(rawTime);
+        const dStr = d.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: '2-digit' });
+        const hStr = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+        dateBadge = `<div style="font-size:0.68rem; color:#64748b; font-weight:500; margin-top:2px;">📅 ${dStr} ${hStr}</div>`;
+      }
+
       tr.innerHTML = `
-        <td style="font-weight:700; color:#64748b;">#${lvl.id || (idx + 1)}</td>
+        <td style="font-weight:700; color:#94a3b8; font-size:0.84rem;">
+          <div>#${lvl.id || (idx + 1)}</div>
+          ${dateBadge}
+        </td>
         <td>
           <strong style="color:#f8fafc; font-size:0.95rem;">${lvl.title}</strong>
         </td>
@@ -780,6 +870,32 @@ class DashboardApp {
 
       this.dom.tableLevelsBody.appendChild(tr);
     });
+  }
+
+  updateSortHeaderArrows() {
+    if (this.dom.selectLevelsSort) {
+      this.dom.selectLevelsSort.value = `${this.state.levelSortBy}-${this.state.levelSortOrder}`;
+    }
+
+    if (this.dom.thSortDate && this.dom.arrowSortDate) {
+      if (this.state.levelSortBy === 'date') {
+        this.dom.thSortDate.classList.add('active-sort');
+        this.dom.arrowSortDate.textContent = this.state.levelSortOrder === 'desc' ? '▼' : '▲';
+      } else {
+        this.dom.thSortDate.classList.remove('active-sort');
+        this.dom.arrowSortDate.textContent = '↕';
+      }
+    }
+
+    if (this.dom.thSortTitle && this.dom.arrowSortTitle) {
+      if (this.state.levelSortBy === 'title') {
+        this.dom.thSortTitle.classList.add('active-sort');
+        this.dom.arrowSortTitle.textContent = this.state.levelSortOrder === 'desc' ? '▼' : '▲';
+      } else {
+        this.dom.thSortTitle.classList.remove('active-sort');
+        this.dom.arrowSortTitle.textContent = '↕';
+      }
+    }
   }
 
   renderCategoriesGrid() {
@@ -1523,6 +1639,9 @@ class DashboardApp {
       return;
     }
 
+    const existingIdx = this.state.levels.findIndex(l => String(l.id) === String(idVal));
+    const existingLvl = existingIdx >= 0 ? this.state.levels[existingIdx] : null;
+
     const levelData = {
       id: idVal,
       title,
@@ -1531,6 +1650,7 @@ class DashboardApp {
       categoryIcon: catObj.icon || '🇬🇶',
       clue,
       words,
+      createdAt: existingLvl?.createdAt || new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
 
@@ -1544,7 +1664,6 @@ class DashboardApp {
     }
 
     // Actualizar estado local
-    const existingIdx = this.state.levels.findIndex(l => String(l.id) === String(idVal));
     if (existingIdx >= 0) {
       this.state.levels[existingIdx] = levelData;
     } else {
