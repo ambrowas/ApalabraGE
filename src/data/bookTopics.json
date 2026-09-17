@@ -2,7 +2,7 @@
   {
     "id": "tema-1",
     "categoryIcon": "🏛️",
-    "categoryName": "Historia y Pioneros",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "1.ALCALDES DE MALABO",
     "words": [
@@ -65,9 +65,9 @@
   },
   {
     "id": "tema-2",
-    "categoryIcon": "🗿",
-    "categoryName": "Identidad y Pueblos",
-    "categoryId": "etnias_identidad",
+    "categoryIcon": "👥",
+    "categoryName": "Sociedad",
+    "categoryId": "sociedad",
     "title": "2.APELLIDOS NDOWES",
     "words": [
       "EPITIE",
@@ -124,8 +124,8 @@
   },
   {
     "id": "tema-3",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "3.AUTORES NACIONALES",
     "words": [
@@ -191,7 +191,7 @@
   {
     "id": "tema-4",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "4.BARRIOS DE BATA",
     "words": [
@@ -247,7 +247,7 @@
   {
     "id": "tema-5",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "5.BARRIOS DE MALABO",
     "words": [
@@ -315,8 +315,8 @@
   },
   {
     "id": "tema-6",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "6.CANTANTES FEMENINAS",
     "words": [
@@ -383,8 +383,8 @@
   },
   {
     "id": "tema-7",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "7.CANTANTES MASCULINOS",
     "words": [
@@ -452,7 +452,7 @@
   {
     "id": "tema-8",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "8.CAPITALES AFRICANAS",
     "words": [
@@ -525,8 +525,8 @@
   },
   {
     "id": "tema-9",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "9.CENTROS EDUCATIVOS",
     "words": [
@@ -603,8 +603,8 @@
   },
   {
     "id": "tema-10",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "10.CANTANTES MASCULINOS II",
     "words": [
@@ -668,7 +668,7 @@
   {
     "id": "tema-11",
     "categoryIcon": "⚽",
-    "categoryName": "Deporte Ecuatoguineano",
+    "categoryName": "Deporte",
     "categoryId": "deporte_nacional",
     "title": "11.CLUBES DE BASKET",
     "words": [
@@ -737,7 +737,7 @@
   {
     "id": "tema-12",
     "categoryIcon": "⚽",
-    "categoryName": "Deporte Ecuatoguineano",
+    "categoryName": "Deporte",
     "categoryId": "deporte_nacional",
     "title": "12.CLUBES DE FUTBOL",
     "words": [
@@ -805,9 +805,9 @@
   },
   {
     "id": "tema-13",
-    "categoryIcon": "🗿",
-    "categoryName": "Identidad y Pueblos",
-    "categoryId": "etnias_identidad",
+    "categoryIcon": "👥",
+    "categoryName": "Sociedad",
+    "categoryId": "sociedad",
     "title": "13.MUJER GUINEANA",
     "words": [
       "BISILA BOKOKO CECILIA OBONO ANGUE",
@@ -867,7 +867,7 @@
   {
     "id": "tema-14",
     "categoryIcon": "🏛️",
-    "categoryName": "Historia y Pioneros",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "14.EMPRESAS NACIONALES",
     "words": [
@@ -941,7 +941,7 @@
   {
     "id": "tema-15",
     "categoryIcon": "⚽",
-    "categoryName": "Deporte Ecuatoguineano",
+    "categoryName": "Deporte",
     "categoryId": "deporte_nacional",
     "title": "15.ENTRENADORES DEL NZALANG",
     "words": [
@@ -1004,7 +1004,7 @@
   {
     "id": "tema-16",
     "categoryIcon": "⚽",
-    "categoryName": "Deporte Ecuatoguineano",
+    "categoryName": "Deporte",
     "categoryId": "deporte_nacional",
     "title": "16.ESTRELLAS DEL BASKET",
     "words": [
@@ -1077,8 +1077,8 @@
   },
   {
     "id": "tema-17",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "17.EXITOS DE MAELE",
     "words": [
@@ -1145,8 +1145,8 @@
   },
   {
     "id": "tema-18",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "18. INTERNACIONALES",
     "words": [
@@ -1211,7 +1211,7 @@
   {
     "id": "tema-19",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "19.HOTELES",
     "words": [
@@ -1284,7 +1284,7 @@
   {
     "id": "tema-20",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "20.LOCALIDADES",
     "words": [
@@ -1355,7 +1355,7 @@
   {
     "id": "tema-21",
     "categoryIcon": "🏛️",
-    "categoryName": "Historia y Pioneros",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "21.MEDIOS DE COMUNICACION",
     "words": [
@@ -1418,8 +1418,8 @@
   },
   {
     "id": "tema-22",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "22.MINISTERIOS",
     "words": [
@@ -1481,9 +1481,9 @@
   },
   {
     "id": "tema-23",
-    "categoryIcon": "🗿",
-    "categoryName": "Identidad y Pueblos",
-    "categoryId": "etnias_identidad",
+    "categoryIcon": "👥",
+    "categoryName": "Sociedad",
+    "categoryId": "sociedad",
     "title": "23.NOMBRES BUBIS",
     "words": [
       "BELOLO BISILA BOABI",
@@ -1535,9 +1535,9 @@
   },
   {
     "id": "tema-24",
-    "categoryIcon": "🗿",
-    "categoryName": "Identidad y Pueblos",
-    "categoryId": "etnias_identidad",
+    "categoryIcon": "👥",
+    "categoryName": "Sociedad",
+    "categoryId": "sociedad",
     "title": "24.APELLIDOS FEMENINOS FANG",
     "words": [
       "AFUY ANDEME ANGUESOMO",
@@ -1590,7 +1590,7 @@
   {
     "id": "tema-25",
     "categoryIcon": "🏛️",
-    "categoryName": "Historia y Pioneros",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "25.PERSONAJES HISTORICOS",
     "words": [
@@ -1656,7 +1656,7 @@
   {
     "id": "tema-26",
     "categoryIcon": "🏛️",
-    "categoryName": "Historia y Pioneros",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "26.PERSONAJES HISTORICOS II",
     "words": [
@@ -1724,7 +1724,7 @@
   {
     "id": "tema-27",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "27. POBLADOS BUBIS",
     "words": [
@@ -1789,7 +1789,7 @@
   {
     "id": "tema-28",
     "categoryIcon": "🏛️",
-    "categoryName": "Historia y Pioneros",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "28.PRIMEROS MINISTROS",
     "words": [
@@ -1847,7 +1847,7 @@
   {
     "id": "tema-29",
     "categoryIcon": "🍲",
-    "categoryName": "Gastronomía Típica",
+    "categoryName": "Gastronomía",
     "categoryId": "gastronomia",
     "title": "29.RESTAURANTES",
     "words": [
@@ -1939,9 +1939,9 @@
   },
   {
     "id": "tema-30",
-    "categoryIcon": "🗿",
-    "categoryName": "Identidad y Pueblos",
-    "categoryId": "etnias_identidad",
+    "categoryIcon": "👥",
+    "categoryName": "Sociedad",
+    "categoryId": "sociedad",
     "title": "30.TRIBUS FANG",
     "words": [
       "R E E H L R D E K Y I F U O G T C V J D M U U X Y",
@@ -2019,7 +2019,7 @@
   {
     "id": "tema-31",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "31.AFRICA CENTRAL",
     "words": [
@@ -2096,8 +2096,8 @@
   },
   {
     "id": "tema-32",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "32.CINE Y TELEVISION",
     "words": [
@@ -2166,8 +2166,8 @@
   },
   {
     "id": "tema-33",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "33.CINE TELEVISION II",
     "words": [
@@ -2235,8 +2235,8 @@
   },
   {
     "id": "tema-34",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "34.FOLKLORE LOCAL",
     "words": [
@@ -2313,7 +2313,7 @@
   {
     "id": "tema-35",
     "categoryIcon": "⚽",
-    "categoryName": "Deporte Ecuatoguineano",
+    "categoryName": "Deporte",
     "categoryId": "deporte_nacional",
     "title": "35.LEYENDAS AFRICANAS DEL FUTBOL",
     "words": [
@@ -2394,8 +2394,8 @@
   },
   {
     "id": "tema-36",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "36.MISCELANEO",
     "words": [
@@ -2472,7 +2472,7 @@
   {
     "id": "tema-37",
     "categoryIcon": "🍲",
-    "categoryName": "Gastronomía Típica",
+    "categoryName": "Gastronomía",
     "categoryId": "gastronomia",
     "title": "37.GASTRONOMíA",
     "words": [
@@ -2556,7 +2556,7 @@
   {
     "id": "tema-38",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "38.SANTA ISABEL",
     "words": [
@@ -2641,8 +2641,8 @@
   },
   {
     "id": "tema-39",
-    "categoryIcon": "🎵",
-    "categoryName": "Música, Cine y Leyendas",
+    "categoryIcon": "🎭",
+    "categoryName": "Entretenimiento",
     "categoryId": "musica_arte",
     "title": "39.VIEJA ESCUELA (CANTANTES AFRICANOS)",
     "words": [
@@ -2723,8 +2723,8 @@
   },
   {
     "id": "tema-40",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "40.MISCELANEO AFRICA",
     "words": [
@@ -2798,8 +2798,8 @@
   },
   {
     "id": "tema-41",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "41.MISCELANEO GUINEA",
     "words": [
@@ -2870,7 +2870,7 @@
   {
     "id": "tema-42",
     "categoryIcon": "🗺️",
-    "categoryName": "Geografía y Lugares",
+    "categoryName": "Geografía",
     "categoryId": "geografia",
     "title": "42.PAISES PEQUENOS",
     "words": [
@@ -2938,7 +2938,7 @@
   {
     "id": "tema-43",
     "categoryIcon": "⚽",
-    "categoryName": "Deporte Ecuatoguineano",
+    "categoryName": "Deporte",
     "categoryId": "deporte_nacional",
     "title": "43.DEPORTE NACIONAL",
     "words": [
@@ -3010,8 +3010,8 @@
   },
   {
     "id": "tema-44",
-    "categoryIcon": "🐆",
-    "categoryName": "Selva y Fauna Fang",
+    "categoryIcon": "🌿",
+    "categoryName": "Naturaleza",
     "categoryId": "selva_fauna",
     "title": "44.SELVA FANG",
     "words": [
@@ -3074,8 +3074,8 @@
   },
   {
     "id": "tema-45",
-    "categoryIcon": "🇬🇶",
-    "categoryName": "Miscelánea Cultural",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia",
     "categoryId": "historia_pioneros",
     "title": "45.MISCELANEO UNIVERSAL",
     "words": [

@@ -504,6 +504,24 @@ class DashboardApp {
     }
 
     if (this.dom.navCountCategories) this.dom.navCountCategories.textContent = this.state.categories.length;
+    this.updateCategorySelectOptions();
+  }
+
+  updateCategorySelectOptions() {
+    if (!this.dom.selectLevelCategory) return;
+    if (Array.isArray(this.state.categories) && this.state.categories.length > 0) {
+      const currentVal = this.dom.selectLevelCategory.value;
+      this.dom.selectLevelCategory.innerHTML = '';
+      this.state.categories.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat.id;
+        opt.textContent = `${cat.icon || '🇬🇶'} ${cat.name}`;
+        this.dom.selectLevelCategory.appendChild(opt);
+      });
+      if (currentVal) {
+        this.dom.selectLevelCategory.value = currentVal;
+      }
+    }
   }
 
   async loadTrivias() {
@@ -891,6 +909,7 @@ class DashboardApp {
   /* ================= GESTIÓN DE MODALES ================= */
 
   openLevelModal(levelId = null) {
+    this.updateCategorySelectOptions();
     this.dom.wordsInputsContainer.innerHTML = '';
 
     if (levelId) {
@@ -899,7 +918,9 @@ class DashboardApp {
       document.getElementById('modal-level-title').textContent = `Editar Nivel #${lvl.id}`;
       this.dom.inputLevelId.value = lvl.id;
       this.dom.inputLevelName.value = lvl.title;
-      this.dom.selectLevelCategory.value = lvl.categoryId;
+      let catId = lvl.categoryId;
+      if (catId === 'etnias_identidad' || catId === 'modismos') catId = 'sociedad';
+      this.dom.selectLevelCategory.value = catId;
       this.dom.inputLevelClue.value = lvl.clue;
 
       (lvl.words || []).forEach(w => {
