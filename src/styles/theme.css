@@ -1,0 +1,64 @@
+/* Sistema de Diseño y Tokens - ApalabraGE (Paleta Azul Océano & UI Premium) */
+:root {
+  /* Azules de Guinea Ecuatorial: Océano Atlántico, Bahía de Santa Isabel y Mar Insular */
+  --blue-950: #071226;
+  --blue-900: #0c1e3d;
+  --blue-800: #153162;
+  --blue-700: #1d4ed8;
+  --blue-600: #2563eb;
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --blue-300: #93c5fd;
+  --blue-200: #bfdbfe;
+  --blue-100: #dbeafe;
+  --blue-50: #eff6ff;
+
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #60a5fa;
+  --color-cyan: #06b6d4;
+
+  --color-gold: #f59e0b;
+  --color-gold-dark: #d97706;
+  --color-gold-glow: rgba(245, 158, 11, 0.4);
+
+  /* Superficies */
+  --surface-white: #ffffff;
+  --surface-light: #f8fafc;
+  --surface-light-border: #e2e8f0;
+  --surface-card-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+
+  --text-dark: #0f172a;
+  --text-dark-muted: #475569;
+  --text-light: #f8fafc;
+  --text-light-muted: #94a3b8;
+
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Sombras y 3D táctil de fichas */
+  --shadow-tile-light: 0 4px 0 #cbd5e1, 0 6px 14px rgba(15, 23, 42, 0.08);
+  --shadow-tile-active: 0 3px 0 #1e3a8a, 0 0 20px rgba(37, 99, 235, 0.5);
+  --shadow-app-frame: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #060e1d;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "ApalabraGE - Palabras y Cultura de Guinea Ecuatorial",
+  "short_name": "ApalabraGE",
+  "description": "Juego de conexión de letras y cultura tradicional de Guinea Ecuatorial",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#071720",
+  "theme_color": "#0e3d29",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

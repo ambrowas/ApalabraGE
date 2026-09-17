@@ -1,0 +1,3144 @@
+[
+  {
+    "id": "tema-1",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia y Pioneros",
+    "categoryId": "historia_pioneros",
+    "title": "1.ALCALDES DE MALABO",
+    "words": [
+      "ABILIO BALBOA",
+      "ELIAS MACHO SICACHA",
+      "JULIAN EHAPO BOMAHO",
+      "ROSENDO TOICHOA BORICO",
+      "VICTORINA BOLEKIA BONAI",
+      "BERNARDINO EDU OBA",
+      "GABRIEL MBA BELA",
+      "JULIO BONETE EIYE",
+      "TOMAS ALFREDO KING",
+      "VIDAL CHONI BEKOBA",
+      "CRISTINA DJOMBE DJANGANI",
+      "ISABEL ERAUL IVINA",
+      "MARIA COLOMA EDJANG",
+      "VICENTE EBONG UWA",
+      "WILWARDO JONES"
+    ],
+    "number": 1,
+    "type": "sopa",
+    "cleanTitle": "ALCALDES DE MALABO",
+    "playableWords": [
+      {
+        "word": "ABILIO",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "BALBOA",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELIAS",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "MACHO",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "SICACHA",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "JULIAN",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "EHAPO",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "BOMAHO",
+        "clue": "Término cultural asociado a ALCALDES DE MALABO de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de ALCALDES DE MALABO",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-2",
+    "categoryIcon": "🗿",
+    "categoryName": "Identidad y Pueblos",
+    "categoryId": "etnias_identidad",
+    "title": "2.APELLIDOS NDOWES",
+    "words": [
+      "EPITIE",
+      "DJANGANI ELONGA",
+      "IPIKO",
+      "IDJABE IKAKA",
+      "IPO IYANGA",
+      "LUKA MAKENDENGUE MBULA",
+      "MBUNA MEMBA MOLONGUA",
+      "OKO OMA RONDO",
+      "UBENGA UPOLO",
+      "COMBE"
+    ],
+    "number": 2,
+    "type": "sopa",
+    "cleanTitle": "APELLIDOS NDOWES",
+    "playableWords": [
+      {
+        "word": "EPITIE",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "DJANGANI",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELONGA",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "IPIKO",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "IDJABE",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "IKAKA",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "IPO",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      },
+      {
+        "word": "IYANGA",
+        "clue": "Término cultural asociado a APELLIDOS NDOWES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de APELLIDOS NDOWES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-3",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "3.AUTORES NACIONALES",
+    "words": [
+      "GUILLERMINA MEKUY OBONO",
+      "JUAN BALBOA BONEKE",
+      "JUSTO BOLEKIABOLEKA",
+      "RAQUEL ILONBE",
+      "AUGUSTO IYANGA PENDI",
+      "JOAQUIN MBANA",
+      "JUAN TOMAS AVILA LAUREL",
+      "LEONCIO EVITA ENOY",
+      "TRIFONIA MELIBEA OBONO",
+      "CESAR MBA ABOGO",
+      "DONATO NDONGO BIDYOGO",
+      "CARMELA OYONO AYINGONO",
+      "CIRIACO BOKESA",
+      "ESTANISLAO MEDINA HUESCA",
+      "JOSE FERNANDO SIALE DJANGANY",
+      "JULIAN BIBANG OYEE",
+      "MARIA NSUE ANGUE"
+    ],
+    "number": 3,
+    "type": "sopa",
+    "cleanTitle": "AUTORES NACIONALES",
+    "playableWords": [
+      {
+        "word": "MEKUY",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "OBONO",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "JUAN",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "BALBOA",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "BONEKE",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "JUSTO",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "RAQUEL",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "ILONBE",
+        "clue": "Término cultural asociado a AUTORES NACIONALES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de AUTORES NACIONALES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-4",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "4.BARRIOS DE BATA",
+    "words": [
+      "ALENA ASONGA BISA",
+      "BIYENDEM BOMUDI BOVANO",
+      "CAYDASA COMANDACHINA COVADONGA",
+      "ECOBENAM EKUKU ETOOFILI",
+      "IKUNDE LEA MBANGAN",
+      "MONDOASI NGOLO NKOLOMBONG",
+      "SHANGAI UDUBANJOLO UTONDE"
+    ],
+    "number": 4,
+    "type": "sopa",
+    "cleanTitle": "BARRIOS DE BATA",
+    "playableWords": [
+      {
+        "word": "ALENA",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "ASONGA",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "BISA",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "BIYENDEM",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "BOMUDI",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "BOVANO",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "CAYDASA",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      },
+      {
+        "word": "ECOBENAM",
+        "clue": "Término cultural asociado a BARRIOS DE BATA de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de BARRIOS DE BATA",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-5",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "5.BARRIOS DE MALABO",
+    "words": [
+      "ALKAIDE",
+      "BARRIO CHINO",
+      "CARACOLAS",
+      "ELA NGUEMA",
+      "IBADAN",
+      "SAMPAKA",
+      "SIPOPO",
+      "AMILIVIA",
+      "BUENA ESPERANZA",
+      "CAYDASA",
+      "FISHTOWN",
+      "LA RONDA PARAISO",
+      "SANTA MARIA",
+      "BANAPA",
+      "CAMPO YAOUNDE",
+      "COCOTEROS",
+      "FORTUNI",
+      "LOS ANGELES",
+      "PILAR BUEPOYO",
+      "SEMU"
+    ],
+    "number": 5,
+    "type": "sopa",
+    "cleanTitle": "BARRIOS DE MALABO",
+    "playableWords": [
+      {
+        "word": "ALKAIDE",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "BARRIO",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "CHINO",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELA",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "NGUEMA",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "IBADAN",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "SAMPAKA",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      },
+      {
+        "word": "SIPOPO",
+        "clue": "Término cultural asociado a BARRIOS DE MALABO de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de BARRIOS DE MALABO",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-6",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "6.CANTANTES FEMENINAS",
+    "words": [
+      "ANGUESOMO",
+      "EUMA",
+      "ISABEL OYANA",
+      "MERCEDES DE ELO",
+      "NELIDA KARR",
+      "PIRUCHI APO",
+      "SITA RICHI",
+      "CHUKUNENE",
+      "FIFI LA MIREY",
+      "ISKA",
+      "MISS YUMA",
+      "PALOMA LORIBO",
+      "PRINCESA DEMETRIA",
+      "CONCHA BUIKA",
+      "FLOR EBENDENG",
+      "LA LENA",
+      "MUAN ASINEPI",
+      "PINA BESOSA",
+      "PRINCESA INONI"
+    ],
+    "number": 6,
+    "type": "sopa",
+    "cleanTitle": "CANTANTES FEMENINAS",
+    "playableWords": [
+      {
+        "word": "EUMA",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ISABEL",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "OYANA",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MERCEDES",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELO",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NELIDA",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "KARR",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "PIRUCHI",
+        "clue": "Término cultural asociado a CANTANTES FEMENINAS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CANTANTES FEMENINAS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-7",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "7.CANTANTES MASCULINOS",
+    "words": [
+      "ALGAS B",
+      "CH B",
+      "JAMIN DOGG",
+      "MBA",
+      "NEGROBEY",
+      "POLACO",
+      "ZESARIO MC",
+      "ANGEL GLAMOUR",
+      "DIDDY ES",
+      "JUNIOR VIP",
+      "MEKO",
+      "NINO BROWN",
+      "ROMY SO LOVE",
+      "BENCRUIS",
+      "EL CHOJIN",
+      "KIKO B",
+      "MUCH ENGA",
+      "PEQUE WAMBO",
+      "TONY MARY"
+    ],
+    "number": 7,
+    "type": "sopa",
+    "cleanTitle": "CANTANTES MASCULINOS",
+    "playableWords": [
+      {
+        "word": "ALGAS",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "JAMIN",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "DOGG",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MBA",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NEGROBEY",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "POLACO",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ZESARIO",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ANGEL",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CANTANTES MASCULINOS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-8",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "8.CAPITALES AFRICANAS",
+    "words": [
+      "DAKAR",
+      "GABARONE",
+      "KINSASHA",
+      "MALABO",
+      "NDJAMENA",
+      "PRAIA",
+      "TRIPOLI",
+      "YAOUNDE",
+      "ASMARA",
+      "BRAZAVILLE",
+      "DAR ES SALAAM",
+      "KAMPALA",
+      "LIBREVILLE",
+      "MORONI",
+      "NIAMEY",
+      "PRETORIA",
+      "WINDHOEK",
+      "BUJUMBURA",
+      "EL CAIRO",
+      "KIGALI",
+      "LUANDA",
+      "NAIROBI",
+      "OUAGADOGOU",
+      "RABAT",
+      "YAMASUKRO"
+    ],
+    "number": 8,
+    "type": "sopa",
+    "cleanTitle": "CAPITALES AFRICANAS",
+    "playableWords": [
+      {
+        "word": "DAKAR",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "GABARONE",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "KINSASHA",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MALABO",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NDJAMENA",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "PRAIA",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "TRIPOLI",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      },
+      {
+        "word": "YAOUNDE",
+        "clue": "Término cultural asociado a CAPITALES AFRICANAS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CAPITALES AFRICANAS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-9",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "9.CENTROS EDUCATIVOS",
+    "words": [
+      "ADVENTISTA",
+      "ATENEO EDU NDONG",
+      "CANIGE",
+      "COLEGIO ESPANOL",
+      "DOCE DE OCTUBRE",
+      "HEROE LUBA",
+      "MARIA CANO",
+      "ORFELINATO",
+      "SANTA BIBIANA",
+      "SECCION DELEGADA",
+      "AMA BILINGUE AUCA",
+      "CARLOS LWANGA",
+      "COLEGIO FRANCES",
+      "EL BUEN PASTOR",
+      "LA SALLE",
+      "NAHANA MANGUE",
+      "POLITECNICO",
+      "SANTATERESITA",
+      "UNGE",
+      "ANEJA LUTHER KING",
+      "BIOKO NORTE",
+      "CLARET",
+      "COLEGIO TURCO",
+      "ENRIQUE NVO",
+      "MAGISTERIO",
+      "NUESTRA SENORA DELPILAR",
+      "REYMALABO",
+      "SANTOANGEL",
+      "WAISO"
+    ],
+    "number": 9,
+    "type": "sopa",
+    "cleanTitle": "CENTROS EDUCATIVOS",
+    "playableWords": [
+      {
+        "word": "ATENEO",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "EDU",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NDONG",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "CANIGE",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "COLEGIO",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESPANOL",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "DOCE",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "OCTUBRE",
+        "clue": "Término cultural asociado a CENTROS EDUCATIVOS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CENTROS EDUCATIVOS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-10",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "10.CANTANTES MASCULINOS II",
+    "words": [
+      "ADJOGUENING",
+      "BARON YABUKLU",
+      "CHERI MALE",
+      "LUIS MBOMIO",
+      "NGAL MADUNGA",
+      "ALEX MORRIS",
+      "BESOSO",
+      "EFAMBA",
+      "MAELE",
+      "PETTIT CHABAL",
+      "ANFIBIO",
+      "CANO",
+      "EYI MUAN NDONG",
+      "NENE BANTU",
+      "SELIN SAMURAI"
+    ],
+    "number": 10,
+    "type": "sopa",
+    "cleanTitle": "CANTANTES MASCULINOS II",
+    "playableWords": [
+      {
+        "word": "BARON",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "YABUKLU",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "CHERI",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "MALE",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "LUIS",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "MBOMIO",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "NGAL",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "MADUNGA",
+        "clue": "Término cultural asociado a CANTANTES MASCULINOS II de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CANTANTES MASCULINOS II",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-11",
+    "categoryIcon": "⚽",
+    "categoryName": "Deporte Ecuatoguineano",
+    "categoryId": "deporte_nacional",
+    "title": "11.CLUBES DE BASKET",
+    "words": [
+      "AFRIBASKET",
+      "ARSENAL DE EPOF",
+      "JET SIETE",
+      "MALABO KINGS",
+      "PANTHERS",
+      "SANTA TERESITA",
+      "VILAES BASKET",
+      "ALL STAR ALENA",
+      "BELSAN",
+      "JUVENTUS",
+      "MONGOMO BASKET",
+      "RAYO LASER",
+      "SHARKYS",
+      "WAISO IPOLA",
+      "ALL STAR CARACOLAS",
+      "HIDRA BASKET",
+      "LITORAL BASKET",
+      "NINE PLACES",
+      "SAN ANTONIO",
+      "SIX STARS"
+    ],
+    "number": 11,
+    "type": "sopa",
+    "cleanTitle": "CLUBES DE BASKET",
+    "playableWords": [
+      {
+        "word": "ARSENAL",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "EPOF",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "JET",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "SIETE",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "MALABO",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "KINGS",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "PANTHERS",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "SANTA",
+        "clue": "Término cultural asociado a CLUBES DE BASKET de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CLUBES DE BASKET",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-12",
+    "categoryIcon": "⚽",
+    "categoryName": "Deporte Ecuatoguineano",
+    "categoryId": "deporte_nacional",
+    "title": "12.CLUBES DE FUTBOL",
+    "words": [
+      "AKONANGUI FC",
+      "CD LAGE",
+      "DRAGON FC",
+      "FUTURO KINGS",
+      "RACING DE MICOMESENG",
+      "REAL X",
+      "ATLETICO MALABO",
+      "CAFE BAND SPORTIF",
+      "DEPORTIVO MONGOMO",
+      "DUMA DUMA",
+      "LEONES VEGETARIANOS",
+      "REAL BASACATO",
+      "SONY ELA NGUEMA",
+      "ATLETICO SEMU",
+      "CANO SPORT ACADEMY",
+      "DEPORTIVO UNIDAD",
+      "EQUIPO DIPLOMADO",
+      "PANTHERS FC",
+      "REAL REBOLA",
+      "UNION VESPER"
+    ],
+    "number": 12,
+    "type": "sopa",
+    "cleanTitle": "CLUBES DE FUTBOL",
+    "playableWords": [
+      {
+        "word": "LAGE",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "DRAGON",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "FUTURO",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "KINGS",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "RACING",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "REAL",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "ATLETICO",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "MALABO",
+        "clue": "Término cultural asociado a CLUBES DE FUTBOL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CLUBES DE FUTBOL",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-13",
+    "categoryIcon": "🗿",
+    "categoryName": "Identidad y Pueblos",
+    "categoryId": "etnias_identidad",
+    "title": "13.MUJER GUINEANA",
+    "words": [
+      "BISILA BOKOKO CECILIA OBONO ANGUE",
+      "CRISTINA DYOMBE DYANGANI MARIA TERESA EFUA",
+      "MILAGROSA OBONO ANGUE",
+      "PURIFICACION ANGUE ONDO",
+      "ISABEL ERAUL IVINA",
+      "MARI CARMEN ANDEM ELA",
+      "MONICA BINDANG",
+      "TRINIDAD MORGADES BESARI",
+      "CONSTANCIA MANGUE",
+      "JESUSA OBONO ENGONO",
+      "MARTA MOUMIE",
+      "PILAR BUEPOYO"
+    ],
+    "number": 13,
+    "type": "sopa",
+    "cleanTitle": "MUJER GUINEANA",
+    "playableWords": [
+      {
+        "word": "BISILA",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "BOKOKO",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "CECILIA",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "OBONO",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "ANGUE",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "CRISTINA",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "DYOMBE",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      },
+      {
+        "word": "DYANGANI",
+        "clue": "Término cultural asociado a MUJER GUINEANA de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MUJER GUINEANA",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-14",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia y Pioneros",
+    "categoryId": "historia_pioneros",
+    "title": "14.EMPRESAS NACIONALES",
+    "words": [
+      "ABAYAK",
+      "CANAL SOL",
+      "DELTA MAR",
+      "EMFEBI FIFTY FIFTY",
+      "GETESA",
+      "GUINACO",
+      "MARTINEZ HERMANOS",
+      "RYESA",
+      "VIAJAYPUNTO",
+      "AFROM GUINEA",
+      "CEIBA INTERCONTINENTAL",
+      "EGLNG",
+      "FARMANATURAL",
+      "GRUPO EVITA",
+      "INICIATIVAS ELEBI",
+      "MUNI",
+      "SEGESA",
+      "AUTOS LITORAL",
+      "CENTURION",
+      "EGTC",
+      "GEPETROL",
+      "GRUPO MEMBA",
+      "IPX",
+      "NOMEX",
+      "SONAPESCA"
+    ],
+    "number": 14,
+    "type": "sopa",
+    "cleanTitle": "EMPRESAS NACIONALES",
+    "playableWords": [
+      {
+        "word": "ABAYAK",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CANAL",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "SOL",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "DELTA",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "MAR",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "EMFEBI",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "FIFTY",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "GETESA",
+        "clue": "Término cultural asociado a EMPRESAS NACIONALES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de EMPRESAS NACIONALES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-15",
+    "categoryIcon": "⚽",
+    "categoryName": "Deporte Ecuatoguineano",
+    "categoryId": "deporte_nacional",
+    "title": "15.ENTRENADORES DEL NZALANG",
+    "words": [
+      "ANDONI GOIKOETXEA",
+      "BUERIBERI ECHUACA",
+      "FELIPE ESONO",
+      "HENRI MICHEL",
+      "RODOLFO BODIPO",
+      "ANGEL LOPEZ CASTO",
+      "NOPO GILSON PAULO",
+      "JUAN MICHA",
+      "SEBASTIAN MIGNE",
+      "ANTONIO PANCHO",
+      "ESTEBAN BECKER",
+      "GILSON PAULO",
+      "QUIQUE SETIEN",
+      "VICENTE ENGONGA"
+    ],
+    "number": 15,
+    "type": "sopa",
+    "cleanTitle": "ENTRENADORES DEL NZALANG",
+    "playableWords": [
+      {
+        "word": "ANDONI",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ECHUACA",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "FELIPE",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESONO",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "HENRI",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "MICHEL",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "RODOLFO",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "BODIPO",
+        "clue": "Término cultural asociado a ENTRENADORES DEL NZALANG de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de ENTRENADORES DEL NZALANG",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-16",
+    "categoryIcon": "⚽",
+    "categoryName": "Deporte Ecuatoguineano",
+    "categoryId": "deporte_nacional",
+    "title": "16.ESTRELLAS DEL BASKET",
+    "words": [
+      "CHIKINENE",
+      "CHOCHI",
+      "ELIAS MBANA",
+      "JUANCA",
+      "MEKO NKO",
+      "PAPI DIDIER",
+      "PEPE COLLINS",
+      "PITU",
+      "TIHITA",
+      "CHIQUITIN",
+      "DOMICIANO",
+      "ELOMAN",
+      "MACHI",
+      "MENOR COLLINS",
+      "PAPUCH",
+      "PEPON",
+      "RICHARD NGUEMA",
+      "CHIVAS",
+      "DONPE",
+      "FRAN MBA",
+      "MARK PETER",
+      "NENE AMBROWAS",
+      "PELU ELONGA",
+      "PETTIT ABIGUI",
+      "TAHATA JORDAN"
+    ],
+    "number": 16,
+    "type": "sopa",
+    "cleanTitle": "ESTRELLAS DEL BASKET",
+    "playableWords": [
+      {
+        "word": "CHOCHI",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELIAS",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "MBANA",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "JUANCA",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "MEKO",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "NKO",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "PAPI",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      },
+      {
+        "word": "DIDIER",
+        "clue": "Término cultural asociado a ESTRELLAS DEL BASKET de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de ESTRELLAS DEL BASKET",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-17",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "17.EXITOS DE MAELE",
+    "words": [
+      "ABOM",
+      "AWOM BINDELE",
+      "CHABELI",
+      "KALARA",
+      "MASIMANE CAMERUN",
+      "OMUMONG",
+      "SATURNINO",
+      "ANDEM ELA",
+      "BATA",
+      "CHICA ANE MBENG",
+      "DJI DA LOT AWA",
+      "MADJING MAWOC",
+      "ONGA DOUG MA",
+      "SSI MITANGAN",
+      "ANEYA",
+      "BERNARDITA",
+      "EL COLOR DE MI PIEL",
+      "MAELE NON GMA",
+      "VEMA"
+    ],
+    "number": 17,
+    "type": "sopa",
+    "cleanTitle": "EXITOS DE MAELE",
+    "playableWords": [
+      {
+        "word": "ABOM",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "AWOM",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "BINDELE",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "CHABELI",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "KALARA",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "MASIMANE",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "CAMERUN",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      },
+      {
+        "word": "OMUMONG",
+        "clue": "Término cultural asociado a EXITOS DE MAELE de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de EXITOS DE MAELE",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-18",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "18. INTERNACIONALES",
+    "words": [
+      "ALEJANDRO ASUMU OSA",
+      "CONCHA BUIKA",
+      "ERIC MOUSSAMBANI",
+      "JAVIER BALBOA OSA",
+      "MAELE NDO",
+      "RODOLFO BODIPO",
+      "BISILA BOKOKO",
+      "DOMINGO EDJANG MORENO",
+      "FORTUNATO OFA MBO",
+      "LAS HIJAS DEL SOL",
+      "NGUEMA OBIANG",
+      "CESAR BRANDON",
+      "EMILIO BUALE",
+      "GENOVEVA AYONGMAN",
+      "LEANDRO MBOMIO NSUE",
+      "RITA BOSAHO"
+    ],
+    "number": 18,
+    "type": "sopa",
+    "cleanTitle": "INTERNACIONALES",
+    "playableWords": [
+      {
+        "word": "ASUMU",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "OSA",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CONCHA",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "BUIKA",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "ERIC",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "JAVIER",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "BALBOA",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      },
+      {
+        "word": "MAELE",
+        "clue": "Término cultural asociado a INTERNACIONALES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de INTERNACIONALES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-19",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "19.HOTELES",
+    "words": [
+      "ANDA CHINA",
+      "BAMI",
+      "CARMEN GALAXY",
+      "ELIK MELEN",
+      "HILTON BISILA",
+      "MAGNO SUITES",
+      "PARAISO",
+      "SUITES DEL MAR",
+      "YOLI Y HERMANOS",
+      "ANGUE ONDO",
+      "BASILICA",
+      "COLINAS FEDERACIONES",
+      "HOTEL MONGOMO",
+      "MPALA",
+      "SOFITEL PRESIDENCIAL",
+      "URECA",
+      "BAHIA",
+      "CARMEN",
+      "EL CASTILLO",
+      "GRAND HOTEL DJIBLOHO",
+      "IBIS",
+      "PANAFRICA",
+      "SOFITEL SIPOPO LE GOLF",
+      "VILLABRENDA"
+    ],
+    "number": 19,
+    "type": "sopa",
+    "cleanTitle": "HOTELES",
+    "playableWords": [
+      {
+        "word": "ANDA",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CHINA",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "BAMI",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CARMEN",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "GALAXY",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELIK",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "MELEN",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      },
+      {
+        "word": "HILTON",
+        "clue": "Término cultural asociado a HOTELES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de HOTELES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-20",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "20.LOCALIDADES",
+    "words": [
+      "ACALAYONG",
+      "BAHO GRANDE",
+      "CABO SAN JUAN",
+      "CONGA",
+      "ELOBEY GRANDE",
+      "NKOLOMBONG",
+      "NSORK NZOMO",
+      "RIO CAMPO",
+      "ANISOK",
+      "BANEY",
+      "CAYDASA",
+      "DJIBLOHO",
+      "MBANE",
+      "NKUE",
+      "NSSANGAYONG",
+      "AUAL",
+      "BITIKA",
+      "COCOTEROS",
+      "ELOBEY CHICO",
+      "NKIMI",
+      "NSORK",
+      "REBOLA"
+    ],
+    "number": 20,
+    "type": "sopa",
+    "cleanTitle": "LOCALIDADES",
+    "playableWords": [
+      {
+        "word": "BAHO",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "GRANDE",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CABO",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "SAN",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "JUAN",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CONGA",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELOBEY",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      },
+      {
+        "word": "NSORK",
+        "clue": "Término cultural asociado a LOCALIDADES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de LOCALIDADES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-21",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia y Pioneros",
+    "categoryId": "historia_pioneros",
+    "title": "21.MEDIOS DE COMUNICACION",
+    "words": [
+      "AFRICA DOS MIL",
+      "CEIBA",
+      "LA GACETA",
+      "MALABOSA",
+      "RADIO ASONGA",
+      "AHORA EG",
+      "EBANO",
+      "LA GUINEA ESPANOLA",
+      "PANAFRICA",
+      "REAL EQUATORIAL GUINEA",
+      "CANAL SOL",
+      "GUINEAECUATORIALPRESS",
+      "LA VOZ DEL PUEBLO",
+      "POTOPOTO",
+      "TVGE"
+    ],
+    "number": 21,
+    "type": "sopa",
+    "cleanTitle": "MEDIOS DE COMUNICACION",
+    "playableWords": [
+      {
+        "word": "AFRICA",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "DOS",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "MIL",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "CEIBA",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "GACETA",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "MALABOSA",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "RADIO",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      },
+      {
+        "word": "ASONGA",
+        "clue": "Término cultural asociado a MEDIOS DE COMUNICACION de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MEDIOS DE COMUNICACION",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-22",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "22.MINISTERIOS",
+    "words": [
+      "ASUNTOS EXTERIORES",
+      "CULTURA Y TURISMO",
+      "HACIENDA Y PRESUPUESTOS",
+      "MINAS E HIDROCARBUROS",
+      "SEGURIDAD NACIONAL",
+      "FUNCION PUBLICA",
+      "INFORMACION Y PRENSA",
+      "ASUNTOS SOCIALES E IGUALDAD",
+      "AVIACION CIVIL",
+      "DEFENSA NACIONAL",
+      "INDUSTRIA Y ENERGIA",
+      "PESCA Y RECURSOSHIDRICOS",
+      "TRABAJO Y FOMENTO",
+      "SANIDAD Y BIENESTARSOCIAL"
+    ],
+    "number": 22,
+    "type": "sopa",
+    "cleanTitle": "MINISTERIOS",
+    "playableWords": [
+      {
+        "word": "ASUNTOS",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "CULTURA",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "TURISMO",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "HACIENDA",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MINAS",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NACIONAL",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "FUNCION",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "PUBLICA",
+        "clue": "Término cultural asociado a MINISTERIOS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MINISTERIOS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-23",
+    "categoryIcon": "🗿",
+    "categoryName": "Identidad y Pueblos",
+    "categoryId": "etnias_identidad",
+    "title": "23.NOMBRES BUBIS",
+    "words": [
+      "BELOLO BISILA BOABI",
+      "EBEBE KATYA KOLEKO",
+      "KORI LELE LOBELA",
+      "MOLABI RIAKA RIMMA",
+      "TAWE URI WEJA"
+    ],
+    "number": 23,
+    "type": "sopa",
+    "cleanTitle": "NOMBRES BUBIS",
+    "playableWords": [
+      {
+        "word": "BELOLO",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BISILA",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BOABI",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "EBEBE",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "KATYA",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "KOLEKO",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "KORI",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "LELE",
+        "clue": "Término cultural asociado a NOMBRES BUBIS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de NOMBRES BUBIS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-24",
+    "categoryIcon": "🗿",
+    "categoryName": "Identidad y Pueblos",
+    "categoryId": "etnias_identidad",
+    "title": "24.APELLIDOS FEMENINOS FANG",
+    "words": [
+      "AFUY ANDEME ANGUESOMO",
+      "ASANGONO AYINGONO BINDANG",
+      "EFUA EKIFANG MANGUE",
+      "MBENGONO MONABANG MONAYONG",
+      "NCHAMA NTONGONO OYANA"
+    ],
+    "number": 24,
+    "type": "sopa",
+    "cleanTitle": "APELLIDOS FEMENINOS FANG",
+    "playableWords": [
+      {
+        "word": "AFUY",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ANDEME",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ASANGONO",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "AYINGONO",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "BINDANG",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "EFUA",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "EKIFANG",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "MANGUE",
+        "clue": "Término cultural asociado a APELLIDOS FEMENINOS FANG de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de APELLIDOS FEMENINOS FANG",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-25",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia y Pioneros",
+    "categoryId": "historia_pioneros",
+    "title": "25.PERSONAJES HISTORICOS",
+    "words": [
+      "ATANASIO NDONG",
+      "ELA NGUEMA",
+      "LOPELO MELAKA",
+      "MARTA MOUMIE",
+      "RAFAEL NZE ABUY",
+      "MIGUEL GERONA",
+      "EDMUNDO BOSIO",
+      "GORI MOLUBELA",
+      "MACIAS NGUEMA",
+      "MAXIMILIANO JONES",
+      "OBIANG NGUEMA",
+      "SATURNINO IBONGO",
+      "EKONG ANDEME",
+      "LOERI COMBA",
+      "MAHO SICACHA",
+      "NDONG EKANG",
+      "ONDO EDU"
+    ],
+    "number": 25,
+    "type": "sopa",
+    "cleanTitle": "PERSONAJES HISTORICOS",
+    "playableWords": [
+      {
+        "word": "ATANASIO",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NDONG",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELA",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "NGUEMA",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "LOPELO",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MELAKA",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MARTA",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MOUMIE",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de PERSONAJES HISTORICOS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-26",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia y Pioneros",
+    "categoryId": "historia_pioneros",
+    "title": "26.PERSONAJES HISTORICOS II",
+    "words": [
+      "ALFONSO JESUS OYONO",
+      "ARMANDO BALBOA",
+      "GARCIA TREVIJANO",
+      "LUIS MAHO",
+      "MODESTO GENE",
+      "RAFAEL EVITA",
+      "TOMAS MBUAMANGONGO",
+      "ANGEL BARRERA",
+      "CLEMENTE ATEBA",
+      "GRANJE MOLAY",
+      "MANUEL IRRADIER",
+      "PADRE SIALO",
+      "REY BONKORO",
+      "ANGEL MASIE",
+      "FEDERICO NGOMO",
+      "GUSTAVO WATSON",
+      "MBA ADA",
+      "PASTOR TORAO",
+      "REY MOKA"
+    ],
+    "number": 26,
+    "type": "sopa",
+    "cleanTitle": "PERSONAJES HISTORICOS II",
+    "playableWords": [
+      {
+        "word": "ALFONSO",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "JESUS",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "OYONO",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "ARMANDO",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "BALBOA",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "GARCIA",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "LUIS",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      },
+      {
+        "word": "MAHO",
+        "clue": "Término cultural asociado a PERSONAJES HISTORICOS II de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de PERSONAJES HISTORICOS II",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-27",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "27. POBLADOS BUBIS",
+    "words": [
+      "BALOERI",
+      "BAHO BAHO",
+      "PEQUENO",
+      "BARRIOBE",
+      "GRANDE",
+      "BANEY BANTABARE",
+      "BASUALA",
+      "BASILE",
+      "CUPAPA",
+      "BASACATO",
+      "BATOIKOPO",
+      "BATETE",
+      "LUBA MOERI",
+      "MOKA MUSOLA MUSOLA",
+      "REBOLA RIABA",
+      "URECA"
+    ],
+    "number": 27,
+    "type": "sopa",
+    "cleanTitle": "POBLADOS BUBIS",
+    "playableWords": [
+      {
+        "word": "BALOERI",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BAHO",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "PEQUENO",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BARRIOBE",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "GRANDE",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BANEY",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BASUALA",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BASILE",
+        "clue": "Término cultural asociado a POBLADOS BUBIS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de POBLADOS BUBIS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-28",
+    "categoryIcon": "🏛️",
+    "categoryName": "Historia y Pioneros",
+    "categoryId": "historia_pioneros",
+    "title": "28.PRIMEROS MINISTROS",
+    "words": [
+      "ANGEL SERICHE DOUGAN",
+      "IGNACIO MILAM TANG",
+      "RICARDO MANGUE",
+      "CANDIDO MUATETEMA RIVAS",
+      "MIGUEL ABIA BITEO",
+      "SILVESTRE SIALE BILEKA",
+      "CRISTINO SERICHE BIOKO",
+      "PASCUAL OBAMA ASUE",
+      "VICENTE EHATE TOMI"
+    ],
+    "number": 28,
+    "type": "sopa",
+    "cleanTitle": "PRIMEROS MINISTROS",
+    "playableWords": [
+      {
+        "word": "ANGEL",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "SERICHE",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "DOUGAN",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "IGNACIO",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MILAM",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "TANG",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "RICARDO",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MANGUE",
+        "clue": "Término cultural asociado a PRIMEROS MINISTROS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de PRIMEROS MINISTROS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-29",
+    "categoryIcon": "🍲",
+    "categoryName": "Gastronomía Típica",
+    "categoryId": "gastronomia",
+    "title": "29.RESTAURANTES",
+    "words": [
+      "E S O V H M C R N X N X P K Y M J J Q A U O H Z V",
+      "M L U C Y C A O R I E N T A L V W S E E K V I M W",
+      "V A B X I Q O Z L B L P I Z Z A P L A C E A H F A",
+      "T L U A N Q E N I V R J C X Q X K H I V K L H I S",
+      "D U L J R M E R S A J N H J T A L X Z Q C J O O K",
+      "J N Q R R C A C S T P O G J A T T Y Z K B K Q A L",
+      "W A O E D C O P A C I E T N K W F P D E A X A W Y",
+      "F C F Z L E L C I F W B B C D I G D F S A V T P Y",
+      "K A A E A U L Y A Z E A O B W H X S L T A J T B N",
+      "L H U F L Q N I C S Z M R N G D H L T V Z E E W L",
+      "C W V I E C S L C N I A A B A Q Y C T I T X L C B",
+      "E B Z I M K A D V E M N C R W P Z R G X J L I F U",
+      "U I H O Y A R O G A D F O E I A E M E E T A E L Q",
+      "T V A A O F G I R V H E C M N T A T C U I G R K O",
+      "T O B V G L L I S N W P F E E T I Z T P F R A K L",
+      "Z U I O I C M A N T V J U R U P R M Y I K A G D Z",
+      "Q K D C E A Z P T E A Q N T A H L A O P T N H U U",
+      "L A J J B A T D U O S N Q B I N O V L X I J N Z G",
+      "X E I Y X D K O V I R R I P E A C Y U E I A A J P",
+      "J D B C K M U J R P P R D A W G X E S X L Y C N X",
+      "I N I Q N P D O K B O H E O F Q B N P E I Y Y W J",
+      "I P N F G C C O K Z U B P P L U Z G Q S U I T P R",
+      "J I I X K A D Q L Q N M K P R M Q M V J F N X R L",
+      "I P A N L S W L Y L G P V X O B K J G D U O U L P",
+      "E Q E L F B Q F S Q V O W I L J K F Q E B H T Z Q",
+      "ATTELIER",
+      "CAFE KRISTANIA",
+      "DELICE DE FRANCE",
+      "IMAGINE",
+      "LA GRANJA",
+      "PIZZA CENTRAL",
+      "AVIATOR",
+      "CAFE MARITIMO",
+      "EL BARCO CASINO",
+      "LA CORISQUENA",
+      "LA LUNA",
+      "MIRAMAR",
+      "PIZZA PLACE",
+      "BIDJI BINIA",
+      "CONSTI BON APETTIT",
+      "ELCARIBE",
+      "LA FERME",
+      "LA TORRE",
+      "ORIENTAL"
+    ],
+    "number": 29,
+    "type": "crucigrama",
+    "cleanTitle": "RESTAURANTES",
+    "playableWords": [
+      {
+        "word": "ATTELIER",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CAFE",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "DELICE",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "FRANCE",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "IMAGINE",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "GRANJA",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "PIZZA",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      },
+      {
+        "word": "CENTRAL",
+        "clue": "Término cultural asociado a RESTAURANTES de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de RESTAURANTES",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-30",
+    "categoryIcon": "🗿",
+    "categoryName": "Identidad y Pueblos",
+    "categoryId": "etnias_identidad",
+    "title": "30.TRIBUS FANG",
+    "words": [
+      "R E E H L R D E K Y I F U O G T C V J D M U U X Y",
+      "F C S W M G Y O O P K U F X H R O J H F K I C G M",
+      "K D A Z U U E R L I R N Y E X P G P Y J U N S X W",
+      "I Q M E L G Z V Z G C S A H T N V A M Y S D H S W",
+      "C E B A S E S A K U N A N K O D J E I N P V Q D T",
+      "Z R I I I A A X M N V A P W Q O Q G P M E C V D A",
+      "A Y R N L K N Y I H O C A X T S O I A Z E L U B S",
+      "L C A F N G H Y P K Y S K X N Z H F P M C M D Q Z",
+      "T L Q A Q I W K E O E K O S D A U A O G L E K O R",
+      "A F C U X R Z B M J Q N A J I I S Y T Z I Z W C G",
+      "L D N B F K E O N L Q E M J T S Q M P M B G S B Q",
+      "E P Y G O Y S Z D T U O K L J C H X M W R Y Y A I",
+      "S F E O H N C P A G S Y Z R A K P X Q H K R J X O",
+      "A K M T P Q U C B A Y M O D Z M Z S C U P Y V L H",
+      "C F V G U A H C S P L D G J E J V O K J J U Z E A",
+      "U K A F A U U E S A L A N N B N B O S Y C D P D U",
+      "N P M P L V I S V A C C V T B D E E M P G Y W O E",
+      "A Q M L Y M P N F Q I K P Y W M R X M G F P I N H",
+      "N G U E X S V T O U S E J O N N L L L B Q H C Y M",
+      "A W U I E A C P G K A F W G N Y O U U N Q Q C O F",
+      "D I U N U T K N Z J G A E N Y T P S L D F G C W G",
+      "T S F P G L A L G X U K M W C K Y K X Q R L F G X",
+      "L N P P I S Y Q A T J N P S M L K B Y Y F H I H E",
+      "C S A W E M T Y B X J W A F T Y I C G I Z D O K G",
+      "U L G W E V Z K K K Q V A F T X X S X Q N A L I V",
+      "AMVOM EBA EFAK",
+      "ESACUNAN ESAKUNAN ESALAN",
+      "ESAMBIRA ESANGUI ESASOM",
+      "ESAWONG NKODJEIN NSOMO",
+      "OKUK YEBEKOAN YEMVAM"
+    ],
+    "number": 30,
+    "type": "crucigrama",
+    "cleanTitle": "TRIBUS FANG",
+    "playableWords": [
+      {
+        "word": "AMVOM",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "EBA",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "EFAK",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESACUNAN",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESAKUNAN",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESALAN",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESAMBIRA",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESANGUI",
+        "clue": "Término cultural asociado a TRIBUS FANG de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de TRIBUS FANG",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-31",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "31.AFRICA CENTRAL",
+    "words": [
+      "2. aka Port-Gentil, segunda ciudad de Gabón.",
+      "6. Aeropuerto internacional en Yaundé,",
+      "Camerún.",
+      "8. (francés) segunda ciudad más poblada de",
+      "Congo Brazzaville.",
+      "9. Capital de Burundi.",
+      "10. Antiguo nombre de la RDC.",
+      "12. Moneda de curso común en los países de la",
+      "región.",
+      "15. Santo Tomé y ...",
+      "17. Grupo étnico victimizado en el genocidio de",
+      "Ruanda.",
+      "19. Presidente de Chad entre 1982 y 1990.",
+      "1. Capital chadiana.",
+      "3. Primer presidente de la Republica",
+      "Centroafricana (1960-1966).",
+      "4. Exitoso saxofonista camerunés.",
+      "5. Genero musical de los Beti. Literalmente",
+      "golpear el suelo.",
+      "7. Ex-mandatario de Angola.",
+      "11. Todopoderoso... club de futbol de Lumumbasi,",
+      "13. Comunidad económica y monetaria de los",
+      "estados del África central.",
+      "14. Uno de los grandes lagos africanos en la",
+      "frontera entre RDC y Ruanda",
+      "16. (sing.)Cazadores-recolectores de baja",
+      "estatura.",
+      "18. Islote propiedad inalienable de Guinea",
+      "Ecuatorial."
+    ],
+    "number": 31,
+    "type": "crucigrama",
+    "cleanTitle": "AFRICA CENTRAL",
+    "playableWords": [
+      {
+        "word": "AKA",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "PORT",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "GENTIL",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "SEGUNDA",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "CIUDAD",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "GABN",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "YAUND",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "CAMERN",
+        "clue": "Término cultural asociado a AFRICA CENTRAL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de AFRICA CENTRAL",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-32",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "32.CINE Y TELEVISION",
+    "words": [
+      "4. Periodista y presentadora de TVE con raíces",
+      "ndowés.",
+      "5. Filmada en Bioko. Batallón que no se entera",
+      "de que la guerra acabó.",
+      "7. Comediante femenina fang que triunfa en",
+      "España con sus monólogos.",
+      "8. Obra teatral protagonizada por Wantó,",
+      "Concha y Walter.",
+      "9. Famoso locutor deportivo que cubría los",
+      "partidos del Nzalang en los 90.",
+      "10. Periodista deportivo fanático del Nzalang.",
+      "1. Actor internacional de películas",
+      "como Black Beach, La Plataforma",
+      "y Bwana.",
+      "2. (Pitú)Presentó Punto de Encuentro",
+      "a principios de los 90.",
+      "3. Gustavo en Palmeras en la Nieve",
+      "(2015) y Eneko en Sr. Dame",
+      "Paciencia (2017)",
+      "6. Nominado a los Goya por su",
+      "trabajo en Historias Lamentables."
+    ],
+    "number": 32,
+    "type": "crucigrama",
+    "cleanTitle": "CINE Y TELEVISION",
+    "playableWords": [
+      {
+        "word": "TVE",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "RACES",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "NDOWS",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "FILMADA",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "BIOKO",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "BATALLN",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "QUE",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      },
+      {
+        "word": "ENTERA",
+        "clue": "Término cultural asociado a CINE Y TELEVISION de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CINE Y TELEVISION",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-33",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "33.CINE TELEVISION II",
+    "words": [
+      "5. Mario Casas y Berta Vázquez la",
+      "protagonizaron (2015).",
+      "6. Magazine de actualidad y entretenimiento en",
+      "TV Asonga.",
+      "7. Telenovela de intriga y pasión.",
+      "9. Documental de 2020 sobre el vil asesinato de",
+      "Sas Ebuera.",
+      "10. Director de Prensa Presidencial y presentador",
+      "de Actualidad Presidencial fallecido en 2019.",
+      "1. Presentadora de Balcón del",
+      "Domingo en TVGE.",
+      "2. Película del Sr. Cuchillas y su",
+      "banda mafiosa.",
+      "3. Antigua presentadora estrella de",
+      "\"A fondo\".",
+      "4. Peli de 1996 que narra la amistad",
+      "entre una niña blanca y una negra",
+      "en la colonia de Santa Isabel.",
+      "8. Longevo programa televisivo",
+      "presentado por Olinga."
+    ],
+    "number": 33,
+    "type": "crucigrama",
+    "cleanTitle": "CINE TELEVISION II",
+    "playableWords": [
+      {
+        "word": "MARIO",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "CASAS",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "BERTA",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "VZQUEZ",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "MAGAZINE",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "ASONGA",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "INTRIGA",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      },
+      {
+        "word": "PASIN",
+        "clue": "Término cultural asociado a CINE TELEVISION II de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de CINE TELEVISION II",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-34",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "34.FOLKLORE LOCAL",
+    "words": [
+      "1. Personaje de la literatura fang glotón,",
+      "mentiroso, con una gran nariz.",
+      "4. Baile tradicional annobonés.",
+      "7. El animal mas astuto de la selva, jefe de",
+      "familia.",
+      "10. Las creencias bubis lo responsabilizan de",
+      "todos los males que pueden acontecer.",
+      "11. Mitad mujer, mitad pez, completamente",
+      "seductora.",
+      "13. Lucha tradicional ndowé.",
+      "14. Héroe del Nvet Oyeng que se presentó",
+      "ante el tribunal de Dios.",
+      "15. Sociedad imaginaria donde todo el mundo",
+      "es numero uno.",
+      "2. Baile tradicional benga también conocido",
+      "como Okay.",
+      "3. Para los fang es el centro de poder de los",
+      "brujos, situado en el vientre.",
+      "5. Antigua danza fang preparatoria para la",
+      "guerra.",
+      "6. Mujer obesa que siempre propina a su",
+      "esposo grandes palizas.",
+      "8. Buscaba a su hija desaparecida en las",
+      "aulas de EGB.",
+      "9. Danza popular bisió que las mujeres bailan",
+      "en fila india al ritmo del tambor.",
+      "12. Dos niños guineanos creados por el Prof.",
+      "Fernández Magaz."
+    ],
+    "number": 34,
+    "type": "crucigrama",
+    "cleanTitle": "FOLKLORE LOCAL",
+    "playableWords": [
+      {
+        "word": "FANG",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "GLOTN",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "GRAN",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "NARIZ",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "BAILE",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "ANNOBONS",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "ANIMAL",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "MAS",
+        "clue": "Término cultural asociado a FOLKLORE LOCAL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de FOLKLORE LOCAL",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-35",
+    "categoryIcon": "⚽",
+    "categoryName": "Deporte Ecuatoguineano",
+    "categoryId": "deporte_nacional",
+    "title": "35.LEYENDAS AFRICANAS DEL FUTBOL",
+    "words": [
+      "3. Centrocampista. Southampton,",
+      "Liverpool, Bayern y Senegal.",
+      "5. Delantero. Chelsea, Roma, Liverpool y",
+      "Egipto.",
+      "8. Defensa. Arsenal.City. Liverpool y",
+      "Costa de Marfil como jugador y",
+      "seleccionador.",
+      "10. Centrocampista. Lille, Marsella y",
+      "selección de Ghana.",
+      "11. Delantero. Único balón de oro africano",
+      "de la historia. Liberia",
+      "12. Delantero. Máximo goleador de la",
+      "selección nigeriana.",
+      "13. Delantero. Augustine Azuka, mas",
+      "conocido como... .(Nigeria.)",
+      "14. Delantero. Marsella, Chelsea,",
+      "Galatasaray y Costa de Marfil.",
+      "1. Delantero.AC Milán, Arsenal,",
+      "Barcelona y Gabón.",
+      "2. Defensa. Liverpool, West Ham,",
+      "Galatasaray y Camerún.",
+      "4. Centrocampista. Nancy, Sporting,",
+      "Deportivo y Marruecos.",
+      "6. Delantero. Posiblemente el mejor",
+      "jugador africano de la historia.",
+      "Camerún.",
+      "7. Centrocampista. Mónaco, Barcelona,",
+      "City. Costa de Marfil",
+      "9. Delantero. Jugador mas viejo en",
+      "marcar un gol en un mundial.",
+      "Camerún.",
+      "15. Delantero. Le Havre, Leicester, City y",
+      "Argelia."
+    ],
+    "number": 35,
+    "type": "crucigrama",
+    "cleanTitle": "LEYENDAS AFRICANAS DEL FUTBOL",
+    "playableWords": [
+      {
+        "word": "BAYERN",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "SENEGAL",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "CHELSEA",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "ROMA",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "EGIPTO",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "DEFENSA",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "COSTA",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      },
+      {
+        "word": "MARFIL",
+        "clue": "Término cultural asociado a LEYENDAS AFRICANAS DEL FUTBOL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de LEYENDAS AFRICANAS DEL FUTBOL",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-36",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "36.MISCELANEO",
+    "words": [
+      "2. Ley Fundamental adoptada el 14 de",
+      "agosto de 1982.",
+      "4. Escenario de las trágicas explosiones",
+      "del 7 de marzo de 2021.",
+      "5. Francisco... primer presidente del",
+      "Parlamento de Guinea Ecuatorial.",
+      "8. Diputada fallecida en un accidente de",
+      "aviación en Camerún, mayo de 2007.",
+      "11. Reconocido economista ligado al",
+      "BEAC y al Fondo Monetario",
+      "Internacional.",
+      "12. Presidente de la Cámara de",
+      "Representantes del Pueblo.",
+      "14. Estadio de Mongomo.",
+      "15. Actual Defensor del Pueblo.",
+      "16. Antiguo Secretario General del PDGE",
+      "entre 1989 y 1995.",
+      "1. Presidenta del Senado.",
+      "3. Embajador de GE ante la ONU.",
+      "6. Hijo predilecto de Corisco, cuyo",
+      "aeropuerto lleva su nombre.",
+      "7. Escuela Militar Inter-Armas... .",
+      "9. Primer Ministro del Gobierno entre",
+      "julio de 2008 y mayo de 2012.",
+      "10. Esono Angué, actual Ministro de",
+      "Asuntos Exteriores y Cooperación.",
+      "13. Partido de la \"gacela\" Encabezado por",
+      "Ondo Edú en las elecciones del 68."
+    ],
+    "number": 36,
+    "type": "crucigrama",
+    "cleanTitle": "MISCELANEO",
+    "playableWords": [
+      {
+        "word": "LEY",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "ADOPTADA",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "AGOSTO",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "TRGICAS",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "MARZO",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "PRIMER",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "GUINEA",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      },
+      {
+        "word": "DIPUTADA",
+        "clue": "Término cultural asociado a MISCELANEO de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MISCELANEO",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-37",
+    "categoryIcon": "🍲",
+    "categoryName": "Gastronomía Típica",
+    "categoryId": "gastronomia",
+    "title": "37.GASTRONOMíA",
+    "words": [
+      "4. Tortuga de tierra.",
+      "6. Riquísimo pescado de agua dulce que se",
+      "suele servir en un envuelto.",
+      "8. Lo llamamos comúnmente chocolate.",
+      "9. Un dulce que se hace con cacahuete, agua",
+      "y azúcar.",
+      "10. Plato ndowé basado en palmiste con un",
+      "característico color rojizo.",
+      "15. Algunos no podemos comer sin ello.",
+      "17. A los fang les gusta servirlo sobre hojas de",
+      "plátano.",
+      "18. Muy buen pescado para el pepesup.",
+      "19. En otras partes de África y en América",
+      "Latina la conocen como \"casava\".",
+      "1. Anita blanca",
+      "2. Tipo de pescado muy abundante en",
+      "nuestros mares.",
+      "3. Plato típico bubi que comparte nombre con",
+      "cierto antiguo Vicepresidente.",
+      "5. Buñuelos pequeños que se venden o",
+      "vendían 5 a 25.",
+      "7. Ingredientes: Malanga, pescado fresco o",
+      "sardina, aceite de palma, picante y sal.",
+      "10. Nada mejor para combatir la resaca.",
+      "11. Salsa hecha a partir del Abelmochus",
+      "Esculentus también conocido como",
+      "quimbombó, molondrón o candia.",
+      "12. Caracoles de mar que hacen un delicioso",
+      "pica-pica.",
+      "13. Este plato verde de hojas de yuca se asocia",
+      "con los fang.",
+      "14. Acompañante por excelencia de los platos",
+      "tradicionales annoboneses.",
+      "16. Los bubis la preparan a base de malanga",
+      "pelada y rallada."
+    ],
+    "number": 37,
+    "type": "crucigrama",
+    "cleanTitle": "GASTRONOMíA",
+    "playableWords": [
+      {
+        "word": "TORTUGA",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "TIERRA",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "RIQUSIMO",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "PESCADO",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "AGUA",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "DULCE",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "QUE",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      },
+      {
+        "word": "SUELE",
+        "clue": "Término cultural asociado a GASTRONOMíA de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de GASTRONOMíA",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-38",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "38.SANTA ISABEL",
+    "words": [
+      "6. El gobernador más influyente que tuvo",
+      "la colonia. Con estatua propia y todo.",
+      "7. Instituto...Hoy día alberga la sede del",
+      "Centro Cultural Guineano.",
+      "10. Maximiliano Cipriano Jones magnate",
+      "fernandino también conocido como...",
+      "11. Playa de Santa Isabel donde los barcos",
+      "de vapor se proveían de carbón.",
+      "12. Nombre que le dieron los fundadores",
+      "ingleses a la ciudad de Santa Isabel.",
+      "14. Semanario más importante de la",
+      "Guinea Española entre 1939 y 1969.",
+      "15. Localidad colindante a Santa Isabel",
+      "conocida hoy como Ela Nguema.",
+      "1. Institución religiosa responsable de la",
+      "educación de muchos futuros lideres",
+      "independentistas",
+      "2. Reverendo....Fernandino de",
+      "ascendencia Igbo que se destacó como",
+      "misionero primitivo metodista.",
+      "3. Plaza de la Independencia desde",
+      "Octubre del 68.",
+      "4. Local de ambiente en la época colonial",
+      "que frecuentaban los nativos",
+      "emancipados.",
+      "5. Otorgaba la condición de emancipado a",
+      "los nativos y tutelaba a los no",
+      "emancipados.",
+      "8. La mas longeva de las fincas de cacao",
+      "de Santa Isabel, activa hasta nuestros",
+      "días.",
+      "9. Acuerdo entre España y Portugal de",
+      "1778 para la cesión de las islas de",
+      "Fernando Poo y Annobón.",
+      "13. Sociedad anónima de la Guinea",
+      "Española dedicada la distribución de",
+      "carburantes."
+    ],
+    "number": 38,
+    "type": "crucigrama",
+    "cleanTitle": "SANTA ISABEL",
+    "playableWords": [
+      {
+        "word": "QUE",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "TUVO",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "COLONIA",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESTATUA",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "PROPIA",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "TODO",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "ALBERGA",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      },
+      {
+        "word": "SEDE",
+        "clue": "Término cultural asociado a SANTA ISABEL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de SANTA ISABEL",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-39",
+    "categoryIcon": "🎵",
+    "categoryName": "Música, Cine y Leyendas",
+    "categoryId": "musica_arte",
+    "title": "39.VIEJA ESCUELA (CANTANTES AFRICANOS)",
+    "words": [
+      "3. Grupo de música cristiano de origen",
+      "congoleño que alcanzo éxito mundial",
+      "en los 90 desde Holanda.",
+      "5. Histórico músico, activista político y",
+      "panafricanista nigeriano pionero del",
+      "afrobeat.",
+      "9. Éxito internacional de 1996 del",
+      "argelino Khaled.",
+      "10. Antoine Christophe Agbepa Mumba,",
+      "más conocido como...",
+      "11. Exitosa banda musical formada en",
+      "Kinsasha en 1993 por Espa Bass y",
+      "Roga Roga.",
+      "12. Diva beninesa con cinco Grammys a",
+      "sus espaldas.",
+      "14. Princesa de la música sudafricana, la",
+      "Madonna de los Guetos.",
+      "15. aka Marie Josephine Kama y/o",
+      "Josephine Bongo.",
+      "1. La canción más famosa del grupo",
+      "marfileño Magic System.",
+      "2. Trompetista, máximo exponente del",
+      "Jazz sudafricano.",
+      "4. Autor de grades éxitos como Icole,",
+      "Bane y Adia.",
+      "6. \"Le propietaire de tous les dossiers\".",
+      "7. Afortunado rastafari sudafricano.",
+      "8. Compositor camerunés, cantó Chica",
+      "Ane Mbeng junto a Maele e Hilarión",
+      "Nguema.",
+      "13. Ntoumba Ayila, más conocido como ...",
+      "Bailarín de Pepe Kalle y pionero de los",
+      "artistas enanos."
+    ],
+    "number": 39,
+    "type": "crucigrama",
+    "cleanTitle": "VIEJA ESCUELA (CANTANTES AFRICANOS)",
+    "playableWords": [
+      {
+        "word": "GRUPO",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "MSICA",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "ORIGEN",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "QUE",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "ALCANZO",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "XITO",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "MUNDIAL",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      },
+      {
+        "word": "DESDE",
+        "clue": "Término cultural asociado a VIEJA ESCUELA (CANTANTES AFRICANOS) de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de VIEJA ESCUELA (CANTANTES AFRICANOS)",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-40",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "40.MISCELANEO AFRICA",
+    "words": [
+      "2. Antiguo imperio africano de capital Gao.",
+      "5. Tribu del NE de Namibia caract. por su piel",
+      "rojiza y las densas trenzas de las mujeres.",
+      "6. Moneda de curso en Ghana.",
+      "8. Hoy, Burkina Faso.",
+      "9. Estado más poblado de Nigeria.",
+      "10. Cabo del Sur de Africa que comparte nombre",
+      "con un barrio de Malabo.",
+      "11. Estado secesionista de la RD de Congo bajo",
+      "el liderazgo de Moise Tshombe.",
+      "12. Rebelión popular en Kenia contra la",
+      "ocupación británica.",
+      "14. Parque natural en Kenia.",
+      "1. Ciudad de Mali famosa por ser un importante",
+      "centro académico del Islam en la antigüedad.",
+      "2. Dialecto utilizado en varios países de Africa",
+      "del Este.",
+      "3. Danza femenina originaria de costa de Marfil",
+      "caract. por el movimiento agresivo de los",
+      "glúteos.",
+      "4. Lingua franca utilizada en Congo y en la",
+      "Republica Democrática de Congo.",
+      "7. Filósofo francés de origen argelino, ganador",
+      "del Premio Nobel de Literatura en 1957.",
+      "13. cordillera montañosa que recorre Túnez,",
+      "Argelia y Marruecos."
+    ],
+    "number": 40,
+    "type": "crucigrama",
+    "cleanTitle": "MISCELANEO AFRICA",
+    "playableWords": [
+      {
+        "word": "ANTIGUO",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "IMPERIO",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "AFRICANO",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "CAPITAL",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "GAO",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "TRIBU",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "NAMIBIA",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      },
+      {
+        "word": "CARACT",
+        "clue": "Término cultural asociado a MISCELANEO AFRICA de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MISCELANEO AFRICA",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-41",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "41.MISCELANEO GUINEA",
+    "words": [
+      "1. Supermercados Guinea sociedad",
+      "anónima.",
+      "5. Localidad de Rio Campo sede de la",
+      "Escuela Naval Militar.",
+      "7. Bifamiliar, Dúplex y Dúplex espinas",
+      "conforman el barrio de...",
+      "11. Hacienda situada en Riaba.",
+      "13. Arzobispo emérito.",
+      "14. Compañía propietaria del avión",
+      "siniestrado en julio de 2005.",
+      "15. Mercado de ropa usada en Malabo.",
+      "2. Entidad publica dedicada a la",
+      "recopilación de datos estadísticos.",
+      "3. Empresa de transferencia de dinero.",
+      "4. Provocador escritor no muy amigo de",
+      "las mujeres.",
+      "6. Premios anuales de excelencia musical.",
+      "8. Policlínico Doctor...",
+      "9. Estilo de baile popularizado por el",
+      "grupo Ela Nguema Gánster.",
+      "10. Panadería en Amilivia.",
+      "12. Mascota de la CAN 2012."
+    ],
+    "number": 41,
+    "type": "crucigrama",
+    "cleanTitle": "MISCELANEO GUINEA",
+    "playableWords": [
+      {
+        "word": "GUINEA",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "SOCIEDAD",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "ANNIMA",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "RIO",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "CAMPO",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "SEDE",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "ESCUELA",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      },
+      {
+        "word": "NAVAL",
+        "clue": "Término cultural asociado a MISCELANEO GUINEA de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MISCELANEO GUINEA",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-42",
+    "categoryIcon": "🗺️",
+    "categoryName": "Geografía y Lugares",
+    "categoryId": "geografia",
+    "title": "42.PAISES PEQUENOS",
+    "words": [
+      "1. CAPITAL LIBREVILLE",
+      "3. CAPITAL PORT LOUIS",
+      "6. CAPITAL MASERU",
+      "7. CAPITAL MBABANE",
+      "9. CAPITAL ASMARA",
+      "10. CAPITAL MONROVIA",
+      "13. CAPITAL BISSAU",
+      "14. CAPITAL BANGUI",
+      "17. CAPITAL ANTANANARIVO",
+      "18. CAPITAL DJIBOUTI",
+      "1. CAPITAL MALABO",
+      "2. CAPITAL PRAIA",
+      "4. CAPITAL PRINCIPE",
+      "5. CAPITAL MORONI",
+      "8. CAPITAL VICTORIA",
+      "11. CAPITAL FREETOWN",
+      "12. CAPITAL KIGALI",
+      "15. CAPITAL LOME",
+      "16. CAPITAL BUJUMBURA"
+    ],
+    "number": 42,
+    "type": "crucigrama",
+    "cleanTitle": "PAISES PEQUENOS",
+    "playableWords": [
+      {
+        "word": "CAPITAL",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "PORT",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "LOUIS",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MASERU",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MBABANE",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "ASMARA",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "MONROVIA",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      },
+      {
+        "word": "BISSAU",
+        "clue": "Término cultural asociado a PAISES PEQUENOS de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de PAISES PEQUENOS",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-43",
+    "categoryIcon": "⚽",
+    "categoryName": "Deporte Ecuatoguineano",
+    "categoryId": "deporte_nacional",
+    "title": "43.DEPORTE NACIONAL",
+    "words": [
+      "1. Equipo de Pelú",
+      "4. Emblemático locutor y periodista",
+      "deportivo de TVGE ya fallecido.",
+      "5. Institución tutora del baloncesto",
+      "6. fue sustituido por Job Obiang como",
+      "Presidente de la Federación de básquet.",
+      "9. Equipo de futbol de Ebebiyin",
+      "10. Gimnasio de Meko en calle Mongomo",
+      "12. Histórico centrocampista del Nzalang,",
+      "Sony y canon de Yaundé.",
+      "13. Da nombre a un campo de futbol en Ela",
+      "Nguema",
+      "14. Equipo de Donpé",
+      "15. Rafael Eneme Enga es presidente de la",
+      "Federación Ecuatoguineana de ...",
+      "2. Este centro de fitness te deja a tono con",
+      "intensas sesiones",
+      "3. Jose Luis... atleta internacional",
+      "representó a EG en los JJOO de 2000.",
+      "7. Francisco Dos Santos Sibita aka...",
+      "campeón de tenis.",
+      "8. Antigua Delantero Centro de origen",
+      "burkinabé del Nzalang femenino",
+      "11. Club de futbol de Annobón."
+    ],
+    "number": 43,
+    "type": "crucigrama",
+    "cleanTitle": "DEPORTE NACIONAL",
+    "playableWords": [
+      {
+        "word": "EQUIPO",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "PEL",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "LOCUTOR",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "TVGE",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "TUTORA",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "FUE",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "JOB",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "OBIANG",
+        "clue": "Término cultural asociado a DEPORTE NACIONAL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de DEPORTE NACIONAL",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-44",
+    "categoryIcon": "🐆",
+    "categoryName": "Selva y Fauna Fang",
+    "categoryId": "selva_fauna",
+    "title": "44.SELVA FANG",
+    "words": [
+      "1. En fang, tigre.",
+      "6. En fang, gato.",
+      "8. En fang, búho.",
+      "10. En fang, serpiente.",
+      "11. En fang, rana.",
+      "12. En fang, cocodrilo.",
+      "13. En fang, elefante.",
+      "2. En fang, tortuga.",
+      "3. En fang, lobo.",
+      "4. En fang, pangolín.",
+      "5. En fang, antílope.",
+      "7. En fang, leopardo.",
+      "9. En fang, perro.",
+      "10. En fang, jirafa.",
+      "11. En fang, gorila."
+    ],
+    "number": 44,
+    "type": "crucigrama",
+    "cleanTitle": "SELVA FANG",
+    "playableWords": [
+      {
+        "word": "FANG",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "TIGRE",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "GATO",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "BHO",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "RANA",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "ELEFANTE",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "TORTUGA",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      },
+      {
+        "word": "LOBO",
+        "clue": "Término cultural asociado a SELVA FANG de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de SELVA FANG",
+    "readyToImport": true
+  },
+  {
+    "id": "tema-45",
+    "categoryIcon": "🇬🇶",
+    "categoryName": "Miscelánea Cultural",
+    "categoryId": "historia_pioneros",
+    "title": "45.MISCELANEO UNIVERSAL",
+    "words": [
+      "2. Antiguo general y presidente francés.",
+      "5. Organización internacional de socorro.",
+      "9. Popular raza de perro originaria de cierto",
+      "país europeo.",
+      "11. Compañía fundada por Bill Gates.",
+      "12. Capital de Nepal.",
+      "14. Depuesto presidente marxista de chile entre",
+      "1970-1973",
+      "1. Que habla mucho.",
+      "3. Gameto sexual masculino.",
+      "4. Abierto de Francia: torneo de tenis en tierra",
+      "batida.",
+      "6. Vasta y fría región oriental de Rusia.",
+      "7. Whisky de Tennessee, Estados Unidos.",
+      "8. Famosa colina de la ciudad de Barcelona.",
+      "10. Tipos: bicho, dragón, eléctrico, fuego,",
+      "volador, fantasma...",
+      "13. Baile de salón en pareja típico de",
+      "Argentina.",
+      "15. Reina egipcia de la decimoctava dinastía."
+    ],
+    "number": 45,
+    "type": "crucigrama",
+    "cleanTitle": "MISCELANEO UNIVERSAL",
+    "playableWords": [
+      {
+        "word": "ANTIGUO",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "GENERAL",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "FRANCS",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "SOCORRO",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "POPULAR",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "RAZA",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "PERRO",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      },
+      {
+        "word": "CIERTO",
+        "clue": "Término cultural asociado a MISCELANEO UNIVERSAL de Guinea Ecuatorial."
+      }
+    ],
+    "playableCount": 8,
+    "clue": "Descubre los términos de MISCELANEO UNIVERSAL",
+    "readyToImport": true
+  }
+]

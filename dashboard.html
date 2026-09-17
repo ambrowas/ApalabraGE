@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApalabraGE Dashboard - Panel de Gestión Cultural y Firebase</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="/src/dashboard/dashboard.css" />
+  <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- ================= BARRA LATERAL (SIDEBAR) ================= -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo-wrap">
+          <img src="/logo.jpg" alt="ApalabraGE Logo" class="brand-logo-img" />
+        </div>
+        <div class="brand-text">
+          <h2 class="brand-title">ApalabraGE</h2>
+          <span class="brand-badge">ADMIN DASHBOARD</span>
+        </div>
+      </div>
+
+      <div class="firebase-status-pill" id="firebase-status-badge">
+        <span class="status-indicator online"></span>
+        <div class="status-info">
+          <span class="status-title">Firebase Firestore</span>
+          <span class="status-desc" id="firebase-project-name">Conectando...</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="overview">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Resumen General</span>
+        </button>
+        <button class="nav-item" data-tab="levels">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">Niveles y Palabras</span>
+          <span class="nav-counter" id="nav-count-levels">0</span>
+        </button>
+        <button class="nav-item" data-tab="categories">
+          <span class="nav-icon">🗂️</span>
+          <span class="nav-label">Categorías</span>
+          <span class="nav-counter" id="nav-count-categories">4</span>
+        </button>
+        <button class="nav-item" data-tab="trophies">
+          <span class="nav-icon">🏆</span>
+          <span class="nav-label">Trofeos & Récords</span>
+          <span class="nav-counter" id="nav-count-trophies">5</span>
+        </button>
+        <button class="nav-item" data-tab="trivias">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">¿Sabías qué...?</span>
+          <span class="nav-counter" id="nav-count-trivias">0</span>
+        </button>
+        <button class="nav-item" data-tab="users">
+          <span class="nav-icon">👥</span>
+          <span class="nav-label">Jugadores</span>
+          <span class="nav-counter" id="nav-count-users">0</span>
+        </button>
+        <button class="nav-item" data-tab="sponsorship">
+          <span class="nav-icon">🤝</span>
+          <span class="nav-label">Patrocinio AEGLE</span>
+          <span class="nav-badge-state" id="nav-sponsorship-badge" style="margin-left: auto; font-size: 0.70rem; font-weight: 700; padding: 2px 7px; border-radius: 6px; background: rgba(34, 197, 94, 0.2); color: #4ade80;">ON</span>
+        </button>
+        <button class="nav-item" data-tab="importer">
+          <span class="nav-icon">📥</span>
+          <span class="nav-label">Importador Libro GE</span>
+          <span class="nav-counter" id="nav-count-importer">45</span>
+        </button>
+        <button class="nav-item" data-tab="backup">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-label">Base de Datos</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" target="_blank" class="btn-sidebar-game">
+          <span class="btn-icon">🎮</span> Ir al Juego Móvil ↗
+        </a>
+        <div class="sidebar-copyright">
+          2026 INICIATIVAS ELEBI<br>TODOS LOS DERECHOS RESERVADOS
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="main-panel">
+      <!-- Barra Superior (Header) -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1 class="page-title" id="page-title">Resumen General</h1>
+          <span class="page-subtitle" id="page-subtitle">Monitoreo de contenido cultural, palabras y jugadores</span>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="btn-outline" id="btn-sync-all" title="Refrescar datos de Firestore">
+            <span class="btn-icon">🔄</span> Sincronizar
+          </button>
+          <button class="btn-primary" id="btn-add-level-top">
+            <span class="btn-icon">➕</span> Nuevo Nivel
+          </button>
+        </div>
+      </header>
+
+      <!-- Contenedor Dinámico de Vistas -->
+      <div class="content-scrollable">
+
+        <!-- ===== TAB 1: RESUMEN GENERAL (OVERVIEW) ===== -->
+        <section class="tab-view active" id="view-overview">
+          <!-- KPIs de Impacto -->
+          <div class="kpi-grid-dashboard">
+            <div class="dashboard-kpi-card">
+              <div class="kpi-icon-wrap icon-blue">📝</div>
+              <div class="kpi-data">
+                <span class="kpi-num" id="stat-total-levels">0</span>
+                <span class="kpi-title">Niveles Culturales</span>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-card">
+              <div class="kpi-icon-wrap icon-gold">🔤</div>
+              <div class="kpi-data">
+                <span class="kpi-num" id="stat-total-words">0</span>
+                <span class="kpi-title">Palabras Ecuatoguineanas</span>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-card">
+              <div class="kpi-icon-wrap icon-green">💡</div>
+              <div class="kpi-data">
+                <span class="kpi-num" id="stat-total-trivias">0</span>
+                <span class="kpi-title">Curiosidades Culturales</span>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-card">
+              <div class="kpi-icon-wrap icon-purple">👥</div>
+              <div class="kpi-data">
+                <span class="kpi-num" id="stat-total-users">0</span>
+                <span class="kpi-title">Jugadores Sincronizados</span>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-card">
+              <div class="kpi-icon-wrap icon-gold">🏆</div>
+              <div class="kpi-data">
+                <span class="kpi-num" id="stat-total-trophies">5</span>
+                <span class="kpi-title">Trofeos & Récords</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paneles de Actividad Rápida -->
+          <div class="overview-grid-columns">
+            <div class="card-panel">
+              <div class="card-panel-header">
+                <h3>Últimos Niveles Añadidos</h3>
+                <button class="btn-text" data-go-tab="levels">Ver todos →</button>
+              </div>
+              <div class="mini-table-wrap">
+                <table class="data-table" id="table-overview-levels">
+                  <thead>
+                    <tr>
+                      <th>Título</th>
+                      <th>Categoría</th>
+                      <th>Palabras</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Inyectado dinámicamente -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card-panel">
+              <div class="card-panel-header">
+                <h3>Jugadores Recientes</h3>
+                <button class="btn-text" data-go-tab="users">Ver todos →</button>
+              </div>
+              <div class="mini-table-wrap">
+                <table class="data-table" id="table-overview-users">
+                  <thead>
+                    <tr>
+                      <th>Jugador</th>
+                      <th>Estrellas</th>
+                      <th>Completados</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Inyectado dinámicamente -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banner de Acceso Rápido a Semillero / Seed -->
+          <div class="seed-banner-callout">
+            <div class="callout-icon">🚀</div>
+            <div class="callout-content">
+              <h4>¿Base de datos de Firebase vacía o desactualizada?</h4>
+              <p>Puedes sincronizar o resembrar todo el banco cultural oficial inicial (11 niveles, categorías y curiosidades) directamente a Cloud Firestore con un solo clic.</p>
+            </div>
+            <button class="btn-secondary" id="btn-quick-seed">
+              🌱 Sembrar Datos en Firestore
+            </button>
+          </div>
+        </section>
+
+        <!-- ===== TAB 2: NIVELES Y PALABRAS (LEVELS) ===== -->
+        <section class="tab-view" id="view-levels">
+          <div class="card-panel">
+            <div class="table-toolbar">
+              <div class="search-input-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="filter-levels-search" placeholder="Buscar por título, pista o palabra..." />
+              </div>
+
+              <div class="category-filter-chips" id="level-category-chips">
+                <button class="chip active" data-cat="all">Todas</button>
+                <button class="chip" data-cat="gastronomia">🍲 Gastronomía</button>
+                <button class="chip" data-cat="geografia">🗺️ Geografía</button>
+                <button class="chip" data-cat="etnias_identidad">🗿 Identidad</button>
+                <button class="chip" data-cat="historia_pioneros">🏛️ Historia</button>
+                <button class="chip" data-cat="musica_arte">🎵 Música</button>
+                <button class="chip" data-cat="deporte_nacional">⚽ Deporte</button>
+                <button class="chip" data-cat="selva_fauna">🐆 Selva Fang</button>
+                <button class="chip" data-cat="modismos">🗣️ Modismos</button>
+              </div>
+
+              <button class="btn-primary" id="btn-create-level">
+                <span class="btn-icon">➕</span> Añadir Nivel
+              </button>
+            </div>
+
+            <div class="full-table-wrap">
+              <table class="data-table main-table" id="table-levels-full">
+                <thead>
+                  <tr>
+                    <th style="width: 70px;">ID</th>
+                    <th>Título del Nivel</th>
+                    <th>Categoría</th>
+                    <th>Pista Descriptiva</th>
+                    <th>Palabras Objetivo</th>
+                    <th style="width: 130px; text-align: right;">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-levels">
+                  <!-- Inyectado dinámicamente -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== TAB 3: CATEGORÍAS (CATEGORIES) ===== -->
+        <section class="tab-view" id="view-categories">
+          <div class="categories-admin-grid" id="categories-admin-list">
+            <!-- Inyectado dinámicamente -->
+          </div>
+        </section>
+
+        <!-- ===== TAB 3B: TROFEOS & RÉCORDS (TROPHIES) ===== -->
+        <section class="tab-view" id="view-trophies">
+          <!-- Gestor de Trofeos Oficiales -->
+          <div class="card-panel" style="margin-bottom: 24px;">
+            <div class="card-panel-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div>
+                <h3 style="margin: 0; font-size: 1.15rem; color: #fff;">🏆 Catálogo de Trofeos y Logros Culturales</h3>
+                <p style="margin: 4px 0 0; font-size: 0.85rem; color: #93c5fd;">Personaliza los retos, medallas y condiciones que los jugadores pueden desbloquear</p>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <div class="search-input-wrap" style="max-width: 240px;">
+                  <span class="search-icon">🔍</span>
+                  <input type="text" id="filter-trophies-search" placeholder="Buscar trofeo..." />
+                </div>
+                <button class="btn-primary" id="btn-add-trophy">
+                  <span class="btn-icon">➕</span> Nuevo Trofeo
+                </button>
+              </div>
+            </div>
+
+            <div class="trophies-admin-grid" id="trophies-admin-list">
+              <!-- Inyectado dinámicamente -->
+            </div>
+          </div>
+
+          <!-- Títulos y Rangos Honoríficos -->
+          <div class="card-panel" style="margin-bottom: 24px;">
+            <div class="card-panel-header" style="margin-bottom: 14px;">
+              <h3 style="margin: 0; font-size: 1.15rem; color: #fff;">🎖️ Rangos Culturales Ecuatoguineanos</h3>
+              <p style="margin: 4px 0 0; font-size: 0.85rem; color: #93c5fd;">Títulos que adquiere el jugador según los niveles completados en el país</p>
+            </div>
+            <div class="ranks-admin-grid" id="ranks-admin-list">
+              <!-- Inyectado dinámicamente -->
+            </div>
+          </div>
+
+          <!-- Salón de la Fama y Récords Globales -->
+          <div class="card-panel">
+            <div class="card-panel-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <div>
+                <h3 style="margin: 0; font-size: 1.15rem; color: #fff;">👑 Salón de la Fama y Récords en Vivo</h3>
+                <p style="margin: 4px 0 0; font-size: 0.85rem; color: #93c5fd;">Clasificación de los mejores exploradores de Guinea Ecuatorial sincronizados en Firestore</p>
+              </div>
+              <div class="leaderboard-tabs" id="leaderboard-metric-selector">
+                <button class="chip active" data-metric="stars">⭐ Estrellas</button>
+                <button class="chip" data-metric="words">🔤 Palabras</button>
+                <button class="chip" data-metric="streak">🔥 Racha</button>
+              </div>
+            </div>
+
+            <div class="full-table-wrap">
+              <table class="data-table main-table" id="table-leaderboard">
+                <thead>
+                  <tr>
+                    <th style="width: 70px;">Puesto</th>
+                    <th style="width: 60px;">Avatar</th>
+                    <th>Explorador</th>
+                    <th>Título Honorífico</th>
+                    <th>Estrellas ⭐</th>
+                    <th>Palabras Ecuatoguineanas</th>
+                    <th>Racha Máxima</th>
+                    <th>Niveles Superados</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-leaderboard">
+                  <!-- Inyectado dinámicamente -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== TAB 4: CURIOSIDADES («¿SABÍAS QUÉ...?») ===== -->
+        <section class="tab-view" id="view-trivias">
+          <div class="card-panel">
+            <div class="table-toolbar">
+              <div class="search-input-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="filter-trivias-search" placeholder="Buscar dato o curiosidad..." />
+              </div>
+              <button class="btn-primary" id="btn-add-trivia">
+                <span class="btn-icon">➕</span> Nueva Curiosidad
+              </button>
+            </div>
+
+            <div class="trivias-admin-grid" id="trivias-admin-list">
+              <!-- Inyectado dinámicamente -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== TAB 5: JUGADORES Y PROGRESO (USERS) ===== -->
+        <section class="tab-view" id="view-users">
+          <div class="card-panel">
+            <div class="table-toolbar">
+              <div class="search-input-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="filter-users-search" placeholder="Buscar por nombre de jugador..." />
+              </div>
+              <span class="toolbar-info" id="users-count-info">0 jugadores encontrados</span>
+            </div>
+
+            <div class="full-table-wrap">
+              <table class="data-table main-table" id="table-users-full">
+                <thead>
+                  <tr>
+                    <th style="width: 70px;">Avatar</th>
+                    <th>Nombre de Jugador</th>
+                    <th>Ciudad 📍</th>
+                    <th>Título Honorífico</th>
+                    <th>Estrellas ⭐</th>
+                    <th>Niveles Superados</th>
+                    <th>Palabras Encontradas</th>
+                    <th>Récord Vel. ⚡</th>
+                    <th>Racha</th>
+                    <th>Última Actividad</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-users">
+                  <!-- Inyectado dinámicamente -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== TAB 6: BASE DE DATOS Y COPIAS DE SEGURIDAD (BACKUP) ===== -->
+        <section class="tab-view" id="view-backup">
+          <div class="backup-grid">
+            <div class="card-panel">
+              <div class="card-panel-header">
+                <h3>📤 Copia de Seguridad Completa (Exportar JSON)</h3>
+              </div>
+              <p class="backup-desc">Descarga un archivo JSON estructurado con todos los niveles, categorías, palabras y curiosidades alojadas actualmente en Firestore para respaldar o migrar tu base de datos.</p>
+              <button class="btn-primary" id="btn-export-backup">
+                ⬇️ Descargar Copia de Seguridad JSON
+              </button>
+            </div>
+
+            <div class="card-panel">
+              <div class="card-panel-header">
+                <h3>🌱 Inicializar / Sembrar Firebase Firestore</h3>
+              </div>
+              <p class="backup-desc">Sube todo el banco cultural predefinido del archivo local <code>levels.json</code> a las colecciones de Cloud Firestore (niveles, categorías y curiosidades).</p>
+              <button class="btn-secondary" id="btn-trigger-seed">
+                🚀 Subir Banco Cultural Local a Firestore
+              </button>
+            </div>
+
+            <div class="card-panel">
+              <div class="card-panel-header">
+                <h3>📲 Paquete Instalador Android (Compartir APK)</h3>
+              </div>
+              <p class="backup-desc">Descarga el instalador independiente <code>ApalabraGE_v1.0.apk</code> con el icono oficial, listo para enviar por WhatsApp, Telegram, correo o Bluetooth a cualquier teléfono Android.</p>
+              <a href="/ApalabraGE_v1.0.apk" download="ApalabraGE_v1.0.apk" class="btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; box-sizing: border-box; width: 100%;">
+                📥 Descargar ApalabraGE_v1.0.apk (8.7 MB)
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= VISTA: IMPORTADOR MASIVO LIBRO GE ================= -->
+        <section class="tab-view" id="view-importer">
+          <div class="importer-hero-banner">
+            <div class="importer-hero-text">
+              <span class="importer-hero-badge">📚 Acervo Documental — Primera Edición Dic 2023</span>
+              <h2>Importador Masivo de Pasatiempos Guinea Ecuatorial</h2>
+              <p>Convierte los 45 temas y más de 850 términos y conceptos autóctonos del libro de pasatiempos en nuevos retos jugables para ApalabraGE. Puedes importar tema a tema o todos en bloque.</p>
+            </div>
+            <div class="importer-hero-actions">
+              <button class="btn-primary" id="btn-import-all-topics" style="font-size: 0.95rem; padding: 12px 22px;">
+                🚀 Importar TODOS los Temas al Juego
+              </button>
+            </div>
+          </div>
+
+          <!-- Métricas del Libro -->
+          <div class="importer-kpis">
+            <div class="importer-kpi-card">
+              <span class="kpi-num">45</span>
+              <span class="kpi-label">Temas en el Libro</span>
+            </div>
+            <div class="importer-kpi-card">
+              <span class="kpi-num">869</span>
+              <span class="kpi-label">Palabras y Conceptos</span>
+            </div>
+            <div class="importer-kpi-card">
+              <span class="kpi-num" id="importer-count-imported" style="color: #4ade80;">0</span>
+              <span class="kpi-label">Niveles Creados</span>
+            </div>
+            <div class="importer-kpi-card">
+              <span class="kpi-num" id="importer-count-pending" style="color: #38bdf8;">45</span>
+              <span class="kpi-label">Temas Pendientes</span>
+            </div>
+          </div>
+
+          <!-- Filtros y Búsqueda -->
+          <div class="table-card" style="margin-top: 20px;">
+            <div class="table-card-toolbar">
+              <div class="search-input-wrap" style="flex: 1; max-width: 380px;">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="filter-importer-search" placeholder="Buscar tema (ej. 'Autores', 'Hoteles', 'Bata')..." />
+              </div>
+
+              <div class="category-filter-chips" id="importer-category-chips">
+                <button class="chip active" data-importer-cat="all">Todos</button>
+                <button class="chip" data-importer-cat="gastronomia">🍲 Gastronomía</button>
+                <button class="chip" data-importer-cat="geografia">🗺️ Geografía</button>
+                <button class="chip" data-importer-cat="etnias_identidad">🗿 Identidad</button>
+                <button class="chip" data-importer-cat="historia_pioneros">🏛️ Historia</button>
+                <button class="chip" data-importer-cat="musica_arte">🎵 Música</button>
+                <button class="chip" data-importer-cat="deporte_nacional">⚽ Deporte</button>
+                <button class="chip" data-importer-cat="selva_fauna">🐆 Selva Fang</button>
+              </div>
+            </div>
+
+            <!-- Contenedor de Temas del Libro -->
+            <div class="importer-topics-grid" id="importer-topics-grid">
+              <!-- Inyectado dinámicamente -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== TAB 9: GESTIÓN DE PATROCINIO (AEGLE / ENTIDADES) ===== -->
+        <section class="tab-view" id="view-sponsorship">
+          <div class="sponsorship-panel-wrap" style="display: flex; flex-direction: column; gap: 22px;">
+            
+            <!-- Tarjeta Principal del Interruptor Maestro (ON / OFF) -->
+            <div class="card-panel" style="border: 2px solid rgba(245, 158, 11, 0.4); background: linear-gradient(145deg, #101f3b 0%, #0d1930 100%);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                    <span style="font-size: 1.8rem;">🤝</span>
+                    <h2 style="font-size: 1.3rem; margin: 0; color: #f8fafc;">Interruptor Maestro de Patrocinio</h2>
+                  </div>
+                  <p style="color: #94a3b8; font-size: 0.88rem; margin: 0; max-width: 650px; line-height: 1.5;">
+                    Enciende o apaga al instante los objetos y logotipos de patrocinio de la <strong>Academia Ecuatoguineana de la Lengua Española (AEGLE)</strong>.
+                    Si se apaga, la aplicación móvil y web restablece automáticamente todos los textos y menciones originales de ApalabraGE.
+                  </p>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <span id="sponsorship-toggle-status-text" style="font-size: 0.88rem; font-weight: 700; color: #4ade80;">ACTIVADO (ON)</span>
+                  <label class="switch-toggle">
+                    <input type="checkbox" id="toggle-sponsorship-active" checked />
+                    <span class="switch-slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel de Comparativa en Vivo (Objetos Afectados) -->
+            <div class="overview-grid-columns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+              <div class="card-panel">
+                <div class="card-panel-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                  <h3 style="color: #60a5fa; margin: 0;">✨ Elementos que se Muestran (ON)</h3>
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; color: #cbd5e1;">
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>🟢</span>
+                    <div><strong>Pantalla Splash:</strong> Tarjeta con logo AEGLE, texto de patrocinio y enlace web oficial <em>https://www.aegle.gq/</em>.</div>
+                  </li>
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>🟢</span>
+                    <div><strong>Glosario de Palabras:</strong> Encabezado con logo AEGLE y título <em>"Glosario de la AEGLE"</em>.</div>
+                  </li>
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>🟢</span>
+                    <div><strong>Salón de Honor y Ranking:</strong> Títulos <em>"Salón de Honor de la AEGLE"</em> y <em>"Tabla Top 50 AEGLE"</em>.</div>
+                  </li>
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>🟢</span>
+                    <div><strong>Trofeos y Rango Máximo:</strong> Galardón honorífico y rango <em>"Académico de la AEGLE 🎓"</em>.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-panel">
+                <div class="card-panel-header" style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                  <h3 style="color: #94a3b8; margin: 0;">🔄 Elementos Originales Restaurados (OFF)</h3>
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.85rem; color: #94a3b8;">
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>⚪</span>
+                    <div><strong>Pantalla Splash:</strong> Splash limpio y centrado exclusivamente en ApalabraGE. Oculta todo logotipo y enlace de patrocinio.</div>
+                  </li>
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>⚪</span>
+                    <div><strong>Glosario de Palabras:</strong> Restablece <em>"📖 Glosario del Reto"</em> sin logotipos externos.</div>
+                  </li>
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>⚪</span>
+                    <div><strong>Salón de Honor y Ranking:</strong> Restablece <em>"🏆 Salón de Honor GE"</em> y <em>"📊 Tabla Top 50 Global"</em>.</div>
+                  </li>
+                  <li style="display: flex; align-items: flex-start; gap: 8px;">
+                    <span>⚪</span>
+                    <div><strong>Trofeos y Rango Máximo:</strong> Restablece <em>"Sabio de Guinea Ecuatorial 👑"</em>.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Formulario de Datos de la Entidad -->
+            <div class="card-panel">
+              <div class="card-panel-header" style="margin-bottom: 16px;">
+                <div>
+                  <h3 style="margin: 0; color: #f8fafc;">Datos de la Entidad Patrocinadora</h3>
+                  <span style="font-size: 0.8rem; color: #94a3b8;">Configura los datos que se presentarán cuando el patrocinio esté encendido</span>
+                </div>
+              </div>
+
+              <form id="form-sponsorship-settings" style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="input-sponsor-name">Nombre Oficial de la Entidad</label>
+                    <input type="text" id="input-sponsor-name" value="Academia Ecuatoguineana de la Lengua Española" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="input-sponsor-short">Siglas / Nombre Abreviado</label>
+                    <input type="text" id="input-sponsor-short" value="AEGLE" required />
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="input-sponsor-website">Sitio Web Oficial</label>
+                    <input type="url" id="input-sponsor-website" value="https://www.aegle.gq/" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="input-sponsor-logo">Ruta o URL del Logotipo</label>
+                    <input type="text" id="input-sponsor-logo" value="/AEGLE.png" required />
+                  </div>
+                </div>
+
+                <!-- Previsualización del Logo -->
+                <div style="background: rgba(0,0,0,0.25); padding: 14px 18px; border-radius: 10px; display: flex; align-items: center; gap: 20px;">
+                  <div style="background: white; padding: 6px 14px; border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+                    <img id="preview-sponsor-logo" src="/AEGLE.png" alt="AEGLE Logo" style="height: 40px; width: auto; object-fit: contain;" />
+                  </div>
+                  <div>
+                    <strong style="color: #f8fafc; font-size: 0.9rem;">Previsualización del Emblema</strong>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin: 2px 0 0 0;">Este logo se muestra en la pantalla de Splash y dentro de la cabecera del Glosario si el patrocinio está ACTIVO.</p>
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px;">
+                  <button type="submit" class="btn-primary" id="btn-save-sponsorship" style="padding: 12px 24px; font-size: 0.95rem;">
+                    <span class="btn-icon">💾</span> Guardar y Sincronizar en Tiempo Real
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= MODAL: CREAR / EDITAR NIVEL ================= -->
+  <div class="modal-overlay" id="modal-level">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-level-title">Añadir Nuevo Nivel Cultural</h3>
+        <button class="btn-close-modal" id="btn-close-level-modal">✕</button>
+      </div>
+
+      <form id="form-level" class="modal-form">
+        <input type="hidden" id="input-level-id" />
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="input-level-name">Título del Nivel</label>
+            <input type="text" id="input-level-name" placeholder="Ej. Frutas Silvestres de Río Muni" required />
+          </div>
+
+          <div class="form-group">
+            <label for="select-level-category">Categoría Cultural</label>
+            <select id="select-level-category" required>
+              <option value="gastronomia">🍲 Gastronomía Típica</option>
+              <option value="geografia">🗺️ Geografía y Lugares</option>
+              <option value="etnias_identidad">🗿 Identidad y Pueblos</option>
+              <option value="historia_pioneros">🏛️ Historia y Pioneros</option>
+              <option value="musica_arte">🎵 Música, Cine y Leyendas</option>
+              <option value="deporte_nacional">⚽ Deporte Ecuatoguineano</option>
+              <option value="selva_fauna">🐆 Selva y Fauna Fang</option>
+              <option value="modismos">🗣️ Modismos y Expresiones</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="input-level-clue">Pista Principal del Reto</label>
+          <input type="text" id="input-level-clue" placeholder="Ej. Sabores de la selva ecuatoguineana" required />
+        </div>
+
+        <!-- Editor de Palabras del Nivel -->
+        <div class="form-words-section">
+          <div class="words-section-header">
+            <label>Palabras del Nivel (Mínimo 3, Máximo 6)</label>
+            <button type="button" class="btn-text-small" id="btn-add-word-row">➕ Añadir Palabra</button>
+          </div>
+          <div class="words-inputs-list" id="words-inputs-container">
+            <!-- Filas dinámicas -->
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-outline" id="btn-cancel-level">Cancelar</button>
+          <button type="submit" class="btn-primary" id="btn-save-level">💾 Guardar Nivel en Firestore</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: CURIOSIDAD («¿SABÍAS QUÉ...?») ================= -->
+  <div class="modal-overlay" id="modal-trivia">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <h3 id="modal-trivia-title">Nueva Curiosidad Cultural</h3>
+        <button class="btn-close-modal" id="btn-close-trivia-modal">✕</button>
+      </div>
+
+      <form id="form-trivia" class="modal-form">
+        <input type="hidden" id="input-trivia-id" />
+
+        <div class="form-group">
+          <label for="input-trivia-text">Texto de la Curiosidad</label>
+          <textarea id="input-trivia-text" rows="4" placeholder="Ej. El Pico Basilé es la cumbre más alta con 3.011 metros..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="select-trivia-topic">Tema</label>
+          <select id="select-trivia-topic">
+            <option value="Geografía">Geografía y Naturaleza</option>
+            <option value="Gastronomía">Gastronomía</option>
+            <option value="Historia">Historia y Tradición</option>
+            <option value="Fauna y Flora">Biodiversidad</option>
+          </select>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-outline" id="btn-cancel-trivia">Cancelar</button>
+          <button type="submit" class="btn-primary">💾 Guardar Curiosidad</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: TROFEO / LOGRO CULTURAL ================= -->
+  <div class="modal-overlay" id="modal-trophy">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-header">
+        <h3 id="modal-trophy-title">🏆 Personalizar Trofeo Cultural</h3>
+        <button class="btn-close-modal" id="btn-close-trophy-modal">✕</button>
+      </div>
+
+      <form id="form-trophy" class="modal-form">
+        <input type="hidden" id="input-trophy-id" />
+
+        <div class="form-row-2">
+          <div class="form-group" style="flex: 0 0 80px;">
+            <label for="input-trophy-icon">Icono</label>
+            <input type="text" id="input-trophy-icon" placeholder="🏆" required style="text-align: center; font-size: 1.3rem;" />
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label for="input-trophy-title-text">Título del Trofeo</label>
+            <input type="text" id="input-trophy-title-text" placeholder="Ej. Cocinero de Pepesup" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="input-trophy-desc">Descripción / Requisito Cultural</label>
+          <textarea id="input-trophy-desc" rows="3" placeholder="Ej. Descubre los platos más representativos de Río Muni y Bioko..." required></textarea>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="select-trophy-criterion">Criterio de Desbloqueo</label>
+            <select id="select-trophy-criterion">
+              <option value="first_word">Primera Palabra Encontrada</option>
+              <option value="category_gastro">Retos de Gastronomía Típica</option>
+              <option value="category_geo">Retos de Geografía y Lugares</option>
+              <option value="category_cultura">Retos de Cultura y Tradición</option>
+              <option value="category_modismos">Retos de Modismos y Lengua</option>
+              <option value="words_count">Total de Palabras Descubiertas</option>
+              <option value="streak_days">Racha de Días Consecutivos</option>
+              <option value="stars_count">Estrellas Acumuladas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="input-trophy-target">Valor Objetivo</label>
+            <input type="number" id="input-trophy-target" value="2" min="1" required />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-outline" id="btn-cancel-trophy">Cancelar</button>
+          <button type="submit" class="btn-primary">💾 Guardar Trofeo en Firestore</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast de Notificaciones -->
+  <div class="toast-notification" id="toast-notify"></div>
+
+  <script type="module" src="/src/dashboard/dashboard.js"></script>
+</body>
+</html>

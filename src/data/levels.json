@@ -1,0 +1,5003 @@
+{
+  "categories": [
+    {
+      "id": "deporte_nacional",
+      "aliases": [
+        "deporte_nacional",
+        "deporte"
+      ],
+      "name": "Deporte Ecuatoguineano",
+      "icon": "⚽",
+      "description": "Hazañas del Nzalang, clubes históricos y estrellas del deporte nacional",
+      "levels": [
+        {
+          "id": "dep-1",
+          "title": "El Nzalang Nacional",
+          "categoryId": "deporte_nacional",
+          "clue": "Héroes del fútbol ecuatoguineano",
+          "words": [
+            {
+              "word": "NZALANG",
+              "clue": "La selección nacional de fútbol"
+            },
+            {
+              "word": "CAN",
+              "clue": "Copa Africana de Naciones"
+            },
+            {
+              "word": "MALABO",
+              "clue": "Estadio de la capital"
+            },
+            {
+              "word": "BATA",
+              "clue": "Estadio de la ciudad portuaria"
+            }
+          ],
+          "categoryName": "Deporte Ecuatoguineano",
+          "categoryIcon": "⚽",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "dep-2",
+          "title": "Clubes de Fútbol Históricos",
+          "categoryId": "deporte_nacional",
+          "clue": "Equipos legendarios de Guinea Ecuatorial",
+          "words": [
+            {
+              "word": "CANO",
+              "clue": "Real Canoe de Malabo"
+            },
+            {
+              "word": "DRAGONES",
+              "clue": "Dragón FC de Bata"
+            },
+            {
+              "word": "LEONES",
+              "clue": "Leones Vegetarianos FC"
+            },
+            {
+              "word": "AKONANG",
+              "clue": "Akonangui FC, club histórico de Kie-Ntem."
+            }
+          ],
+          "categoryName": "Deporte Ecuatoguineano",
+          "categoryIcon": "⚽",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "dep-3",
+          "title": "Equipos de Basket",
+          "categoryId": "deporte_nacional",
+          "clue": "Baloncesto y canchas nacionales",
+          "words": [
+            {
+              "word": "MALABO",
+              "clue": "Malabo Kings Basket"
+            },
+            {
+              "word": "KINGS",
+              "clue": "Campeones de la liga"
+            },
+            {
+              "word": "CANASTA",
+              "clue": "Punto anotado"
+            },
+            {
+              "word": "TABLERO",
+              "clue": "Objetivo del tiro"
+            }
+          ],
+          "categoryName": "Deporte Ecuatoguineano",
+          "categoryIcon": "⚽",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-tema-11-1",
+          "title": "CLUBES DE BASKET I",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE BASKET (I)",
+          "words": [
+            {
+              "word": "ARSENAL",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "EPOF",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "JET",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "SIETE",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MALABO",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-11-2",
+          "title": "CLUBES DE BASKET II",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE BASKET (II)",
+          "words": [
+            {
+              "word": "KINGS",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "SANTA",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "VILAES",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "BASKET",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ALL",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-11-3",
+          "title": "CLUBES DE BASKET III",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE BASKET (III)",
+          "words": [
+            {
+              "word": "STAR",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ALENA",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "BELSAN",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MONGOMO",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "RAYO",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-11-4",
+          "title": "CLUBES DE BASKET IV",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE BASKET (IV)",
+          "words": [
+            {
+              "word": "LASER",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "SHARKYS",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "WAISO",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "IPOLA",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "HIDRA",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-11-5",
+          "title": "CLUBES DE BASKET V",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE BASKET (V)",
+          "words": [
+            {
+              "word": "LITORAL",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "NINE",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PLACES",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "SAN",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANTONIO",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "SIX",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "STARS",
+              "clue": "Término cultural de CLUBES DE BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-12-1",
+          "title": "CLUBES DE FUTBOL I",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE FUTBOL (I)",
+          "words": [
+            {
+              "word": "LAGE",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "DRAGON",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "FUTURO",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "KINGS",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "RACING",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-12-2",
+          "title": "CLUBES DE FUTBOL II",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE FUTBOL (II)",
+          "words": [
+            {
+              "word": "REAL",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "MALABO",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "CAFE",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "BAND",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "SPORTIF",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-12-3",
+          "title": "CLUBES DE FUTBOL III",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE FUTBOL (III)",
+          "words": [
+            {
+              "word": "MONGOMO",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "DUMA",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "LEONES",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "SONY",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELA",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-12-4",
+          "title": "CLUBES DE FUTBOL IV",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE FUTBOL (IV)",
+          "words": [
+            {
+              "word": "NGUEMA",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "SEMU",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "CANO",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "SPORT",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "ACADEMY",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-12-5",
+          "title": "CLUBES DE FUTBOL V",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de CLUBES DE FUTBOL (V)",
+          "words": [
+            {
+              "word": "UNIDAD",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "EQUIPO",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "REBOLA",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "UNION",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            },
+            {
+              "word": "VESPER",
+              "clue": "Término cultural de CLUBES DE FUTBOL en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-15-1",
+          "title": "ENTRENADORES DEL NZALANG I",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ENTRENADORES DEL NZALANG (I)",
+          "words": [
+            {
+              "word": "ANDONI",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ECHUACA",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "FELIPE",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ESONO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "HENRI",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-15-2",
+          "title": "ENTRENADORES DEL NZALANG II",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ENTRENADORES DEL NZALANG (II)",
+          "words": [
+            {
+              "word": "MICHEL",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "RODOLFO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "BODIPO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGEL",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "LOPEZ",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-15-3",
+          "title": "ENTRENADORES DEL NZALANG III",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ENTRENADORES DEL NZALANG (III)",
+          "words": [
+            {
+              "word": "CASTO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "NOPO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "GILSON",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "PAULO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "JUAN",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-15-4",
+          "title": "ENTRENADORES DEL NZALANG IV",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ENTRENADORES DEL NZALANG (IV)",
+          "words": [
+            {
+              "word": "MICHA",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "MIGNE",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANTONIO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "PANCHO",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ESTEBAN",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-15-5",
+          "title": "ENTRENADORES DEL NZALANG V",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ENTRENADORES DEL NZALANG (V)",
+          "words": [
+            {
+              "word": "BECKER",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "QUIQUE",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "SETIEN",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "VICENTE",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ENGONGA",
+              "clue": "Término cultural de ENTRENADORES DEL NZALANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-16-1",
+          "title": "ESTRELLAS DEL BASKET I",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ESTRELLAS DEL BASKET (I)",
+          "words": [
+            {
+              "word": "CHOCHI",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELIAS",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBANA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "JUANCA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MEKO",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-16-2",
+          "title": "ESTRELLAS DEL BASKET II",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ESTRELLAS DEL BASKET (II)",
+          "words": [
+            {
+              "word": "NKO",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PAPI",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "DIDIER",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PEPE",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "COLLINS",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-16-3",
+          "title": "ESTRELLAS DEL BASKET III",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ESTRELLAS DEL BASKET (III)",
+          "words": [
+            {
+              "word": "PITU",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "TIHITA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELOMAN",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MACHI",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MENOR",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-16-4",
+          "title": "ESTRELLAS DEL BASKET IV",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ESTRELLAS DEL BASKET (IV)",
+          "words": [
+            {
+              "word": "PAPUCH",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PEPON",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "RICHARD",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "NGUEMA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHIVAS",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-16-5",
+          "title": "ESTRELLAS DEL BASKET V",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ESTRELLAS DEL BASKET (V)",
+          "words": [
+            {
+              "word": "DONPE",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "FRAN",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARK",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PETER",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-16-6",
+          "title": "ESTRELLAS DEL BASKET VI",
+          "categoryId": "deporte_nacional",
+          "clue": "Términos auténticos de ESTRELLAS DEL BASKET (VI)",
+          "words": [
+            {
+              "word": "NENE",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PELU",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELONGA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "PETTIT",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "ABIGUI",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "TAHATA",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            },
+            {
+              "word": "JORDAN",
+              "clue": "Término cultural de ESTRELLAS DEL BASKET en Guinea Ecuatorial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "etnias_identidad",
+      "aliases": [
+        "etnias_identidad",
+        "identidad"
+      ],
+      "name": "Identidad y Pueblos",
+      "icon": "🗿",
+      "description": "Pueblos Fang, Bubi, Ndowe, Bisio, Annobonés y sus raíces ancestrales",
+      "levels": [
+        {
+          "id": "etn-1",
+          "title": "Pueblos Originarios",
+          "categoryId": "etnias_identidad",
+          "clue": "Las identidades ancestrales de Guinea Ecuatorial",
+          "words": [
+            {
+              "word": "FANG",
+              "clue": "Pueblo mayoritario de la Región Continental"
+            },
+            {
+              "word": "BUBI",
+              "clue": "Pueblo originario de la Isla de Bioko"
+            },
+            {
+              "word": "NDOWE",
+              "clue": "Pueblo costero o playero"
+            },
+            {
+              "word": "BISIO",
+              "clue": "Comunidad histórica continental"
+            }
+          ],
+          "categoryName": "Identidad y Pueblos",
+          "categoryIcon": "🗿",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "etn-2",
+          "title": "Símbolos Ancestrales",
+          "categoryId": "etnias_identidad",
+          "clue": "Tradición y herencia cultural",
+          "words": [
+            {
+              "word": "CEIBA",
+              "clue": "Árbol sagrado y símbolo nacional"
+            },
+            {
+              "word": "ABIRA",
+              "clue": "Ceremonia tradicional de purificación"
+            },
+            {
+              "word": "MANDJANG",
+              "clue": "Xilófono tradicional fang"
+            },
+            {
+              "word": "NGUEMA",
+              "clue": "Fuerza o escudo en lenguas locales"
+            }
+          ],
+          "categoryName": "Identidad y Pueblos",
+          "categoryIcon": "🗿",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "etn-3",
+          "title": "Nombres Bubis Tradicionales",
+          "categoryId": "etnias_identidad",
+          "clue": "Nombres propios de la isla de Bioko",
+          "words": [
+            {
+              "word": "BOTEY",
+              "clue": "Nombre tradicional bubi"
+            },
+            {
+              "word": "LORICHE",
+              "clue": "Nombre de linaje bubi"
+            },
+            {
+              "word": "BOKESA",
+              "clue": "Apellido y nombre tradicional"
+            },
+            {
+              "word": "BOLEKIA",
+              "clue": "Nombre de raíz histórica"
+            }
+          ],
+          "categoryName": "Identidad y Pueblos",
+          "categoryIcon": "🗿",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "etn-4",
+          "title": "Tribus y Clanes Fang",
+          "categoryId": "etnias_identidad",
+          "clue": "Linajes y ayong del continente",
+          "words": [
+            {
+              "word": "AYONG",
+              "clue": "Clan o tribu en lengua fang"
+            },
+            {
+              "word": "OKAK",
+              "clue": "Gran rama de la familia fang"
+            },
+            {
+              "word": "NTUMU",
+              "clue": "Subgrupo dialectal del norte"
+            },
+            {
+              "word": "ESASUM",
+              "clue": "Familia de linaje tradicional"
+            }
+          ],
+          "categoryName": "Identidad y Pueblos",
+          "categoryIcon": "🗿",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-tema-2-1",
+          "title": "APELLIDOS NDOWES I",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de APELLIDOS NDOWES (I)",
+          "words": [
+            {
+              "word": "EPITIE",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELONGA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IPIKO",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IDJABE",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IKAKA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-2-2",
+          "title": "APELLIDOS NDOWES II",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de APELLIDOS NDOWES (II)",
+          "words": [
+            {
+              "word": "IPO",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IYANGA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUKA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBULA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBUNA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-2-3",
+          "title": "APELLIDOS NDOWES III",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de APELLIDOS NDOWES (III)",
+          "words": [
+            {
+              "word": "MEMBA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OKO",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OMA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "RONDO",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "UBENGA",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "UPOLO",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            },
+            {
+              "word": "COMBE",
+              "clue": "Término cultural de APELLIDOS NDOWES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-13-1",
+          "title": "MUJER GUINEANA I",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de MUJER GUINEANA (I)",
+          "words": [
+            {
+              "word": "BISILA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOKOKO",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "CECILIA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "OBONO",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGUE",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-13-2",
+          "title": "MUJER GUINEANA II",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de MUJER GUINEANA (II)",
+          "words": [
+            {
+              "word": "DYOMBE",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARIA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "TERESA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "EFUA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "ONDO",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-13-3",
+          "title": "MUJER GUINEANA III",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de MUJER GUINEANA (III)",
+          "words": [
+            {
+              "word": "ISABEL",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "ERAUL",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "IVINA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARI",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "CARMEN",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-13-4",
+          "title": "MUJER GUINEANA IV",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de MUJER GUINEANA (IV)",
+          "words": [
+            {
+              "word": "ANDEM",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "MONICA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BINDANG",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BESARI",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-13-5",
+          "title": "MUJER GUINEANA V",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de MUJER GUINEANA (V)",
+          "words": [
+            {
+              "word": "MANGUE",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "JESUSA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "ENGONO",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARTA",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "MOUMIE",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "PILAR",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BUEPOYO",
+              "clue": "Término cultural de MUJER GUINEANA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-23-1",
+          "title": "NOMBRES BUBIS I",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de NOMBRES BUBIS (I)",
+          "words": [
+            {
+              "word": "BELOLO",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BISILA",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOABI",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EBEBE",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "KATYA",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-23-2",
+          "title": "NOMBRES BUBIS II",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de NOMBRES BUBIS (II)",
+          "words": [
+            {
+              "word": "KOLEKO",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "KORI",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LELE",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LOBELA",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MOLABI",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-23-3",
+          "title": "NOMBRES BUBIS III",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de NOMBRES BUBIS (III)",
+          "words": [
+            {
+              "word": "RIAKA",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RIMMA",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TAWE",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "URI",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "WEJA",
+              "clue": "Término cultural de NOMBRES BUBIS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-24-1",
+          "title": "APELLIDOS FEMENINOS FANG",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de APELLIDOS FEMENINOS FANG",
+          "words": [
+            {
+              "word": "AFUY",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANDEME",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "BINDANG",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "EFUA",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "EKIFANG",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "MANGUE",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "NCHAMA",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "OYANA",
+              "clue": "Término cultural de APELLIDOS FEMENINOS FANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-30-1",
+          "title": "TRIBUS FANG I",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de TRIBUS FANG (I)",
+          "words": [
+            {
+              "word": "AMVOM",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "EBA",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "EFAK",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ESALAN",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ESANGUI",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-30-2",
+          "title": "TRIBUS FANG II",
+          "categoryId": "etnias_identidad",
+          "clue": "Términos auténticos de TRIBUS FANG (II)",
+          "words": [
+            {
+              "word": "ESASOM",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "ESAWONG",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "NSOMO",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "OKUK",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            },
+            {
+              "word": "YEMVAM",
+              "clue": "Término cultural de TRIBUS FANG en Guinea Ecuatorial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gastronomia",
+      "aliases": [
+        "gastronomia"
+      ],
+      "name": "Gastronomía Típica",
+      "icon": "🍲",
+      "description": "Platos tradicionales, envueltos, sopas y delicias culinarias de GE",
+      "levels": [
+        {
+          "id": "gastro-1",
+          "title": "Platos Fuertes y Sopas",
+          "categoryId": "gastronomia",
+          "clue": "Sabores emblemáticos de la cocina guineana",
+          "words": [
+            {
+              "word": "MODIKA",
+              "clue": "Salsa de chocolate o mango silvestre"
+            },
+            {
+              "word": "BAMBUCHA",
+              "clue": "Plato tradicional especiado"
+            },
+            {
+              "word": "PEPESUP",
+              "clue": "Sopa de pescado picante"
+            },
+            {
+              "word": "SUCUCHE",
+              "clue": "Sopa de pescado o carne con verduras"
+            }
+          ],
+          "categoryName": "Gastronomía Típica",
+          "categoryIcon": "🍲",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "gastro-2",
+          "title": "Bebidas y Bocados",
+          "categoryId": "gastronomia",
+          "clue": "Bebidas tradicionales y frutas",
+          "words": [
+            {
+              "word": "MALAMBA",
+              "clue": "Aguardiente tradicional de caña"
+            },
+            {
+              "word": "TOPY",
+              "clue": "Vino de palma recién recolectado"
+            },
+            {
+              "word": "PLANTAIN",
+              "clue": "Plátano macho frito o cocido"
+            },
+            {
+              "word": "MANIOC",
+              "clue": "Yuca base de la alimentación"
+            }
+          ],
+          "categoryName": "Gastronomía Típica",
+          "categoryIcon": "🍲",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "gastro-3",
+          "title": "Envoltorios y Salsas",
+          "categoryId": "gastronomia",
+          "clue": "Técnicas en hoja de plátano",
+          "words": [
+            {
+              "word": "KANKAN",
+              "clue": "Envoltorio de calabaza y carne en hoja"
+            },
+            {
+              "word": "ENVUELTO",
+              "clue": "Pescado preparado al vapor en hoja"
+            },
+            {
+              "word": "MANI",
+              "clue": "Cacahuete o maní para salsas típicas."
+            },
+            {
+              "word": "PIPER",
+              "clue": "Toque picante tradicional"
+            }
+          ],
+          "categoryName": "Gastronomía Típica",
+          "categoryIcon": "🍲",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "gastro-4",
+          "title": "Sabores y Palmiste",
+          "categoryId": "gastronomia",
+          "clue": "Frutos de la tierra guineana",
+          "words": [
+            {
+              "word": "PALMISTE",
+              "clue": "Nuez de la palma de aceite"
+            },
+            {
+              "word": "BATATA",
+              "clue": "Boniato dulce de tierra volcánica"
+            },
+            {
+              "word": "MALANGA",
+              "clue": "Tubérculo suave y digestivo"
+            },
+            {
+              "word": "AGUACATE",
+              "clue": "Fruta cremosa y nutritiva"
+            }
+          ],
+          "categoryName": "Gastronomía Típica",
+          "categoryIcon": "🍲",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-gastro-libro-1",
+          "title": "GASTRONOMÍA TRADICIONAL I",
+          "categoryId": "gastronomia",
+          "clue": "Platos e ingredientes típicos de Guinea Ecuatorial (I)",
+          "words": [
+            {
+              "word": "BAMBUCHA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "MODIKA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "PEPESUP",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "BILOLA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "MALANGA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-gastro-libro-2",
+          "title": "GASTRONOMÍA TRADICIONAL II",
+          "categoryId": "gastronomia",
+          "clue": "Platos e ingredientes típicos de Guinea Ecuatorial (II)",
+          "words": [
+            {
+              "word": "ENVUELTO",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "SUKUSUKU",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "TOPETU",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "CANGREJO",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "PLANTAIN",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-gastro-libro-3",
+          "title": "GASTRONOMÍA TRADICIONAL III",
+          "categoryId": "gastronomia",
+          "clue": "Platos e ingredientes típicos de Guinea Ecuatorial (III)",
+          "words": [
+            {
+              "word": "TUPIS",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "KANKAN",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "KIKU",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "CANDIA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "TURRON",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-gastro-libro-4",
+          "title": "GASTRONOMÍA TRADICIONAL IV",
+          "categoryId": "gastronomia",
+          "clue": "Platos e ingredientes típicos de Guinea Ecuatorial (IV)",
+          "words": [
+            {
+              "word": "CORVINA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "SARDINA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "YUCA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "KWAN",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "PITYI",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-gastro-libro-5",
+          "title": "GASTRONOMÍA TRADICIONAL V",
+          "categoryId": "gastronomia",
+          "clue": "Platos e ingredientes típicos de Guinea Ecuatorial (V)",
+          "words": [
+            {
+              "word": "AKUAN",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "EBANGA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "MALOMBA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "TOPE",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "OSENG",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            },
+            {
+              "word": "BIDA",
+              "clue": "Plato o ingrediente de la cocina típica de Guinea Ecuatorial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geografia",
+      "aliases": [
+        "geografia"
+      ],
+      "name": "Geografía y Lugares",
+      "icon": "🗺️",
+      "description": "Ciudades, ríos, picos, islas y rincones fascinantes de Guinea Ecuatorial",
+      "levels": [
+        {
+          "id": "geo-1",
+          "title": "Capitales y Ciudades",
+          "categoryId": "geografia",
+          "clue": "Los centros urbanos de Guinea Ecuatorial",
+          "words": [
+            {
+              "word": "MALABO",
+              "clue": "Capital política en la Isla de Bioko"
+            },
+            {
+              "word": "BATA",
+              "clue": "Gran capital económica continental"
+            },
+            {
+              "word": "EBEBIYIN",
+              "clue": "Ciudad fronteriza del nordeste"
+            },
+            {
+              "word": "MONGOMO",
+              "clue": "Ciudad histórica del este continental"
+            }
+          ],
+          "categoryName": "Geografía y Lugares",
+          "categoryIcon": "🗺️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "geo-2",
+          "title": "Islas y Regiones",
+          "categoryId": "geografia",
+          "clue": "El territorio insular y continental",
+          "words": [
+            {
+              "word": "BIOKO",
+              "clue": "La mayor isla del golfo de Guinea"
+            },
+            {
+              "word": "ANNOBON",
+              "clue": "Isla volcánica del hemisferio sur"
+            },
+            {
+              "word": "CORISCO",
+              "clue": "Isla paradisíaca en la bahía de Corisco"
+            },
+            {
+              "word": "ELOBEY",
+              "clue": "Islas Grande y Chico en el estuario"
+            }
+          ],
+          "categoryName": "Geografía y Lugares",
+          "categoryIcon": "🗺️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "geo-3",
+          "title": "Naturaleza y Cumbres",
+          "categoryId": "geografia",
+          "clue": "Relieve y ecosistemas fascinantes",
+          "words": [
+            {
+              "word": "BASILE",
+              "clue": "Pico Basilé, techo nacional con 3.011 m"
+            },
+            {
+              "word": "CALDERA",
+              "clue": "La gran Caldera volcánica de Luba"
+            },
+            {
+              "word": "ALEN",
+              "clue": "Monte Alén, parque nacional en Río Muni."
+            },
+            {
+              "word": "WELE",
+              "clue": "Río que da nombre a la provincia Wele-Nzas"
+            }
+          ],
+          "categoryName": "Geografía y Lugares",
+          "categoryIcon": "🗺️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "geo-4",
+          "title": "Barrios y Poblados",
+          "categoryId": "geografia",
+          "clue": "Lugares con vida y tradición",
+          "words": [
+            {
+              "word": "NGUEMA",
+              "clue": "Barrio histórico y club de Malabo."
+            },
+            {
+              "word": "NTEMBO",
+              "clue": "Poblado de las laderas de Bioko"
+            },
+            {
+              "word": "ASONGGA",
+              "clue": "Barrio costero de Bata"
+            },
+            {
+              "word": "BOMUDI",
+              "clue": "Zona histórica de Bata marítimo"
+            }
+          ],
+          "categoryName": "Geografía y Lugares",
+          "categoryIcon": "🗺️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-tema-4-1",
+          "title": "BARRIOS DE BATA I",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de BARRIOS DE BATA (I)",
+          "words": [
+            {
+              "word": "ALENA",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "ASONGA",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BISA",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOMUDI",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOVANO",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-4-2",
+          "title": "BARRIOS DE BATA II",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de BARRIOS DE BATA (II)",
+          "words": [
+            {
+              "word": "CAYDASA",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "EKUKU",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "IKUNDE",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "LEA",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBANGAN",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "NGOLO",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "SHANGAI",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            },
+            {
+              "word": "UTONDE",
+              "clue": "Término cultural de BARRIOS DE BATA en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-5-1",
+          "title": "BARRIOS DE MALABO I",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de BARRIOS DE MALABO (I)",
+          "words": [
+            {
+              "word": "ALKAIDE",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BARRIO",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHINO",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "NGUEMA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-5-2",
+          "title": "BARRIOS DE MALABO II",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de BARRIOS DE MALABO (II)",
+          "words": [
+            {
+              "word": "IBADAN",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "SAMPAKA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "SIPOPO",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BUENA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "CAYDASA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-5-3",
+          "title": "BARRIOS DE MALABO III",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de BARRIOS DE MALABO (III)",
+          "words": [
+            {
+              "word": "RONDA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "PARAISO",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "SANTA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARIA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BANAPA",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-5-4",
+          "title": "BARRIOS DE MALABO IV",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de BARRIOS DE MALABO (IV)",
+          "words": [
+            {
+              "word": "CAMPO",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "YAOUNDE",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "FORTUNI",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGELES",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "PILAR",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BUEPOYO",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "SEMU",
+              "clue": "Término cultural de BARRIOS DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-8-1",
+          "title": "CAPITALES AFRICANAS I",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de CAPITALES AFRICANAS (I)",
+          "words": [
+            {
+              "word": "DAKAR",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MALABO",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "PRAIA",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TRIPOLI",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "YAOUNDE",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-8-2",
+          "title": "CAPITALES AFRICANAS II",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de CAPITALES AFRICANAS (II)",
+          "words": [
+            {
+              "word": "ASMARA",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "DAR",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SALAAM",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "KAMPALA",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MORONI",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-8-3",
+          "title": "CAPITALES AFRICANAS III",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de CAPITALES AFRICANAS (III)",
+          "words": [
+            {
+              "word": "NIAMEY",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CAIRO",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "KIGALI",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUANDA",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NAIROBI",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RABAT",
+              "clue": "Término cultural de CAPITALES AFRICANAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-19-1",
+          "title": "HOTELES I",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de HOTELES (I)",
+          "words": [
+            {
+              "word": "ANDA",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHINA",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BAMI",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CARMEN",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GALAXY",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-19-2",
+          "title": "HOTELES II",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de HOTELES (II)",
+          "words": [
+            {
+              "word": "ELIK",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MELEN",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "HILTON",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BISILA",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAGNO",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-19-3",
+          "title": "HOTELES III",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de HOTELES (III)",
+          "words": [
+            {
+              "word": "SUITES",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "PARAISO",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAR",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "YOLI",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGUE",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-19-4",
+          "title": "HOTELES IV",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de HOTELES (IV)",
+          "words": [
+            {
+              "word": "ONDO",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "COLINAS",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "HOTEL",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MONGOMO",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MPALA",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-19-5",
+          "title": "HOTELES V",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de HOTELES (V)",
+          "words": [
+            {
+              "word": "SOFITEL",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "URECA",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BAHIA",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GRAND",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IBIS",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "SIPOPO",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GOLF",
+              "clue": "Término cultural de HOTELES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-20-1",
+          "title": "LOCALIDADES I",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de LOCALIDADES (I)",
+          "words": [
+            {
+              "word": "BAHO",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GRANDE",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CABO",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "SAN",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "JUAN",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-20-2",
+          "title": "LOCALIDADES II",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de LOCALIDADES (II)",
+          "words": [
+            {
+              "word": "CONGA",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELOBEY",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NSORK",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NZOMO",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "RIO",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-20-3",
+          "title": "LOCALIDADES III",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de LOCALIDADES (III)",
+          "words": [
+            {
+              "word": "CAMPO",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANISOK",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BANEY",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CAYDASA",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBANE",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-20-4",
+          "title": "LOCALIDADES IV",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de LOCALIDADES (IV)",
+          "words": [
+            {
+              "word": "NKUE",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "AUAL",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BITIKA",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHICO",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NKIMI",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            },
+            {
+              "word": "REBOLA",
+              "clue": "Término cultural de LOCALIDADES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-27-1",
+          "title": "POBLADOS BUBIS I",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de POBLADOS BUBIS (I)",
+          "words": [
+            {
+              "word": "BALOERI",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BAHO",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "PEQUENO",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "GRANDE",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BANEY",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-27-2",
+          "title": "POBLADOS BUBIS II",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de POBLADOS BUBIS (II)",
+          "words": [
+            {
+              "word": "BASUALA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BASILE",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CUPAPA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BATETE",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUBA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-27-3",
+          "title": "POBLADOS BUBIS III",
+          "categoryId": "geografia",
+          "clue": "Términos auténticos de POBLADOS BUBIS (III)",
+          "words": [
+            {
+              "word": "MOERI",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MOKA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MUSOLA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "REBOLA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RIABA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            },
+            {
+              "word": "URECA",
+              "clue": "Término cultural de POBLADOS BUBIS en Guinea Ecuatorial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "historia_pioneros",
+      "aliases": [
+        "historia_pioneros",
+        "historia"
+      ],
+      "name": "Historia y Pioneros",
+      "icon": "🏛️",
+      "description": "Próceres, líderes, hitos y fechas memorables de nuestra nación",
+      "levels": [
+        {
+          "id": "hist-1",
+          "title": "Próceres de la Independencia",
+          "categoryId": "historia_pioneros",
+          "clue": "Figuras clave de la independencia de 1968",
+          "words": [
+            {
+              "word": "NDONGO",
+              "clue": "Atanasio Ndongo Miyone, compositor del himno"
+            },
+            {
+              "word": "BOSIO",
+              "clue": "Edmundo Bosió Dioco, líder bubi"
+            },
+            {
+              "word": "GARCIA",
+              "clue": "Saturnino Ibongo Iyanga, diplomático"
+            },
+            {
+              "word": "OCTUBRE",
+              "clue": "Mes de la proclamación de 1968"
+            }
+          ],
+          "categoryName": "Historia y Pioneros",
+          "categoryIcon": "🏛️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "hist-2",
+          "title": "Líderes de Estado",
+          "categoryId": "historia_pioneros",
+          "clue": "Etapas políticas de la república",
+          "words": [
+            {
+              "word": "MBIASOGO",
+              "clue": "Figura central del desarrollo nacional"
+            },
+            {
+              "word": "CONSEJO",
+              "clue": "Consejo Militar Supremo de 1979"
+            },
+            {
+              "word": "CARTA",
+              "clue": "Carta Magna e historia constitucional."
+            },
+            {
+              "word": "GOLFO",
+              "clue": "Aguas estratégicas de Guinea"
+            }
+          ],
+          "categoryName": "Historia y Pioneros",
+          "categoryIcon": "🏛️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "hist-3",
+          "title": "Santa Isabel de Antaño",
+          "categoryId": "historia_pioneros",
+          "clue": "El casco antiguo y la memoria colonial",
+          "words": [
+            {
+              "word": "PUERTO",
+              "clue": "El puerto natural en la caldera sumergida"
+            },
+            {
+              "word": "CATEDRAL",
+              "clue": "Catedral neogótica de Santa Isabel"
+            },
+            {
+              "word": "PLAZA",
+              "clue": "Plaza de la Independencia"
+            },
+            {
+              "word": "FARO",
+              "clue": "Faro histórico de Punta Europa"
+            }
+          ],
+          "categoryName": "Historia y Pioneros",
+          "categoryIcon": "🏛️",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-tema-1-1",
+          "title": "ALCALDES DE MALABO I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (I)",
+          "words": [
+            {
+              "word": "ABILIO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BALBOA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELIAS",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "MACHO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "SICACHA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-1-2",
+          "title": "ALCALDES DE MALABO II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (II)",
+          "words": [
+            {
+              "word": "JULIAN",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "EHAPO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOMAHO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ROSENDO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "TOICHOA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-1-3",
+          "title": "ALCALDES DE MALABO III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (III)",
+          "words": [
+            {
+              "word": "BORICO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOLEKIA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BONAI",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "EDU",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "OBA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-1-4",
+          "title": "ALCALDES DE MALABO IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (IV)",
+          "words": [
+            {
+              "word": "GABRIEL",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BELA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "JULIO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BONETE",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-1-5",
+          "title": "ALCALDES DE MALABO V",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (V)",
+          "words": [
+            {
+              "word": "EIYE",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "TOMAS",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ALFREDO",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "KING",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "VIDAL",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-1-6",
+          "title": "ALCALDES DE MALABO VI",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (VI)",
+          "words": [
+            {
+              "word": "CHONI",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "BEKOBA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "DJOMBE",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ISABEL",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "ERAUL",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-1-7",
+          "title": "ALCALDES DE MALABO VII",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de ALCALDES DE MALABO (VII)",
+          "words": [
+            {
+              "word": "IVINA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARIA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "COLOMA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "EDJANG",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "VICENTE",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "EBONG",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "UWA",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            },
+            {
+              "word": "JONES",
+              "clue": "Término cultural de ALCALDES DE MALABO en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-1",
+          "title": "CENTROS EDUCATIVOS I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (I)",
+          "words": [
+            {
+              "word": "ATENEO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EDU",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NDONG",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CANIGE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "COLEGIO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-2",
+          "title": "CENTROS EDUCATIVOS II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (II)",
+          "words": [
+            {
+              "word": "ESPANOL",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "DOCE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "OCTUBRE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "HEROE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUBA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-3",
+          "title": "CENTROS EDUCATIVOS III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (III)",
+          "words": [
+            {
+              "word": "MARIA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CANO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SANTA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BIBIANA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SECCION",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-4",
+          "title": "CENTROS EDUCATIVOS IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (IV)",
+          "words": [
+            {
+              "word": "AMA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "AUCA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CARLOS",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LWANGA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "FRANCES",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-5",
+          "title": "CENTROS EDUCATIVOS V",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (V)",
+          "words": [
+            {
+              "word": "PASTOR",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SALLE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NAHANA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MANGUE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "UNGE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-6",
+          "title": "CENTROS EDUCATIVOS VI",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (VI)",
+          "words": [
+            {
+              "word": "ANEJA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUTHER",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "KING",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BIOKO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NORTE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-9-7",
+          "title": "CENTROS EDUCATIVOS VII",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de CENTROS EDUCATIVOS (VII)",
+          "words": [
+            {
+              "word": "CLARET",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TURCO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ENRIQUE",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NVO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NUESTRA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SENORA",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "WAISO",
+              "clue": "Término cultural de CENTROS EDUCATIVOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-14-1",
+          "title": "EMPRESAS NACIONALES I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de EMPRESAS NACIONALES (I)",
+          "words": [
+            {
+              "word": "ABAYAK",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CANAL",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "SOL",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "DELTA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAR",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-14-2",
+          "title": "EMPRESAS NACIONALES II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de EMPRESAS NACIONALES (II)",
+          "words": [
+            {
+              "word": "EMFEBI",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "FIFTY",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GETESA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GUINACO",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "RYESA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-14-3",
+          "title": "EMPRESAS NACIONALES III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de EMPRESAS NACIONALES (III)",
+          "words": [
+            {
+              "word": "AFROM",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GUINEA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CEIBA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "EGLNG",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GRUPO",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-14-4",
+          "title": "EMPRESAS NACIONALES IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de EMPRESAS NACIONALES (IV)",
+          "words": [
+            {
+              "word": "EVITA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELEBI",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MUNI",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "SEGESA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "AUTOS",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-14-5",
+          "title": "EMPRESAS NACIONALES V",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de EMPRESAS NACIONALES (V)",
+          "words": [
+            {
+              "word": "LITORAL",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "EGTC",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MEMBA",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IPX",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NOMEX",
+              "clue": "Término cultural de EMPRESAS NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-21-1",
+          "title": "MEDIOS DE COMUNICACION I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de MEDIOS DE COMUNICACION (I)",
+          "words": [
+            {
+              "word": "DOS",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "MIL",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "CEIBA",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "GACETA",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "RADIO",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-21-2",
+          "title": "MEDIOS DE COMUNICACION II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de MEDIOS DE COMUNICACION (II)",
+          "words": [
+            {
+              "word": "ASONGA",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "AHORA",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "EBANO",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "GUINEA",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "REAL",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-21-3",
+          "title": "MEDIOS DE COMUNICACION III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de MEDIOS DE COMUNICACION (III)",
+          "words": [
+            {
+              "word": "CANAL",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "SOL",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "VOZ",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "PUEBLO",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            },
+            {
+              "word": "TVGE",
+              "clue": "Término cultural de MEDIOS DE COMUNICACION en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-22-1",
+          "title": "MINISTERIOS I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de MINISTERIOS (I)",
+          "words": [
+            {
+              "word": "ASUNTOS",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CULTURA",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TURISMO",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MINAS",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "FUNCION",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-22-2",
+          "title": "MINISTERIOS II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de MINISTERIOS (II)",
+          "words": [
+            {
+              "word": "PUBLICA",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "PRENSA",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CIVIL",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "DEFENSA",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ENERGIA",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-22-3",
+          "title": "MINISTERIOS III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de MINISTERIOS (III)",
+          "words": [
+            {
+              "word": "PESCA",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TRABAJO",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "FOMENTO",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SANIDAD",
+              "clue": "Término cultural de MINISTERIOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-25-1",
+          "title": "PERSONAJES HISTORICOS I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS (I)",
+          "words": [
+            {
+              "word": "NDONG",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NGUEMA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LOPELO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MELAKA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-25-2",
+          "title": "PERSONAJES HISTORICOS II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS (II)",
+          "words": [
+            {
+              "word": "MARTA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MOUMIE",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RAFAEL",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NZE",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ABUY",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-25-3",
+          "title": "PERSONAJES HISTORICOS III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS (III)",
+          "words": [
+            {
+              "word": "MIGUEL",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "GERONA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EDMUNDO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOSIO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "GORI",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-25-4",
+          "title": "PERSONAJES HISTORICOS IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS (IV)",
+          "words": [
+            {
+              "word": "MACIAS",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "JONES",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "OBIANG",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "IBONGO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EKONG",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-25-5",
+          "title": "PERSONAJES HISTORICOS V",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS (V)",
+          "words": [
+            {
+              "word": "ANDEME",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LOERI",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "COMBA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAHO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SICACHA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EKANG",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ONDO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EDU",
+              "clue": "Término cultural de PERSONAJES HISTORICOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-26-1",
+          "title": "PERSONAJES HISTORICOS II I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS II (I)",
+          "words": [
+            {
+              "word": "ALFONSO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "JESUS",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "OYONO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "ARMANDO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "BALBOA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-26-2",
+          "title": "PERSONAJES HISTORICOS II II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS II (II)",
+          "words": [
+            {
+              "word": "GARCIA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUIS",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAHO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MODESTO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "GENE",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-26-3",
+          "title": "PERSONAJES HISTORICOS II III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS II (III)",
+          "words": [
+            {
+              "word": "RAFAEL",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "EVITA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "TOMAS",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGEL",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "BARRERA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-26-4",
+          "title": "PERSONAJES HISTORICOS II IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS II (IV)",
+          "words": [
+            {
+              "word": "ATEBA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "GRANJE",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MOLAY",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MANUEL",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "PADRE",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-26-5",
+          "title": "PERSONAJES HISTORICOS II V",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS II (V)",
+          "words": [
+            {
+              "word": "SIALO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "REY",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "BONKORO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MASIE",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "NGOMO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-26-6",
+          "title": "PERSONAJES HISTORICOS II VI",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PERSONAJES HISTORICOS II (VI)",
+          "words": [
+            {
+              "word": "GUSTAVO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "WATSON",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "ADA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "PASTOR",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "TORAO",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MOKA",
+              "clue": "Término cultural de PERSONAJES HISTORICOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-28-1",
+          "title": "PRIMEROS MINISTROS I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PRIMEROS MINISTROS (I)",
+          "words": [
+            {
+              "word": "ANGEL",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SERICHE",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "DOUGAN",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "IGNACIO",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MILAM",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-28-2",
+          "title": "PRIMEROS MINISTROS II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PRIMEROS MINISTROS (II)",
+          "words": [
+            {
+              "word": "TANG",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RICARDO",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MANGUE",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CANDIDO",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RIVAS",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-28-3",
+          "title": "PRIMEROS MINISTROS III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PRIMEROS MINISTROS (III)",
+          "words": [
+            {
+              "word": "MIGUEL",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ABIA",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BITEO",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SIALE",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BILEKA",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-28-4",
+          "title": "PRIMEROS MINISTROS IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de PRIMEROS MINISTROS (IV)",
+          "words": [
+            {
+              "word": "BIOKO",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "PASCUAL",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "OBAMA",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ASUE",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "VICENTE",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "EHATE",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TOMI",
+              "clue": "Término cultural de PRIMEROS MINISTROS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-29-1",
+          "title": "RESTAURANTES I",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de RESTAURANTES (I)",
+          "words": [
+            {
+              "word": "CAFE",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "DELICE",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "FRANCE",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IMAGINE",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "GRANJA",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-29-2",
+          "title": "RESTAURANTES II",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de RESTAURANTES (II)",
+          "words": [
+            {
+              "word": "PIZZA",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CENTRAL",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "AVIATOR",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BARCO",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CASINO",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-29-3",
+          "title": "RESTAURANTES III",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de RESTAURANTES (III)",
+          "words": [
+            {
+              "word": "LUNA",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MIRAMAR",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "PLACE",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BIDJI",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BINIA",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-29-4",
+          "title": "RESTAURANTES IV",
+          "categoryId": "historia_pioneros",
+          "clue": "Términos auténticos de RESTAURANTES (IV)",
+          "words": [
+            {
+              "word": "CONSTI",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BON",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "APETTIT",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "FERME",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            },
+            {
+              "word": "TORRE",
+              "clue": "Término cultural de RESTAURANTES en Guinea Ecuatorial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musica_arte",
+      "aliases": [
+        "musica_arte",
+        "musica"
+      ],
+      "name": "Música, Cine y Leyendas",
+      "icon": "🎵",
+      "description": "Ritmos tradicionales, cantantes legendarios, cine y leyendas populares",
+      "levels": [
+        {
+          "id": "mus-1",
+          "title": "Trovadores e Instrumentos",
+          "categoryId": "musica_arte",
+          "clue": "Sonoridades e instrumentos tradicionales",
+          "words": [
+            {
+              "word": "MANDJANG",
+              "clue": "Xilófono de láminas de madera"
+            },
+            {
+              "word": "NGOMBI",
+              "clue": "Arpa tradicional de ocho cuerdas"
+            },
+            {
+              "word": "TAMBOR",
+              "clue": "Ritmo base de las danzas"
+            },
+            {
+              "word": "CANTOR",
+              "clue": "Voz que narra las epopeyas"
+            }
+          ],
+          "categoryName": "Música, Cine y Leyendas",
+          "categoryIcon": "🎵",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "mus-2",
+          "title": "Damas de la Canción",
+          "categoryId": "musica_arte",
+          "clue": "Grandes voces femeninas de Guinea Ecuatorial",
+          "words": [
+            {
+              "word": "PIRUCHI",
+              "clue": "Piruchi Apo, integrante de Las Hijas del Sol"
+            },
+            {
+              "word": "PALOMA",
+              "clue": "Paloma Loribo, voz del dúo mítico"
+            },
+            {
+              "word": "HIJAS",
+              "clue": "Las Hijas del Sol, embajadoras mundiales"
+            },
+            {
+              "word": "CANTO",
+              "clue": "Expresión viva de la tradición"
+            }
+          ],
+          "categoryName": "Música, Cine y Leyendas",
+          "categoryIcon": "🎵",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "mus-3",
+          "title": "El Gran Maele",
+          "categoryId": "musica_arte",
+          "clue": "El ícono eterno de la música popular",
+          "words": [
+            {
+              "word": "MAELE",
+              "clue": "Martiniano Micha Nguema, el gran Maele"
+            },
+            {
+              "word": "CHICOTE",
+              "clue": "Ritmo contagioso de sus canciones"
+            },
+            {
+              "word": "BAILE",
+              "clue": "Alegría colectiva en sus conciertos"
+            },
+            {
+              "word": "MICHA",
+              "clue": "Apellido natal de la leyenda"
+            }
+          ],
+          "categoryName": "Música, Cine y Leyendas",
+          "categoryIcon": "🎵",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "mus-4",
+          "title": "Cine y Escena Cultural",
+          "categoryId": "musica_arte",
+          "clue": "Expresiones audiovisuales y teatro",
+          "words": [
+            {
+              "word": "CCEM",
+              "clue": "Centro Cultural de España en Malabo"
+            },
+            {
+              "word": "CINE",
+              "clue": "Festivales y películas nacionales"
+            },
+            {
+              "word": "TEATRO",
+              "clue": "Obras que recrean la historia"
+            },
+            {
+              "word": "CULTURA",
+              "clue": "Alma viva del pueblo guineano"
+            }
+          ],
+          "categoryName": "Música, Cine y Leyendas",
+          "categoryIcon": "🎵",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-tema-3-1",
+          "title": "AUTORES NACIONALES I",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (I)",
+          "words": [
+            {
+              "word": "MEKUY",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OBONO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "JUAN",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BALBOA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BONEKE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-2",
+          "title": "AUTORES NACIONALES II",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (II)",
+          "words": [
+            {
+              "word": "JUSTO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "RAQUEL",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ILONBE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "AUGUSTO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "IYANGA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-3",
+          "title": "AUTORES NACIONALES III",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (III)",
+          "words": [
+            {
+              "word": "PENDI",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "JOAQUIN",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBANA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "TOMAS",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "AVILA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-4",
+          "title": "AUTORES NACIONALES IV",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (IV)",
+          "words": [
+            {
+              "word": "LAUREL",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "LEONCIO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "EVITA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ENOY",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MELIBEA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-5",
+          "title": "AUTORES NACIONALES V",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (V)",
+          "words": [
+            {
+              "word": "CESAR",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ABOGO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "DONATO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NDONGO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-6",
+          "title": "AUTORES NACIONALES VI",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (VI)",
+          "words": [
+            {
+              "word": "BIDYOGO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CARMELA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OYONO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CIRIACO",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOKESA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-7",
+          "title": "AUTORES NACIONALES VII",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (VII)",
+          "words": [
+            {
+              "word": "MEDINA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "HUESCA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "JOSE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "SIALE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "JULIAN",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-3-8",
+          "title": "AUTORES NACIONALES VIII",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de AUTORES NACIONALES (VIII)",
+          "words": [
+            {
+              "word": "BIBANG",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OYEE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARIA",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NSUE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGUE",
+              "clue": "Término cultural de AUTORES NACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-6-1",
+          "title": "CANTANTES FEMENINAS I",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES FEMENINAS (I)",
+          "words": [
+            {
+              "word": "EUMA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ISABEL",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "OYANA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELO",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NELIDA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-6-2",
+          "title": "CANTANTES FEMENINAS II",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES FEMENINAS (II)",
+          "words": [
+            {
+              "word": "KARR",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "PIRUCHI",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "APO",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "SITA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "RICHI",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-6-3",
+          "title": "CANTANTES FEMENINAS III",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES FEMENINAS (III)",
+          "words": [
+            {
+              "word": "FIFI",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MIREY",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ISKA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MISS",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "YUMA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-6-4",
+          "title": "CANTANTES FEMENINAS IV",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES FEMENINAS (IV)",
+          "words": [
+            {
+              "word": "PALOMA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "LORIBO",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CONCHA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BUIKA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "FLOR",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-6-5",
+          "title": "CANTANTES FEMENINAS V",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES FEMENINAS (V)",
+          "words": [
+            {
+              "word": "LENA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MUAN",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ASINEPI",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "PINA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BESOSA",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            },
+            {
+              "word": "INONI",
+              "clue": "Término cultural de CANTANTES FEMENINAS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-7-1",
+          "title": "CANTANTES MASCULINOS I",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS (I)",
+          "words": [
+            {
+              "word": "ALGAS",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "JAMIN",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "DOGG",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBA",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "POLACO",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-7-2",
+          "title": "CANTANTES MASCULINOS II",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS (II)",
+          "words": [
+            {
+              "word": "ZESARIO",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANGEL",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "GLAMOUR",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "DIDDY",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "JUNIOR",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-7-3",
+          "title": "CANTANTES MASCULINOS III",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS (III)",
+          "words": [
+            {
+              "word": "VIP",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MEKO",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "NINO",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "BROWN",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ROMY",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-7-4",
+          "title": "CANTANTES MASCULINOS IV",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS (IV)",
+          "words": [
+            {
+              "word": "LOVE",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHOJIN",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "KIKO",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MUCH",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "ENGA",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-7-5",
+          "title": "CANTANTES MASCULINOS V",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS (V)",
+          "words": [
+            {
+              "word": "PEQUE",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "WAMBO",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "TONY",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            },
+            {
+              "word": "MARY",
+              "clue": "Término cultural de CANTANTES MASCULINOS en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-10-1",
+          "title": "CANTANTES MASCULINOS II I",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS II (I)",
+          "words": [
+            {
+              "word": "BARON",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "YABUKLU",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHERI",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MALE",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "LUIS",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-10-2",
+          "title": "CANTANTES MASCULINOS II II",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS II (II)",
+          "words": [
+            {
+              "word": "MBOMIO",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "NGAL",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MADUNGA",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "ALEX",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MORRIS",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-10-3",
+          "title": "CANTANTES MASCULINOS II III",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS II (III)",
+          "words": [
+            {
+              "word": "BESOSO",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "EFAMBA",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAELE",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "PETTIT",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHABAL",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-10-4",
+          "title": "CANTANTES MASCULINOS II IV",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS II (IV)",
+          "words": [
+            {
+              "word": "ANFIBIO",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "CANO",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "EYI",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "MUAN",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "NDONG",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-10-5",
+          "title": "CANTANTES MASCULINOS II V",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de CANTANTES MASCULINOS II (V)",
+          "words": [
+            {
+              "word": "NENE",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "BANTU",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "SELIN",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            },
+            {
+              "word": "SAMURAI",
+              "clue": "Término cultural de CANTANTES MASCULINOS II en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-17-1",
+          "title": "EXITOS DE MAELE I",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de EXITOS DE MAELE (I)",
+          "words": [
+            {
+              "word": "ABOM",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "AWOM",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "BINDELE",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "CHABELI",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "KALARA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-17-2",
+          "title": "EXITOS DE MAELE II",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de EXITOS DE MAELE (II)",
+          "words": [
+            {
+              "word": "CAMERUN",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "OMUMONG",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANDEM",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "ELA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "BATA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-17-3",
+          "title": "EXITOS DE MAELE III",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de EXITOS DE MAELE (III)",
+          "words": [
+            {
+              "word": "CHICA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANE",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBENG",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "DJI",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "LOT",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-17-4",
+          "title": "EXITOS DE MAELE IV",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de EXITOS DE MAELE (IV)",
+          "words": [
+            {
+              "word": "AWA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "MADJING",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAWOC",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "ONGA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "DOUG",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-17-5",
+          "title": "EXITOS DE MAELE V",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de EXITOS DE MAELE (V)",
+          "words": [
+            {
+              "word": "SSI",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "ANEYA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "PIEL",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAELE",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "NON",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "GMA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            },
+            {
+              "word": "VEMA",
+              "clue": "Término cultural de EXITOS DE MAELE en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-18-1",
+          "title": "INTERNACIONALES I",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de INTERNACIONALES (I)",
+          "words": [
+            {
+              "word": "ASUMU",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OSA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CONCHA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BUIKA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "ERIC",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-18-2",
+          "title": "INTERNACIONALES II",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de INTERNACIONALES (II)",
+          "words": [
+            {
+              "word": "JAVIER",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BALBOA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MAELE",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NDO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "RODOLFO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-18-3",
+          "title": "INTERNACIONALES III",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de INTERNACIONALES (III)",
+          "words": [
+            {
+              "word": "BODIPO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BISILA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOKOKO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "DOMINGO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "EDJANG",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-18-4",
+          "title": "INTERNACIONALES IV",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de INTERNACIONALES (IV)",
+          "words": [
+            {
+              "word": "MORENO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OFA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "HIJAS",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "SOL",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-18-5",
+          "title": "INTERNACIONALES V",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de INTERNACIONALES (V)",
+          "words": [
+            {
+              "word": "NGUEMA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "OBIANG",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "CESAR",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BRANDON",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "EMILIO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        },
+        {
+          "id": "lvl-tema-18-6",
+          "title": "INTERNACIONALES VI",
+          "categoryId": "musica_arte",
+          "clue": "Términos auténticos de INTERNACIONALES (VI)",
+          "words": [
+            {
+              "word": "BUALE",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "LEANDRO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "MBOMIO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "NSUE",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "RITA",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            },
+            {
+              "word": "BOSAHO",
+              "clue": "Término cultural de INTERNACIONALES en Guinea Ecuatorial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "selva_fauna",
+      "aliases": [
+        "selva_fauna",
+        "selva"
+      ],
+      "name": "Selva y Fauna Fang",
+      "icon": "🐆",
+      "description": "La rica biodiversidad de la cuenca del Congo en territorio ecuatoguineano",
+      "levels": [
+        {
+          "id": "sel-1",
+          "title": "Señores de la Selva",
+          "categoryId": "selva_fauna",
+          "clue": "Animales emblemáticos de los bosques de GE",
+          "words": [
+            {
+              "word": "GORILA",
+              "clue": "Gorila de llanura en Monte Alén"
+            },
+            {
+              "word": "MANDRIL",
+              "clue": "Primate emblemático de las selvas de Guinea."
+            },
+            {
+              "word": "LEOPARDO",
+              "clue": "El felino supremo de los bosques"
+            },
+            {
+              "word": "ELEFANTE",
+              "clue": "Elefante de bosque de colmillos rectos"
+            }
+          ],
+          "categoryName": "Selva y Fauna Fang",
+          "categoryIcon": "🐆",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "sel-2",
+          "title": "Criaturas del Bosque",
+          "categoryId": "selva_fauna",
+          "clue": "Aves, reptiles y fauna insular",
+          "words": [
+            {
+              "word": "GOLIAT",
+              "clue": "Rana Goliat, la mayor del planeta"
+            },
+            {
+              "word": "PANGOLIN",
+              "clue": "Mamífero escamoso nocturno"
+            },
+            {
+              "word": "TORO",
+              "clue": "Búfalo enano o toro de selva"
+            },
+            {
+              "word": "LORA",
+              "clue": "Serpiente verde de las copas altas"
+            }
+          ],
+          "categoryName": "Selva y Fauna Fang",
+          "categoryIcon": "🐆",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "lvl-selva-libro-1",
+          "title": "FAUNA FANG I",
+          "categoryId": "selva_fauna",
+          "clue": "Animales y naturaleza en lengua Fang (I)",
+          "words": [
+            {
+              "word": "NZOK",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "NZE",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "EKUK",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "NYO",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "JENG",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            }
+          ]
+        },
+        {
+          "id": "lvl-selva-libro-2",
+          "title": "FAUNA FANG II",
+          "categoryId": "selva_fauna",
+          "clue": "Animales y naturaleza en lengua Fang (II)",
+          "words": [
+            {
+              "word": "NGAN",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "KULU",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "MVO",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "KAA",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "SO",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "NGI",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "SIKA",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            },
+            {
+              "word": "EKAN",
+              "clue": "Animal emblemático de la selva ecuatoguineana en Fang."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modismos",
+      "aliases": [
+        "modismos"
+      ],
+      "name": "Modismos y Expresiones",
+      "icon": "💬",
+      "description": "Giros lingüísticos, refranes y habla popular de las calles guineanas",
+      "levels": [
+        {
+          "id": "mod-1",
+          "title": "Saludos y Convivencia",
+          "categoryId": "modismos",
+          "clue": "Expresiones populares del día a día",
+          "words": [
+            {
+              "word": "MBOLO",
+              "clue": "Hola o saludo cordial en lengua fang"
+            },
+            {
+              "word": "AYOP",
+              "clue": "Respeto y saludo tradicional"
+            },
+            {
+              "word": "PICHI",
+              "clue": "Pichi, criollo inglés hablado en Bioko."
+            },
+            {
+              "word": "AMIGO",
+              "clue": "Vínculo de fraternidad guineana"
+            }
+          ],
+          "categoryName": "Modismos y Expresiones",
+          "categoryIcon": "💬",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        },
+        {
+          "id": "mod-2",
+          "title": "Vida Cotidiana",
+          "categoryId": "modismos",
+          "clue": "Frases y términos de la calle guineana",
+          "words": [
+            {
+              "word": "CHOP",
+              "clue": "Comida o almorzar en habla popular"
+            },
+            {
+              "word": "BODEGA",
+              "clue": "Tienda de ultramarinos o colmado"
+            },
+            {
+              "word": "FIESTA",
+              "clue": "Celebración y alegría compartida"
+            },
+            {
+              "word": "FAMILIA",
+              "clue": "El pilar central de la sociedad"
+            }
+          ],
+          "categoryName": "Modismos y Expresiones",
+          "categoryIcon": "💬",
+          "gridSize": {
+            "cols": 4,
+            "rows": 6
+          },
+          "source": "ApalabraGE Base"
+        }
+      ]
+    }
+  ]
+}
