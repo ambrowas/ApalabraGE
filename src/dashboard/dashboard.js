@@ -867,9 +867,9 @@ class DashboardApp {
       const isSelected = this.state.selectedLevelIds.has(String(lvl.id));
       if (isSelected) tr.classList.add('row-selected');
 
-      const wordsList = (lvl.words || []).map(w => {
+      const wordsList = (lvl.words || []).map((w, wIdx) => {
         const wordText = typeof w === 'string' ? w : w.word;
-        return `<span class="word-badge">${wordText}</span>`;
+        return `<span class="word-badge draggable-word" draggable="true" data-level-id="${lvl.id}" data-word-idx="${wIdx}" title="Arrastra este término a otro nivel"><span class="drag-icon">⠿</span>${wordText}</span>`;
       }).join(' ');
 
       const rawTime = getLevelTimestamp(lvl, idx);
@@ -899,7 +899,7 @@ class DashboardApp {
         </td>
         <td style="color:#94a3b8; font-size:0.85rem;">${lvl.clue || '-'}</td>
         <td>
-          <div class="words-pill-list">${wordsList}</div>
+          <div class="words-pill-list drop-zone-words" data-level-id="${lvl.id}" title="Suelta términos aquí para moverlos a este nivel">${wordsList}</div>
         </td>
         <td style="text-align: right; white-space: nowrap;">
           <button class="table-action-btn add-next btn-add-next-level" data-id="${lvl.id}" title="Crear siguiente nivel derivado (misma categoría y pista)">➕</button>
@@ -923,6 +923,61 @@ class DashboardApp {
           this.updateBulkActionBar(filtered);
         });
       }
+
+      // Drag & Drop de Términos
+      const dropZone = tr.querySelector('.drop-zone-words');
+      if (dropZone) {
+        dropZone.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = 'move';
+        });
+
+        dropZone.addEventListener('dragenter', (e) => {
+          e.preventDefault();
+          dropZone.classList.add('drop-zone-active');
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+          if (!dropZone.contains(e.relatedTarget)) {
+            dropZone.classList.remove('drop-zone-active');
+          }
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('drop-zone-active');
+          try {
+            const rawData = e.dataTransfer.getData('application/json') || e.dataTransfer.getData('text/plain');
+            if (!rawData) return;
+            const data = JSON.parse(rawData);
+            if (data.sourceLevelId && data.wordIdx !== undefined) {
+              this.handleMoveWord(data.sourceLevelId, lvl.id, data.wordIdx);
+            }
+          } catch (err) {
+            console.warn('Error procesando drop de palabra:', err);
+          }
+        });
+      }
+
+      const draggableBadges = tr.querySelectorAll('.draggable-word');
+      draggableBadges.forEach(badge => {
+        badge.addEventListener('dragstart', (e) => {
+          badge.classList.add('is-dragging');
+          const payload = JSON.stringify({
+            sourceLevelId: String(lvl.id),
+            wordIdx: parseInt(badge.dataset.wordIdx, 10),
+            wordText: badge.textContent.replace('⠿', '').trim()
+          });
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('application/json', payload);
+          e.dataTransfer.setData('text/plain', payload);
+        });
+
+        badge.addEventListener('dragend', () => {
+          badge.classList.remove('is-dragging');
+          document.querySelectorAll('.drop-zone-words').forEach(el => el.classList.remove('drop-zone-active'));
+        });
+      });
 
       // Eventos de creación derivada, edición y borrado
       const btnAddNext = tr.querySelector('.btn-add-next-level');
@@ -1837,6 +1892,75 @@ class DashboardApp {
     const deleteSet = new Set(idsToDelete.map(String));
     this.state.levels = this.state.levels.filter(lvl => !deleteSet.has(String(lvl.id)));
     this.state.selectedLevelIds.clear();
+    this.saveLocalBackup();
+    this.updateKPIs();
+    this.renderLevelsTable();
+    this.renderOverview();
+  }
+
+  async handleMoveWord(sourceLevelId, targetLevelId, wordIdx) {
+    if (String(sourceLevelId) === String(targetLevelId)) {
+      return; // Mismo nivel
+    }
+
+    const sourceLvl = this.state.levels.find(l => String(l.id) === String(sourceLevelId));
+    const targetLvl = this.state.levels.find(l => String(l.id) === String(targetLevelId));
+
+    if (!sourceLvl || !targetLvl) return;
+    if (!Array.isArray(sourceLvl.words) || wordIdx >= sourceLvl.words.length) return;
+
+    const wordItem = sourceLvl.words[wordIdx];
+    const wordText = (typeof wordItem === 'string' ? wordItem : (wordItem.word || '')).trim().toUpperCase();
+
+    if (!wordText) return;
+
+    // Verificar si ya existe en el nivel destino
+    if (!Array.isArray(targetLvl.words)) targetLvl.words = [];
+    const alreadyExists = targetLvl.words.some(w => {
+      const txt = typeof w === 'string' ? w : (w.word || '');
+      return txt.trim().toUpperCase() === wordText;
+    });
+
+    if (alreadyExists) {
+      this.showToast(`⚠️ El término "${wordText}" ya existe en "${targetLvl.title}".`);
+      return;
+    }
+
+    // Advertencia si el nivel origen se quedará con menos de 2 palabras
+    if (sourceLvl.words.length <= 2) {
+      const confirmMove = confirm(
+        `El nivel "${sourceLvl.title}" se quedará con solo ${sourceLvl.words.length - 1} palabra.\n` +
+        `Para que la sopa de letras sea jugable se recomiendan al menos 2 palabras.\n\n` +
+        `¿Deseas mover "${wordText}" a "${targetLvl.title}" igualmente?`
+      );
+      if (!confirmMove) return;
+    }
+
+    // Extraer del origen
+    const removedList = sourceLvl.words.splice(wordIdx, 1);
+    const movedWordObj = removedList[0];
+    sourceLvl.updatedAt = new Date().toISOString();
+
+    // Normalizar objeto palabra para el destino
+    const normalizedWordObj = typeof movedWordObj === 'string'
+      ? { word: movedWordObj.toUpperCase().trim(), clue: `Término cultural perteneciente a ${targetLvl.title}.` }
+      : { ...movedWordObj, word: (movedWordObj.word || '').toUpperCase().trim() };
+
+    targetLvl.words.push(normalizedWordObj);
+    targetLvl.updatedAt = new Date().toISOString();
+
+    // Guardar ambos niveles en Firestore
+    try {
+      await Promise.all([
+        setDoc(doc(db, 'levels', String(sourceLvl.id)), sourceLvl),
+        setDoc(doc(db, 'levels', String(targetLvl.id)), targetLvl)
+      ]);
+      this.showToast(`🎯 Término "${wordText}" movido a "${targetLvl.title}".`);
+    } catch (err) {
+      console.warn('Error sincronizando movimiento en Firestore:', err);
+      this.showToast(`💾 Término "${wordText}" movido localmente a "${targetLvl.title}".`);
+    }
+
     this.saveLocalBackup();
     this.updateKPIs();
     this.renderLevelsTable();
