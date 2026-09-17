@@ -762,16 +762,19 @@ class DashboardApp {
         <td>
           <div class="words-pill-list">${wordsList}</div>
         </td>
-        <td style="text-align: right;">
+        <td style="text-align: right; white-space: nowrap;">
+          <button class="table-action-btn add-next btn-add-next-level" data-id="${lvl.id}" title="Crear siguiente nivel derivado (misma categoría y pista)">➕</button>
           <button class="table-action-btn btn-edit-level" data-id="${lvl.id}" title="Editar Nivel">✏️</button>
           <button class="table-action-btn delete btn-delete-level" data-id="${lvl.id}" title="Eliminar Nivel">🗑️</button>
         </td>
       `;
 
-      // Eventos de edición y borrado
+      // Eventos de creación derivada, edición y borrado
+      const btnAddNext = tr.querySelector('.btn-add-next-level');
       const btnEdit = tr.querySelector('.btn-edit-level');
       const btnDelete = tr.querySelector('.btn-delete-level');
 
+      if (btnAddNext) btnAddNext.addEventListener('click', () => this.openCreateNextLevelModal(lvl));
       if (btnEdit) btnEdit.addEventListener('click', () => this.openLevelModal(lvl.id));
       if (btnDelete) btnDelete.addEventListener('click', () => this.confirmDeleteLevel(lvl.id, lvl.title));
 
@@ -1316,6 +1319,128 @@ class DashboardApp {
   }
 
   /* ================= GESTIÓN DE MODALES ================= */
+
+  calculateNextLevelTitle(currentTitle) {
+    if (!currentTitle) return 'Nuevo Nivel';
+    const trimmed = currentTitle.trim();
+
+    const romanValues = {
+      'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5,
+      'VI': 6, 'VII': 7, 'VIII': 8, 'IX': 9, 'X': 10,
+      'XI': 11, 'XII': 12, 'XIII': 13, 'XIV': 14, 'XV': 15,
+      'XVI': 16, 'XVII': 17, 'XVIII': 18, 'XIX': 19, 'XX': 20,
+      'XXI': 21, 'XXII': 22, 'XXIII': 23, 'XXIV': 24, 'XXV': 25
+    };
+
+    const toRoman = (num) => {
+      const lookup = [
+        ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400],
+        ['C', 100], ['XC', 90], ['L', 50], ['XL', 40],
+        ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1]
+      ];
+      let roman = '';
+      for (const [letter, value] of lookup) {
+        while (num >= value) {
+          roman += letter;
+          num -= value;
+        }
+      }
+      return roman || 'I';
+    };
+
+    const romanRegex = /\s+(XXV|XXIV|XXIII|XXII|XXI|XX|XIX|XVIII|XVII|XVI|XV|XIV|XIII|XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I)$/i;
+    const arabicRegex = /\s+(\d+)$/;
+
+    let baseName = trimmed;
+    let currentNum = 1;
+    let format = 'roman';
+
+    const romanMatch = trimmed.match(romanRegex);
+    if (romanMatch) {
+      currentNum = romanValues[romanMatch[1].toUpperCase()] || 1;
+      baseName = trimmed.replace(romanRegex, '').trim();
+      format = 'roman';
+    } else {
+      const arabicMatch = trimmed.match(arabicRegex);
+      if (arabicMatch) {
+        currentNum = parseInt(arabicMatch[1], 10) || 1;
+        baseName = trimmed.replace(arabicRegex, '').trim();
+        format = 'arabic';
+      } else {
+        baseName = trimmed;
+        currentNum = 1;
+        format = 'roman';
+      }
+    }
+
+    // Comprobar todos los niveles existentes en estado con este mismo título base para evitar colisiones
+    const existingNums = [currentNum];
+    const escapedBase = baseName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    (this.state.levels || []).forEach(l => {
+      const t = (l.title || '').trim();
+      if (format === 'roman') {
+        const m = t.match(new RegExp(`^${escapedBase}(?:\\s+(XXV|XXIV|XXIII|XXII|XXI|XX|XIX|XVIII|XVII|XVI|XV|XIV|XIII|XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I))?$`, 'i'));
+        if (m) {
+          if (!m[1]) {
+            existingNums.push(1);
+          } else {
+            const val = romanValues[m[1].toUpperCase()];
+            if (val) existingNums.push(val);
+          }
+        }
+      } else {
+        const m = t.match(new RegExp(`^${escapedBase}(?:\\s+(\\d+))?$`, 'i'));
+        if (m) {
+          if (!m[1]) {
+            existingNums.push(1);
+          } else {
+            existingNums.push(parseInt(m[1], 10));
+          }
+        }
+      }
+    });
+
+    const maxNum = Math.max(...existingNums);
+    const nextNum = Math.max(currentNum + 1, maxNum + 1);
+
+    if (format === 'roman') {
+      return `${baseName} ${toRoman(nextNum)}`;
+    } else {
+      return `${baseName} ${nextNum}`;
+    }
+  }
+
+  openCreateNextLevelModal(sourceLevel) {
+    if (!sourceLevel) return;
+
+    this.updateCategorySelectOptions();
+    this.dom.wordsInputsContainer.innerHTML = '';
+
+    const nextTitle = this.calculateNextLevelTitle(sourceLevel.title);
+
+    document.getElementById('modal-level-title').textContent = `Nuevo Nivel Derivado: ${nextTitle}`;
+    this.dom.inputLevelId.value = '';
+    this.dom.inputLevelName.value = nextTitle;
+
+    let catId = sourceLevel.categoryId;
+    if (catId === 'etnias_identidad' || catId === 'modismos') catId = 'sociedad';
+    this.dom.selectLevelCategory.value = catId;
+    this.dom.inputLevelClue.value = sourceLevel.clue || '';
+
+    // 3 filas vacías preparadas para las nuevas palabras
+    this.addWordInputRow('', '');
+    this.addWordInputRow('', '');
+    this.addWordInputRow('', '');
+
+    this.dom.modalLevel.classList.add('active');
+
+    // Foco automático en el primer campo de palabra
+    setTimeout(() => {
+      const firstWordInput = this.dom.wordsInputsContainer.querySelector('.input-word-val');
+      if (firstWordInput) firstWordInput.focus();
+    }, 120);
+  }
 
   openLevelModal(levelId = null) {
     this.updateCategorySelectOptions();

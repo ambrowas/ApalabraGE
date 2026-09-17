@@ -673,6 +673,11 @@ body.dashboard-body {
   transform: scale(1.15);
 }
 
+.table-action-btn.add-next:hover {
+  background: rgba(16, 185, 129, 0.25);
+  transform: scale(1.2);
+}
+
 .table-action-btn.delete:hover {
   background: rgba(239, 68, 68, 0.2);
 }
