@@ -192,6 +192,11 @@ class DashboardApp {
       inputLevelClue: document.getElementById('input-level-clue'),
       wordsInputsContainer: document.getElementById('words-inputs-container'),
       btnAddWordRow: document.getElementById('btn-add-word-row'),
+      modalLettersBar: document.getElementById('modal-letters-bar'),
+      modalLettersTotal: document.getElementById('modal-letters-total'),
+      modalWordsTotal: document.getElementById('modal-words-total'),
+      modalDensityTag: document.getElementById('modal-density-tag'),
+      modalDensityText: document.getElementById('modal-density-text'),
 
       modalTrivia: document.getElementById('modal-trivia'),
       formTrivia: document.getElementById('form-trivia'),
@@ -1765,6 +1770,7 @@ class DashboardApp {
     this.addWordInputRow('', '');
     this.addWordInputRow('', '');
 
+    this.updateModalLettersCounter();
     this.dom.modalLevel.classList.add('active');
 
     // Foco automático en el primer campo de palabra
@@ -1807,27 +1813,92 @@ class DashboardApp {
       this.addWordInputRow('', '');
     }
 
+    this.updateModalLettersCounter();
     this.dom.modalLevel.classList.add('active');
   }
 
   addWordInputRow(word = '', clue = '') {
+    const cleanWord = (word || '').toUpperCase().trim().replace(/[^A-ZÑ]/g, '');
     const row = document.createElement('div');
     row.className = 'word-row-input';
     row.innerHTML = `
-      <input type="text" class="input-word-val" placeholder="PALABRA" value="${word}" required maxlength="12" style="text-transform: uppercase; font-weight:700;" />
+      <div class="word-input-wrap">
+        <input type="text" class="input-word-val" placeholder="PALABRA" value="${word}" required maxlength="12" style="text-transform: uppercase; font-weight:700;" />
+        <span class="word-len-pill" title="Letras de esta palabra">${cleanWord.length}</span>
+      </div>
       <input type="text" class="input-word-clue" placeholder="Significado cultural o pista (Glosario)" value="${clue}" />
       <button type="button" class="btn-remove-word-row" title="Eliminar fila">✕</button>
     `;
 
+    const wordInput = row.querySelector('.input-word-val');
+    const lenPill = row.querySelector('.word-len-pill');
+
+    wordInput.addEventListener('input', () => {
+      const clean = wordInput.value.toUpperCase().trim().replace(/[^A-ZÑ]/g, '');
+      if (lenPill) lenPill.textContent = clean.length;
+      this.updateModalLettersCounter();
+    });
+
     row.querySelector('.btn-remove-word-row').addEventListener('click', () => {
       if (this.dom.wordsInputsContainer.children.length > 2) {
         row.remove();
+        this.updateModalLettersCounter();
       } else {
         alert('Un nivel debe tener al menos 2 palabras.');
       }
     });
 
     this.dom.wordsInputsContainer.appendChild(row);
+    this.updateModalLettersCounter();
+  }
+
+  updateModalLettersCounter() {
+    if (!this.dom.modalLettersTotal || !this.dom.modalWordsTotal) return;
+
+    const rows = this.dom.wordsInputsContainer.querySelectorAll('.word-row-input');
+    let totalLetters = 0;
+    let validWordsCount = 0;
+
+    rows.forEach(r => {
+      const input = r.querySelector('.input-word-val');
+      const pill = r.querySelector('.word-len-pill');
+      const val = input ? input.value.toUpperCase().trim().replace(/[^A-ZÑ]/g, '') : '';
+      const len = val.length;
+      if (pill) pill.textContent = len;
+      if (len > 0) {
+        totalLetters += len;
+        validWordsCount++;
+      }
+    });
+
+    this.dom.modalLettersTotal.textContent = totalLetters;
+    this.dom.modalWordsTotal.textContent = `${validWordsCount} Palabras`;
+
+    const tag = this.dom.modalDensityTag;
+    const text = this.dom.modalDensityText;
+    if (!tag || !text) return;
+
+    tag.classList.remove('density-optimal', 'density-low', 'density-high');
+
+    if (totalLetters === 0) {
+      tag.classList.add('density-low');
+      text.textContent = 'Introduce palabras';
+    } else if (totalLetters < 18) {
+      tag.classList.add('density-low');
+      text.textContent = `${totalLetters}/18 letras (Tablero corto)`;
+    } else if (totalLetters <= 24) {
+      tag.classList.add('density-optimal');
+      if (totalLetters === 20) {
+        text.textContent = '20 letras: Óptimo (4×5 completa)';
+      } else if (totalLetters === 24) {
+        text.textContent = '24 letras: Óptimo (4×6 completa)';
+      } else {
+        text.textContent = `${totalLetters} letras: Rango Óptimo móvil (18–24)`;
+      }
+    } else {
+      tag.classList.add('density-high');
+      text.textContent = `${totalLetters} letras: Tablero denso (> 24 letras)`;
+    }
   }
 
   async handleSaveLevel() {

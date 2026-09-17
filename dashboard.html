@@ -834,6 +834,23 @@
             <label>Palabras del Nivel (Mínimo 3, Máximo 6)</label>
             <button type="button" class="btn-text-small" id="btn-add-word-row">➕ Añadir Palabra</button>
           </div>
+
+          <!-- Barra de Conteo de Letras en Vivo -->
+          <div class="modal-letters-bar" id="modal-letters-bar">
+            <div class="modal-letters-stats">
+              <span class="modal-letters-icon">🔠</span>
+              <span class="modal-letters-main">
+                <strong id="modal-letters-total">0</strong> <span class="lbl-letters">Letras</span>
+              </span>
+              <span class="modal-letters-sep">•</span>
+              <span class="modal-words-main"><strong id="modal-words-total">0</strong> Palabras</span>
+            </div>
+            <div class="modal-density-tag density-low" id="modal-density-tag">
+              <span class="density-dot">●</span>
+              <span id="modal-density-text">Introduce palabras</span>
+            </div>
+          </div>
+
           <div class="words-inputs-list" id="words-inputs-container">
             <!-- Filas dinámicas -->
           </div>
